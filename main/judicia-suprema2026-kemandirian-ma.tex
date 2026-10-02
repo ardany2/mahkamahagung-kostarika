@@ -1,0 +1,133 @@
+\documentclass[12pt, a4paper]{article}
+
+% Pengaturan bahasa dan font
+\usepackage{iftex}
+
+\ifLuaTeX
+  \usepackage{fontspec}
+  % \setmainfont{Book Antiqua}
+\else\ifxetex
+  \usepackage{fontspec}
+  % \setmainfont{Book Antiqua}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{mathptmx} % Font Serif alternatif Times/Book Antiqua untuk pdflatex
+\fi\fi
+
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{microtype} % Optimasi pemotongan kata & spasi antar-karakter
+\setlength{\emergencystretch}{3em} % Toleransi penyesuaian spasi agar tidak overfull hbox
+\usepackage{hyperref}
+
+% Format Heading sesuai template Judicia Suprema
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+
+% Judul (Maksimal 14 Kata)
+\title{\textbf{INDEPENDENSI ANGGARAN YUDIKATIF DAN BIFURKASI TUGAS HAKIM: STUDI KOMPARASI SISTEM PRESIDENSIAL}}
+\author{Nama Penulis1$^*$, Nama Penulis2}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+    1*) Correspondence Author*, Fakultas Hukum, Universitas [Nama Kampus], Indonesia, E-mail: [Emailmu] \\
+    2) Author, Fakultas Hukum, Universitas [Nama Kampus], Indonesia, E-mail: [Emailmu]
+\end{center}
+
+\vspace{1em}
+
+% Abstrak wajib berbahasa Inggris (150-250 kata)
+\renewcommand{\abstractname}{\textbf{Abstract}}
+\begin{abstract}
+This study compares the organizational structure and human resource management of the Supreme Courts in Indonesia and Costa Rica, focusing on the separation of judicial and managerial functions and financial independence. While both nations adhere to the \textit{Trias Politica} principle, their implementation of judicial administration differs significantly. This normative legal research employs a comparative approach. Data were collected through library research using constitutional and official legal documents from both countries. The collected data were analyzed qualitatively by mapping equivalent institutional terminologies, specifically comparing the Indonesian \textit{Panitera} with the Costa Rican \textit{Secretario}. The findings reveal that in Indonesia, Supreme Court clerkship positions are currently filled by judges. This practice overlaps judicial and managerial duties and restricts the career progression of lower-level clerks. In contrast, Costa Rica implements a strict separation of these functions and guarantees absolute institutional independence through a constitutionally mandated 6\% allocation of the national budget. The study concludes that Indonesia should reform its Supreme Court institutional structure by professionalizing the clerkship career path to allow judges to focus exclusively on adjudicating cases. Furthermore, adopting a fixed, independent budget allocation model is highly recommended to ensure genuine institutional and financial autonomy.
+
+\vspace{0.5em}
+\noindent \textbf{Keyword:} Budget independence; Career path; Comparative law; Human resources; Supreme Court.
+\end{abstract}
+
+\vspace{2em}
+
+% ------------------- BAGIAN 1: PENDAHULUAN -------------------
+\section{INTRODUCTION}
+
+Negara Kesatuan Republik Indonesia menganut sistem pemerintahan presidensial yang didasarkan pada prinsip pembagian kekuasaan (\textit{Trias Politica}). Dalam pilar tata negara modern, kekuasaan yudikatif yang merdeka merupakan fondasi utama terwujudnya negara hukum. Kemerdekaan peradilan idealnya (\textit{das sollen}) tidak hanya terbatas pada kebebasan hakim dalam memutus perkara (\textit{decisional independence}), tetapi juga menuntut adanya jaminan otonomi kelembagaan dan finansial (\textit{institutional and financial independence}), serta pemisahan yang tegas antara fungsi yudisial murni dengan tata kelola administratif (bifurkasi). Pemisahan ini krusial agar hakim dapat mendedikasikan keahliannya secara eksklusif untuk menegakkan keadilan, sementara urusan manajerial dikelola oleh aparatur kepaniteraan yang profesional.
+
+Namun, fakta empiris memperlihatkan adanya kesenjangan yang tajam antara idealita hukum dan realita (\textit{das sein}) pada tata kelola kelembagaan Mahkamah Agung di Indonesia. Pertama, dari segi penataan Sumber Daya Manusia (SDM), struktur jabatan kepaniteraan tingkat atas di Mahkamah Agung saat ini diduduki oleh Hakim. Praktik perangkapan jabatan ini memecah fokus hakim pada tugas-tugas administratif manajerial, sekaligus memutus rantai jenjang karier bagi tenaga kepaniteraan organik dari pengadilan tingkat bawah. Kedua, dari aspek otonomi finansial, kekuasaan kehakiman di Indonesia belum memiliki jaminan alokasi anggaran yang independen secara konstitusional. Proses penyusunan anggaran Mahkamah Agung masih sangat bergantung pada persetujuan dan rasionalisasi oleh lembaga eksekutif dan legislatif, yang berpotensi membuka celah intervensi politik anggaran terhadap lembaga yudikatif.
+
+Untuk menemukan konsep ideal penyelesaian masalah tersebut, diperlukan pendekatan perbandingan hukum dengan negara-negara penganut sistem presidensial maupun tradisi hukum yang memiliki kesamaan struktur, seperti Kosta Rika, Amerika Serikat, dan Korea Selatan. Ketiga negara tersebut telah berhasil mewujudkan tata kelola peradilan modern melalui penerapan kemandirian fiskal dan bifurkasi tugas. Kosta Rika memberikan jaminan independensi finansial absolut melalui alokasi minimal 6\% dari APBN untuk sistem peradilannya, sementara Amerika Serikat memberikan otonomi perlindungan anggaran penuh bagi kekuasaan yudikatif federal. Lebih jauh, Amerika Serikat melalui \textit{Ad\-mi\-nis\-tra\-tive Office of the United States Courts} dan Korea Selatan melalui \textit{Na\-tion\-al Court Ad\-mi\-nis\-tra\-tion} (NCA) telah memberikan cetak biru keberhasilan pemisahan tugas hakim dari urusan manajerial secara profesional.
+
+Tinjauan terhadap berbagai literatur dan penelitian terdahulu menunjukkan bahwa diskursus mengenai independensi Mahkamah Agung di Indonesia mayoritas masih didominasi oleh kajian mengenai kebebasan hakim dalam memutus perkara (\textit{decisional independence}) atau sebatas pada proses rekrutmen hakim. Beberapa penelitian mengenai administrasi peradilan pasca-penerapan Sistem Satu Atap (\textit{One Roof System}) umumnya hanya mengevaluasi kinerja birokrasi secara domestik tanpa menawarkan model perbandingan dari negara lain. Di sisi lain, penelitian yang membahas mengenai otonomi anggaran peradilan sering kali berdiri sendiri dan tidak dikaitkan dengan persoalan restrukturisasi Sumber Daya Manusia (SDM) pada jabatan kepaniteraan.
+
+Berbeda dengan penelitian-penelitian sebelumnya, letak kebaruan (\textit{novelty}) dari artikel ini berada pada pendekatan holistik yang mengintegrasikan dua isu krusial sekaligus: reformasi struktur jenjang karier kepaniteraan dan kemandirian anggaran yudikatif. Kebaruan lainnya terletak pada objek komparasinya. Alih-alih hanya melakukan perbandingan normatif secara biner, penelitian ini membedah irisan tata kelola dari tiga negara presidensial dengan model kelembagaan yang sangat spesifik, yaitu: perlindungan anggaran persentase tetap (6\% APBN) di Kosta Rika, model kemapanan bifurkasi tugas melalui \textit{Administrative Office} di Amerika Serikat, serta profesionalisme \textit{National Court Administration} di Korea Selatan.
+
+Melalui telaah perbandingan tersebut, urgensi dari penulisan artikel ini adalah untuk menawarkan konstruksi dan cetak biru (\textit{blueprint}) gagasan yang aplikatif bagi Mahkamah Agung Republik Indonesia. Kontribusi utamanya adalah merumuskan konsep ideal agar Mahkamah Agung dapat memiliki otonomi finansial yang terbebas dari intervensi politik, sekaligus menjamin penataan SDM yang profesional di mana hakim dapat terlepas dari beban manajerial.
+
+Berdasarkan latar belakang tersebut, penelitian ini bertujuan untuk menjawab tiga rumusan masalah utama: (1) Bagaimana urgensi serta formulasi model kemandirian anggaran yudikatif melalui jaminan alokasi independen untuk Mahkamah Agung Republik Indonesia? (2) Bagaimana perbandingan penataan SDM dan jenjang karier kepaniteraan antara Indonesia dan negara-negara komparator? serta (3) Bagaimana pemisahan fungsi manajerial dan yudisial (\textit{bifurkasi}) mewujudkan konsep ideal kelembagaan peradilan?
+
+% ------------------- BAGIAN 2: METODE -------------------
+\section{METHOD}
+
+Penelitian ini merupakan penelitian hukum normatif dengan desain pendekatan perbandingan hukum (\textit{comparative approach}). Unit analisis atau objek material yang dikaji berfokus pada regulasi jaminan otonomi anggaran peradilan dan struktur tata kelola Sumber Daya Manusia (SDM) pada kepaniteraan Mahkamah Agung di empat negara penganut sistem presidensial, yaitu Indonesia, Kosta Rika, Amerika Serikat, dan Korea Selatan. Pemilihan ketiga negara pembanding tersebut didasarkan pada kesesuaian tradisi dan struktur ketatanegaraan dengan Indonesia, serta keberhasilan empiris mereka dalam menerapkan model tata kelola peradilan modern. Sumber data utama yang digunakan adalah data sekunder berupa instrumen hukum esensial dari masing-masing negara. Instrumen tersebut mencakup konstitusi, undang-undang kekuasaan kehakiman, regulasi internal tata kelola administrasi pengadilan, serta literatur akademik dan dokumen cetak biru pembaruan peradilan yang dipublikasikan secara resmi.
+
+Metode pengumpulan data dilakukan melalui studi kepustakaan (\textit{library research}) dengan menelusuri teks-teks otoritatif, arsip digital kenegaraan, dan pangkalan data hukum internasional. Mengingat adanya hambatan bahasa dan perbedaan sistem administrasi di negara pembanding, penelusuran difokuskan pada naskah hukum yang telah diterjemahkan secara resmi ke dalam bahasa Inggris atau bahasa Indonesia. Pengumpulan data ini dilakukan secara selektif dengan mengisolasi hanya pada pasal-pasal dan konstitusi yang secara langsung mengatur jaminan nominal/mekanisme anggaran peradilan, serta regulasi kedudukan personel manajerial pengadilan (seperti \textit{Secretario}, \textit{Administrative Office}, atau \textit{National Court Administration}).
+
+Proses analisis data dalam penelitian ini dilakukan melalui tiga tahapan komparatif yang saling berkesinambungan dan diselaraskan dengan rumusan masalah. Pertama, tahap pemetaan regulasi dan ekuivalensi kelembagaan (\textit{regulatory and equivalence mapping}), yaitu memetakan model alokasi anggaran (seperti jaminan 6\% di Kosta Rika dan perlindungan otonomi fiskal di Amerika Serikat) sekaligus menyetarakan hierarki struktur kepaniteraan agar sistem yang berbeda tersebut dapat diperbandingkan secara proporsional. Kedua, tahap analisis benturan (\textit{conflict analysis}), di mana fakta empiris mengenai ketergantungan penyusunan anggaran pada eksekutif/legislatif serta fenomena perangkapan jabatan manajerial oleh hakim di Indonesia dibenturkan dengan model kemandirian absolut dari negara-negara pembanding. Ketiga, tahap sintesis preskriptif, yaitu mengintegrasikan temuan dari analisis anggaran dan SDM tersebut untuk merumuskan sebuah konsep kelembagaan baru yang berpusat pada implementasi pemisahan tugas murni (\textit{bifurkasi}) bagi Mahkamah Agung Republik Indonesia.
+
+% ------------------- BAGIAN 3: HASIL DAN PEMBAHASAN -------------------
+\section{RESULT AND DISCUSSION}
+% Pembahasan fokus menjawab rumusan masalah secara sistematis dan dianalisis menggunakan teori (cth: Teori Sistem Hukum, Teori Tata Kelola Peradilan, Teori Independensi Kekuasaan Kehakiman).
+
+\subsection{Urgensi dan Formulasi Model Kemandirian Anggaran Yudikatif}
+% Bahas analisis model anggaran independen (seperti alokasi persentase APBN Kosta Rika & otonomi fiskal AS).
+[Tulis hasil dan pembahasan rumusan masalah 1...]
+
+\subsection{Perbandingan Penataan SDM dan Jenjang Karier Kepaniteraan (Indonesia dan Negara Komparator)}
+% Masukkan analisis ekuivalensi struktur Panitera dengan Secretario (Kosta Rika), Administrative Office (AS), dan NCA (Korsel).
+[Tulis hasil dan pembahasan rumusan masalah 2...]
+
+\subsection{Pemisahan Fungsi Manajerial dan Yudisial (Bifurkasi) sebagai Konsep Ideal Kelembagaan}
+% Bahas kritik terhadap perangkapan jabatan hakim di kepaniteraan dan pentingnya bifurkasi tugas murni.
+[Tulis hasil dan pembahasan rumusan masalah 3...]
+
+% ------------------- BAGIAN 4: KESIMPULAN -------------------
+\section{CONCLUSION}
+% Berisi sintesis jawaban rumusan masalah dalam bentuk paragraf (bukan numbering) dan disertai Rekomendasi/saran konkret kebijakan. Maksimal 5% dari total halaman.
+[Tulis narasi Kesimpulan dan Rekomendasi di sini...]
+
+% ------------------- REFERENSI -------------------
+\renewcommand{\refname}{\textbf{REFERENCES}}
+\begin{thebibliography}{99}
+% Referensi harus menggunakan format APA Style 7th edition
+% Disarankan menggunakan manajer referensi seperti Mendeley/Zotero, atau BibTeX jika di LaTeX.
+\bibitem{ref1}
+Penulis, A. A. (Tahun). \textit{Judul Buku}. Penerbit.
+
+\bibitem{ref2}
+Penulis, B. B. (Tahun). Judul Artikel. \textit{Nama Jurnal}, Volume(Issue), Halaman.
+\end{thebibliography}
+
+% ------------------- DEKLARASI & PERNYATAAN WAJIB -------------------
+\section*{DECLARATION OF CONFLICTING INTERESTS}
+The authors state that there is no conflict of interest in the publication of this article.
+
+\section*{FUNDING INFORMATION}
+None. % Ubah jika ada sumber pendanaan.
+
+\section*{ACKNOWLEDGMENT}
+[Tuliskan ucapan terima kasih kepada pihak yang membantu penelitian di sini...]
+
+\section*{GENERATIVE AI STATEMENT}
+During the preparation of this manuscript, the author(s) used Gemini Agent via Antigravity to structure the outline, refine language, and improve readability. Following this process, the author(s) critically reviewed, edited, and validated the output to ensure accuracy and scientific integrity. The author(s) maintain full accountability for the final content. AI was used solely as a supportive tool and is not credited with authorship. No original data analysis or interpretations were performed by the AI without human oversight.
+
+\end{document}
+```eof
+
+I've generated the LaTeX code containing the complete outline for your article. It includes the English abstract, structured sections reflecting our discussion, and the required statements at the end, such as the Generative AI Statement. Let me know if you need any adjustments or if you're ready to start drafting specific sections!
