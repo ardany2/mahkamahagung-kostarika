@@ -5,14 +5,14 @@
 
 \ifLuaTeX
   \usepackage{fontspec}
-  % \setmainfont{Book Antiqua}
+  \setmainfont{Book Antiqua}
 \else\ifxetex
   \usepackage{fontspec}
-  % \setmainfont{Book Antiqua}
+  \setmainfont{Book Antiqua}
 \else
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
-  \usepackage{mathptmx} % Font Serif alternatif Times/Book Antiqua untuk pdflatex
+  \usepackage{mathpazo} % Font Serif Palatino/Book Antiqua untuk pdflatex
 \fi\fi
 
 \usepackage{geometry}
@@ -20,100 +20,443 @@
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage{caption}
-\usepackage{microtype} % Optimasi pemotongan kata & spasi antar-karakter
+\usepackage[nopatch=footnote]{microtype} % Optimasi pemotongan kata & spasi antar-karakter
 \setlength{\emergencystretch}{3em} % Toleransi penyesuaian spasi agar tidak overfull hbox
 \usepackage{hyperref}
+\usepackage{float} % Mengunci posisi tabel agar tidak memotong paragraf
 
-% Format Heading sesuai template Judicia Suprema
+% Format Heading & Spasi Paragraf sesuai template Judicia Suprema
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{\MakeUppercase}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+\titlespacing*{\section}{0pt}{14pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 3pt minus 2pt}{6pt plus 2pt minus 2pt}
+
+% Pengaturan Jarak Spasi Sebelum & Sesudah Paragraf (Paragraph Spacing)
+\setlength{\parskip}{6pt plus 2pt minus 1pt} % Spasi after/before antar-paragraf
+\setlength{\parindent}{1.25cm} % Indentasi paragraf baru
 
 % Judul (Maksimal 14 Kata)
-\title{\textbf{INDEPENDENSI ANGGARAN YUDIKATIF DAN BIFURKASI TUGAS HAKIM: STUDI KOMPARASI SISTEM PRESIDENSIAL}}
-\author{Nama Penulis1$^*$, Nama Penulis2}
+\title{\textbf{DEKONSTRUKSI SISTEM KASTA PERADILAN: URGENSI BIFURKASI MANAJERIAL DAN KEMANDIRIAN ANGGARAN YUDIKATIF}}
+\author{Moch. Ardany Chabib, S.H.}
 \date{}
 
 \begin{document}
 
 \maketitle
 \begin{center}
-    1*) Correspondence Author*, Fakultas Hukum, Universitas [Nama Kampus], Indonesia, E-mail: [Emailmu] \\
-    2) Author, Fakultas Hukum, Universitas [Nama Kampus], Indonesia, E-mail: [Emailmu]
+    Panitera Pengganti pada Pengadilan Agama Bojonegoro
 \end{center}
 
 \vspace{1em}
 
 % Abstrak wajib berbahasa Inggris (150-250 kata)
-\renewcommand{\abstractname}{\textbf{Abstract}}
-\begin{abstract}
-This study compares the organizational structure and human resource management of the Supreme Courts in Indonesia and Costa Rica, focusing on the separation of judicial and managerial functions and financial independence. While both nations adhere to the \textit{Trias Politica} principle, their implementation of judicial administration differs significantly. This normative legal research employs a comparative approach. Data were collected through library research using constitutional and official legal documents from both countries. The collected data were analyzed qualitatively by mapping equivalent institutional terminologies, specifically comparing the Indonesian \textit{Panitera} with the Costa Rican \textit{Secretario}. The findings reveal that in Indonesia, Supreme Court clerkship positions are currently filled by judges. This practice overlaps judicial and managerial duties and restricts the career progression of lower-level clerks. In contrast, Costa Rica implements a strict separation of these functions and guarantees absolute institutional independence through a constitutionally mandated 6\% allocation of the national budget. The study concludes that Indonesia should reform its Supreme Court institutional structure by professionalizing the clerkship career path to allow judges to focus exclusively on adjudicating cases. Furthermore, adopting a fixed, independent budget allocation model is highly recommended to ensure genuine institutional and financial autonomy.
+\noindent
+\begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \fontsize{9}{11}\selectfont
+    \centering
+    \textbf{ARTICLE INFO}\\
+    \textit{Article history:}\\
+    Received\\
+    January 14, 2026\\
+    Revised\\
+    March 16, 2026\\
+    Accepted\\
+    April 30, 2026\\
+    \vspace{1em}
+    \textbf{Copyright: \copyright~The Author (s). 2026}\\
+    \textbf{This is an open access article under the (CC BY-SA 4.0) license.}\\
+\end{minipage}%
+\hfill\vrule\hfill%
+\begin{minipage}[t]{0.73\textwidth}
+    \vspace{0pt}
+    \centering\textbf{Abstract}\par
+    \vspace{0.5em}
+    \fontsize{11}{13}\selectfont
+    \textit{This study investigates structural anomalies within the Supreme Court of Indonesia by comparing its budget autonomy and human resource administration against presidential counterparts: Costa Rica, the United States, and South Korea. Utilizing normative legal research, this paper evaluates two critical pillars of judicial independence: fiscal autonomy and the bifurcation of adjudicative and managerial duties. The findings uncover a severe violation of the \textbf{Trias Politica} principle in Indonesia, characterized by the executive branch's control over judicial budgets and the monopolization of top administrative posts by career judges. This structural failure has institutionalized a feudalistic hierarchy and triggered an extreme compensation disparity. The study reveals a shocking empirical anomaly: a zero-experience junior judge receives a \textbf{take-home pay} nearly 400\% higher than a senior court clerk burdened with the entire operational management of the court. Consequently, this inequality triggers an intellectual \textbf{brain drain}, as top administrative talents flee to adjudicative tracks, paralyzing the court's managerial backbone. In stark contrast, comparator nations ensure absolute judicial independence through fixed constitutional budget shields (e.g., Costa Rica's 6\% allocation) and pure bifurcation models, wherein non-judge professionals exclusively manage court administration with proportional remuneration. The study concludes that Indonesia must urgently implement pure bifurcation and a hybrid financial autonomy model to eradicate these bureaucratic anomalies, restoring judges exclusively to adjudicative functions while reclaiming the professional dignity of administrative personnel.}\par
+    \vspace{1em}
+    \textit{Keyword : Bifurcation; budget independence; career path; comparative law; Supreme Court.}
+\end{minipage}
 
-\vspace{0.5em}
-\noindent \textbf{Keyword:} Budget independence; Career path; Comparative law; Human resources; Supreme Court.
-\end{abstract}
+\vspace{1.5em}
+\noindent
+\colorbox{gray!15}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+    \centering
+    \vspace{0.5em}
+    \textbf{How to cite this article:}\\
+    Chabib, M. A. (2026). Dekonstruksi Sistem Kasta Peradilan: Urgensi Bifurkasi Manajerial dan Kemandirian Anggaran Yudikatif. \textit{Judicia Suprema}. 1 (1). 01-10. DOI: https://doi.org/10.xxxx/js.v1i1.2026
+    \vspace{0.5em}
+\end{minipage}}
 
 \vspace{2em}
 
 % ------------------- BAGIAN 1: PENDAHULUAN -------------------
 \section{INTRODUCTION}
 
-Negara Kesatuan Republik Indonesia menganut sistem pemerintahan presidensial yang didasarkan pada prinsip pembagian kekuasaan (\textit{Trias Politica}). Dalam pilar tata negara modern, kekuasaan yudikatif yang merdeka merupakan fondasi utama terwujudnya negara hukum. Kemerdekaan peradilan idealnya (\textit{das sollen}) tidak hanya terbatas pada kebebasan hakim dalam memutus perkara (\textit{decisional independence}), tetapi juga menuntut adanya jaminan otonomi kelembagaan dan finansial (\textit{institutional and financial independence}), serta pemisahan yang tegas antara fungsi yudisial murni dengan tata kelola administratif (bifurkasi). Pemisahan ini krusial agar hakim dapat mendedikasikan keahliannya secara eksklusif untuk menegakkan keadilan, sementara urusan manajerial dikelola oleh aparatur kepaniteraan yang profesional.
+Negara Kesatuan Republik Indonesia menganut sistem pemerintahan presidensial yang didasarkan pada prinsip pembagian kekuasaan (\textit{Trias Politica}). Dalam pilar tata negara modern, kekuasaan yudikatif yang merdeka merupakan fondasi utama terwujudnya negara hukum. Kemerdekaan peradilan idealnya (\textit{das sollen}) tidak hanya terbatas pada kebebasan hakim dalam memutus perkara (\textit{decisional independence}), tetapi juga menuntut adanya jaminan otonomi kelembagaan dan finansial (\textit{institutional and financial independence}), serta pemisahan yang tegas antara fungsi yudisial murni dengan tata kelola administratif (bifurkasi). Pemisahan ini krusial agar hakim dapat mendedikasikan keahliannya secara eksklusif untuk menegakkan keadilan, sementara urusan manajerial dikelola oleh aparatur kepaniteraan dan kesekretariatan yang profesional.
 
-Namun, fakta empiris memperlihatkan adanya kesenjangan yang tajam antara idealita hukum dan realita (\textit{das sein}) pada tata kelola kelembagaan Mahkamah Agung di Indonesia. Pertama, dari segi penataan Sumber Daya Manusia (SDM), struktur jabatan kepaniteraan tingkat atas di Mahkamah Agung saat ini diduduki oleh Hakim. Praktik perangkapan jabatan ini memecah fokus hakim pada tugas-tugas administratif manajerial, sekaligus memutus rantai jenjang karier bagi tenaga kepaniteraan organik dari pengadilan tingkat bawah. Kedua, dari aspek otonomi finansial, kekuasaan kehakiman di Indonesia belum memiliki jaminan alokasi anggaran yang independen secara konstitusional. Proses penyusunan anggaran Mahkamah Agung masih sangat bergantung pada persetujuan dan rasionalisasi oleh lembaga eksekutif dan legislatif, yang berpotensi membuka celah intervensi politik anggaran terhadap lembaga yudikatif.
+Namun, fakta empiris memperlihatkan adanya kesenjangan yang tajam antara idealita hukum dan realita (\textit{das sein}) pada tata kelola kelembagaan Mahkamah Agung di Indonesia. Pertama, dari segi penataan Sumber Daya Manusia (SDM), struktur jabatan strategis manajerial puncak—baik pada rumpun kepaniteraan maupun kesekretariatan—saat ini masih didominasi oleh perangkapan jabatan oleh hakim karier, sementara pembinaan kepegawaiannya disubordinasi di bawah rezim eksekutif. Praktik perangkapan fungsi ini memecah fokus hakim pada tugas-tugas administratif manajerial, sekaligus memutus rantai jenjang karier bagi tenaga kepaniteraan dan kesekretariatan organik dari pengadilan tingkat bawah. Kedua, dari aspek otonomi finansial, kekuasaan kehakiman di Indonesia belum memiliki jaminan alokasi anggaran yang independen secara konstitusional. Proses penyusunan anggaran Mahkamah Agung masih sangat bergantung pada persetujuan dan rasionalisasi oleh lembaga eksekutif dan legislatif, yang berpotensi membuka celah intervensi politik anggaran terhadap lembaga yudikatif.
 
 Untuk menemukan konsep ideal penyelesaian masalah tersebut, diperlukan pendekatan perbandingan hukum dengan negara-negara penganut sistem presidensial maupun tradisi hukum yang memiliki kesamaan struktur, seperti Kosta Rika, Amerika Serikat, dan Korea Selatan. Ketiga negara tersebut telah berhasil mewujudkan tata kelola peradilan modern melalui penerapan kemandirian fiskal dan bifurkasi tugas. Kosta Rika memberikan jaminan independensi finansial absolut melalui alokasi minimal 6\% dari APBN untuk sistem peradilannya, sementara Amerika Serikat memberikan otonomi perlindungan anggaran penuh bagi kekuasaan yudikatif federal. Lebih jauh, Amerika Serikat melalui \textit{Ad\-mi\-nis\-tra\-tive Office of the United States Courts} dan Korea Selatan melalui \textit{Na\-tion\-al Court Ad\-mi\-nis\-tra\-tion} (NCA) telah memberikan cetak biru keberhasilan pemisahan tugas hakim dari urusan manajerial secara profesional.
 
-Tinjauan terhadap berbagai literatur dan penelitian terdahulu menunjukkan bahwa diskursus mengenai independensi Mahkamah Agung di Indonesia mayoritas masih didominasi oleh kajian mengenai kebebasan hakim dalam memutus perkara (\textit{decisional independence}) atau sebatas pada proses rekrutmen hakim. Beberapa penelitian mengenai administrasi peradilan pasca-penerapan Sistem Satu Atap (\textit{One Roof System}) umumnya hanya mengevaluasi kinerja birokrasi secara domestik tanpa menawarkan model perbandingan dari negara lain. Di sisi lain, penelitian yang membahas mengenai otonomi anggaran peradilan sering kali berdiri sendiri dan tidak dikaitkan dengan persoalan restrukturisasi Sumber Daya Manusia (SDM) pada jabatan kepaniteraan.
+Tinjauan terhadap berbagai literatur dan penelitian terdahulu menunjukkan bahwa diskursus mengenai independensi Mahkamah Agung di Indonesia mayoritas masih didominasi oleh kajian mengenai kebebasan hakim dalam memutus perkara (\textit{decisional independence}) atau sebatas pada proses rekrutmen hakim. Beberapa penelitian mengenai administrasi peradilan pasca-penerapan Sistem Satu Atap (\textit{One Roof System}) umumnya hanya mengevaluasi kinerja birokrasi secara domestik tanpa menawarkan model perbandingan dari negara lain. Di sisi lain, penelitian yang membahas mengenai otonomi anggaran peradilan sering kali berdiri sendiri dan tidak dikaitkan dengan persoalan restrukturisasi Sumber Daya Manusia (SDM) pada jabatan kepaniteraan dan kesekretariatan.
 
-Berbeda dengan penelitian-penelitian sebelumnya, letak kebaruan (\textit{novelty}) dari artikel ini berada pada pendekatan holistik yang mengintegrasikan dua isu krusial sekaligus: reformasi struktur jenjang karier kepaniteraan dan kemandirian anggaran yudikatif. Kebaruan lainnya terletak pada objek komparasinya. Alih-alih hanya melakukan perbandingan normatif secara biner, penelitian ini membedah irisan tata kelola dari tiga negara presidensial dengan model kelembagaan yang sangat spesifik, yaitu: perlindungan anggaran persentase tetap (6\% APBN) di Kosta Rika, model kemapanan bifurkasi tugas melalui \textit{Administrative Office} di Amerika Serikat, serta profesionalisme \textit{National Court Administration} di Korea Selatan.
+Berbeda dengan penelitian-penelitian sebelumnya, letak kebaruan (\textit{novelty}) dari artikel ini berada pada pendekatan holistik yang mengintegrasikan dua isu krusial sekaligus: reformasi struktur jenjang karier kepaniteraan dan kesekretariatan serta kemandirian anggaran yudikatif. Kebaruan lainnya terletak pada objek komparasinya. Alih-alih hanya melakukan perbandingan normatif secara biner, penelitian ini membedah irisan tata kelola dari tiga negara presidensial dengan model kelembagaan yang sangat spesifik, yaitu: perlindungan anggaran persentase tetap (6\% APBN) di Kosta Rika, model kemapanan bifurkasi tugas melalui \textit{Administrative Office} di Amerika Serikat, serta profesionalisme \textit{National Court Administration} di Korea Selatan.
 
 Melalui telaah perbandingan tersebut, urgensi dari penulisan artikel ini adalah untuk menawarkan konstruksi dan cetak biru (\textit{blueprint}) gagasan yang aplikatif bagi Mahkamah Agung Republik Indonesia. Kontribusi utamanya adalah merumuskan konsep ideal agar Mahkamah Agung dapat memiliki otonomi finansial yang terbebas dari intervensi politik, sekaligus menjamin penataan SDM yang profesional di mana hakim dapat terlepas dari beban manajerial.
 
-Berdasarkan latar belakang tersebut, penelitian ini bertujuan untuk menjawab tiga rumusan masalah utama: (1) Bagaimana urgensi serta formulasi model kemandirian anggaran yudikatif melalui jaminan alokasi independen untuk Mahkamah Agung Republik Indonesia? (2) Bagaimana perbandingan penataan SDM dan jenjang karier kepaniteraan antara Indonesia dan negara-negara komparator? serta (3) Bagaimana pemisahan fungsi manajerial dan yudisial (\textit{bifurkasi}) mewujudkan konsep ideal kelembagaan peradilan?
+Berdasarkan latar belakang tersebut, penelitian ini bertujuan untuk menjawab tiga rumusan masalah utama: (1) Bagaimana urgensi serta formulasi model kemandirian anggaran yudikatif melalui jaminan alokasi independen untuk Mahkamah Agung Republik Indonesia? (2) Bagaimana perbandingan penataan SDM dan jenjang karier kepaniteraan serta kesekretariatan antara Indonesia dan negara-negara komparator? serta (3) Bagaimana pemisahan fungsi manajerial dan yudisial (\textit{bifurkasi}) mewujudkan konsep ideal kelembagaan peradilan?
 
 % ------------------- BAGIAN 2: METODE -------------------
 \section{METHOD}
 
-Penelitian ini merupakan penelitian hukum normatif dengan desain pendekatan perbandingan hukum (\textit{comparative approach}). Unit analisis atau objek material yang dikaji berfokus pada regulasi jaminan otonomi anggaran peradilan dan struktur tata kelola Sumber Daya Manusia (SDM) pada kepaniteraan Mahkamah Agung di empat negara penganut sistem presidensial, yaitu Indonesia, Kosta Rika, Amerika Serikat, dan Korea Selatan. Pemilihan ketiga negara pembanding tersebut didasarkan pada kesesuaian tradisi dan struktur ketatanegaraan dengan Indonesia, serta keberhasilan empiris mereka dalam menerapkan model tata kelola peradilan modern. Sumber data utama yang digunakan adalah data sekunder berupa instrumen hukum esensial dari masing-masing negara. Instrumen tersebut mencakup konstitusi, undang-undang kekuasaan kehakiman, regulasi internal tata kelola administrasi pengadilan, serta literatur akademik dan dokumen cetak biru pembaruan peradilan yang dipublikasikan secara resmi.
+Penelitian ini merupakan penelitian hukum normatif dengan desain pendekatan perbandingan hukum (\textit{comparative approach}). Unit analisis atau objek material yang dikaji berfokus pada regulasi jaminan otonomi anggaran peradilan dan struktur tata kelola Sumber Daya Manusia (SDM) pada kepaniteraan dan kesekretariatan Mahkamah Agung di empat negara penganut sistem presidensial, yaitu Indonesia, Kosta Rika, Amerika Serikat, dan Korea Selatan. Pemilihan ketiga negara pembanding tersebut didasarkan pada kesesuaian tradisi dan struktur ketatanegaraan dengan Indonesia, serta keberhasilan empiris mereka dalam menerapkan model tata kelola peradilan modern. Sumber data utama yang digunakan adalah data sekunder berupa instrumen hukum esensial dari masing-masing negara. Instrumen tersebut mencakup konstitusi, undang-undang kekuasaan kehakiman, regulasi internal tata kelola administrasi pengadilan, serta literatur akademik dan dokumen cetak biru pembaruan peradilan yang dipublikasikan secara resmi.
 
-Metode pengumpulan data dilakukan melalui studi kepustakaan (\textit{library research}) dengan menelusuri teks-teks otoritatif, arsip digital kenegaraan, dan pangkalan data hukum internasional. Mengingat adanya hambatan bahasa dan perbedaan sistem administrasi di negara pembanding, penelusuran difokuskan pada naskah hukum yang telah diterjemahkan secara resmi ke dalam bahasa Inggris atau bahasa Indonesia. Pengumpulan data ini dilakukan secara selektif dengan mengisolasi hanya pada pasal-pasal dan konstitusi yang secara langsung mengatur jaminan nominal/mekanisme anggaran peradilan, serta regulasi kedudukan personel manajerial pengadilan (seperti \textit{Secretario}, \textit{Administrative Office}, atau \textit{National Court Administration}).
+Metode pengumpulan data dilakukan melalui studi kepustakaan (\textit{library research}) dengan menelusuri teks-teks otoritatif, arsip digital kenegaraan, dan pangkalan data hukum internasional. Mengingat adanya hambatan bahasa dan perbedaan sistem administrasi di negara pembanding, penelusuran difokuskan pada naskah hukum berbahasa asli maupun terjemahan resmi ke dalam bahasa Inggris atau bahasa Indonesia yang ditranslasikan dan diselaraskan dengan bantuan Gemini 3.6 Flash AI guna menjamin presisi terminologi hukum teknis. Pengumpulan data ini dilakukan secara selektif dengan mengisolasi hanya pada pasal-pasal dan konstitusi yang secara langsung mengatur jaminan nominal/mekanisme anggaran peradilan, serta regulasi kedudukan personel manajerial pengadilan (seperti \textit{Secretario}, \textit{Administrative Office}, atau \textit{National Court Administration}).
 
-Proses analisis data dalam penelitian ini dilakukan melalui tiga tahapan komparatif yang saling berkesinambungan dan diselaraskan dengan rumusan masalah. Pertama, tahap pemetaan regulasi dan ekuivalensi kelembagaan (\textit{regulatory and equivalence mapping}), yaitu memetakan model alokasi anggaran (seperti jaminan 6\% di Kosta Rika dan perlindungan otonomi fiskal di Amerika Serikat) sekaligus menyetarakan hierarki struktur kepaniteraan agar sistem yang berbeda tersebut dapat diperbandingkan secara proporsional. Kedua, tahap analisis benturan (\textit{conflict analysis}), di mana fakta empiris mengenai ketergantungan penyusunan anggaran pada eksekutif/legislatif serta fenomena perangkapan jabatan manajerial oleh hakim di Indonesia dibenturkan dengan model kemandirian absolut dari negara-negara pembanding. Ketiga, tahap sintesis preskriptif, yaitu mengintegrasikan temuan dari analisis anggaran dan SDM tersebut untuk merumuskan sebuah konsep kelembagaan baru yang berpusat pada implementasi pemisahan tugas murni (\textit{bifurkasi}) bagi Mahkamah Agung Republik Indonesia.
+Proses analisis data dalam penelitian ini dilakukan melalui tiga tahapan komparatif yang saling berkesinambungan dan diselaraskan dengan rumusan masalah. Pertama, tahap pemetaan regulasi dan ekuivalensi kelembagaan (\textit{regulatory and equivalence mapping}), yaitu memetakan model alokasi anggaran (seperti jaminan 6\% di Kosta Rika dan perlindungan otonomi fiskal di Amerika Serikat) sekaligus menyetarakan hierarki struktur kepaniteraan dan kesekretariatan agar sistem yang berbeda tersebut dapat diperbandingkan secara proporsional. Kedua, tahap analisis benturan (\textit{conflict analysis}), di mana fakta empiris mengenai ketergantungan penyusunan anggaran pada eksekutif/legislatif serta fenomena perangkapan jabatan manajerial oleh hakim di Indonesia dibenturkan dengan model kemandirian absolut dari negara-negara pembanding. Ketiga, tahap sintesis preskriptif, yaitu mengintegrasikan temuan dari analisis anggaran dan SDM tersebut untuk merumuskan sebuah konsep kelembagaan baru yang berpusat pada implementasi pemisahan tugas murni (\textit{bifurkasi}) bagi Mahkamah Agung Republik Indonesia.
 
 % ------------------- BAGIAN 3: HASIL DAN PEMBAHASAN -------------------
 \section{RESULT AND DISCUSSION}
 % Pembahasan fokus menjawab rumusan masalah secara sistematis dan dianalisis menggunakan teori (cth: Teori Sistem Hukum, Teori Tata Kelola Peradilan, Teori Independensi Kekuasaan Kehakiman).
 
 \subsection{Urgensi dan Formulasi Model Kemandirian Anggaran Yudikatif}
-% Bahas analisis model anggaran independen (seperti alokasi persentase APBN Kosta Rika & otonomi fiskal AS).
-[Tulis hasil dan pembahasan rumusan masalah 1...]
 
-\subsection{Perbandingan Penataan SDM dan Jenjang Karier Kepaniteraan (Indonesia dan Negara Komparator)}
-% Masukkan analisis ekuivalensi struktur Panitera dengan Secretario (Kosta Rika), Administrative Office (AS), dan NCA (Korsel).
-[Tulis hasil dan pembahasan rumusan masalah 2...]
+Pilar utama dari tegaknya negara hukum adalah kekuasaan kehakiman yang merdeka. Berdasarkan Teori Independensi Kekuasaan Kehakiman (\textit{Judicial Independence Theory}), kemerdekaan yudikatif tidak boleh dimaknai secara sempit hanya pada kebebasan hakim dalam mengadili dan memutus perkara (\textit{decisional independence}). Kemerdekaan tersebut wajib ditopang oleh kemandirian institusional, yang fondasi terpentingnya adalah otonomi finansial (\textit{financial independence}) (Shetreet \& Deschênes, 1985; Russell \& O'Brien, 2001). Di Indonesia, transisi menuju ``Sistem Satu Atap'' pasca-amandemen Konstitusi melalui Pasal 24 ayat (1) UUD 1945 jo. Pasal 81 ayat (1) UU No. 3 Tahun 2009 tentang Mahkamah Agung dan Pasal 8 UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman memang telah menetapkan Mahkamah Agung sebagai Bagian Anggaran (BA 005) tersendiri dalam APBN. Namun, pada tataran normatif-operasional dan praksisnya (\textit{das sein}), kemandirian anggaran yudikatif ini belum terwujud secara absolut.
+
+Penyusunan anggaran Mahkamah Agung saat ini secara rigid masih tunduk pada rezim penganggaran eksekutif di bawah Pasal 14--15 UU No. 17 Tahun 2003 tentang Keuangan Negara dan Pasal 21 UU No. 25 Tahun 2004 tentang SPPN, yang diturunkan dalam Peraturan Pemerintah (PP) No. 6 Tahun 2023 tentang Penyusunan Rencana Kerja dan Anggaran, Pasal 11 PP No. 17 Tahun 2017 tentang Sinkronisasi Perencanaan dan Penganggaran, serta Peraturan Menteri Keuangan (PMK) No. 62 Tahun 2023. Melalui hierarki regulasi penganggaran tersebut, besaran Pagu Indikatif Mahkamah Agung tidak ditentukan secara mandiri oleh yudikatif, melainkan ditetapkan secara unilateral oleh lembaga eksekutif melalui Surat Bersama Menteri Keuangan dan Menteri PPN/Kepala Bappenas. Selanjutnya, penetapan Pagu Anggaran hingga Pagu Definitif Mahkamah Agung masih harus melalui penelaahan dan sinkronisasi eksekutif serta persetujuan legislatif di DPR RI. Mekanisme ini menciptakan subordinasi struktural di mana rancangan anggaran yudikatif dapat dipotong atau diintervensi oleh cabang kekuasaan lain, yang secara implisit membuka ruang bagi politisasi anggaran (\textit{political bargaining}) yang mengancam independensi peradilan (Bedner, 2008; Butt, 2018; Pomery, 2021).
+
+Praktik politisasi anggaran (\textit{budgetary politics}) sebagai instrumen pembalasan politik (\textit{political retaliation}) bukanlah sekadar kekhawatiran teoretis, melainkan fenomena empiris yang melumpuhkan yudikatif di berbagai negara ketika anggarannya disubordinasi oleh cabang kekuasaan lain. Sebagai preseden, di level negara bagian Amerika Serikat (Alaska) pada tahun 2019, Gubernur secara terang-terangan menggunakan hak veto (\textit{line-item veto}) untuk memotong anggaran Mahkamah Agung Alaska sebesar \$334.700 sebagai bentuk hukuman langsung karena Mahkamah Agung memutus perkara yang tidak disukai oleh eksekutif. Kasus penyanderaan anggaran yang ekstrem juga terjadi di Kansas (2014--2015). Ketika Mahkamah Agung Kansas memerintahkan badan legislatif untuk menggelontorkan lebih banyak dana bagi sekolah umum demi memenuhi standar konstitusi, badan legislatif membalas dengan mengesahkan undang-undang yang secara eksplisit mengancam akan menghentikan seluruh pendanaan (\textit{defunding}) untuk sistem peradilan jika pengadilan membatalkan regulasi yang membatasi wewenang Mahkamah Agung. Ini adalah contoh ekstrem \textit{political bargaining} di mana anggaran disandera. Demikian pula di Kenya pada tahun 2019, Kementerian Keuangan (\textit{National Treasury}) secara sepihak memotong hampir 50\% anggaran operasional peradilan dengan dalih "efisiensi nasional". Tindakan ini seketika melumpuhkan jalannya persidangan dan memicu kecurigaan bahwa eksekutif sedang menjinakkan pengadilan yang kerap membatalkan kebijakan inkonstitusional rezim penguasa. Fakta-fakta ini mengonfirmasi bahwa menyerahkan kendali pendanaan kekuasaan kehakiman kepada eksekutif dan legislatif sama halnya dengan menempatkan muruah peradilan di bawah sandera kepentingan politik.
+
+Secara empiris, kesenjangan dan subordinasi fiskal ini terlihat jelas dari porsi anggaran Mahkamah Agung (BA 005) dalam APBN beberapa tahun anggaran terakhir. Padahal, Konstitusi mengamanatkan dalam Pasal 24 ayat (1) UUD NRI 1945 bahwa kekuasaan kehakiman merupakan kekuasaan yang merdeka untuk menyelenggarakan peradilan guna menegakkan hukum dan keadilan, di mana Pasal 24 ayat (2) jo. Pasal 24A ayat (5) melimpahkan tanggung jawab pengelolaan empat lingkungan peradilan (Umum, Agama, Militer, dan TUN) di seluruh Indonesia kepada Mahkamah Agung. Namun, tidak seperti anggaran pendidikan yang secara eksplisit dikunci minimal 20\% dalam Pasal 31 ayat (4) UUD NRI 1945, Konstitusi Indonesia tidak memuat norma jaminan persentase anggaran bagi kekuasaan kehakiman. Akibatnya, penyusunan anggaran yudikatif diserap oleh mekanisme umum APBN di bawah Pasal 23 ayat (1)--(3) UUD NRI 1945 yang dikontrol penuh oleh eksekutif dan legislatif.
+
+Dampaknya, porsi alokasi anggaran Mahkamah Agung terdegradasi secara drastis. Pada TA 2025, berdasarkan Surat Bersama Menteri Keuangan No. S-346/\allowbreak{}MK.02/\allowbreak{}2024 dan Menteri PPN/Kepala Bappenas No. B-201/\allowbreak{}D.8/\allowbreak{}PP.04.03/\allowbreak{}04/\allowbreak{}2024 tentang Pagu Indikatif Belanja K/L TA 2025 jo. UU No. 62 Tahun 2024 tentang APBN TA 2025, Mahkamah Agung dialokasikan Pagu Indikatif sebesar Rp12,05 triliun (dengan Pagu Definitif Rp12,54 triliun). Dari total Belanja Negara APBN 2025 sebesar Rp3.621,3 triliun, porsi anggaran Mahkamah Agung hanya mencapai sekitar 0,346\% (kurang dari 0,35\%). Selanjutnya pada TA 2026, berdasarkan Surat Bersama Menteri Keuangan dan Menteri PPN/Kepala Bappenas tentang Pagu Indikatif TA 2026 jo. Perpres Rincian APBN TA 2026, Pagu Indikatif Mahkamah Agung ditetapkan sebesar Rp12,85 triliun, yang dari total APBN 2026 sebesar Rp3.786,7 triliun hanya merepresentasikan porsi 0,339\% (sekitar 0,34\%). Bahkan dalam proyeksi penyusunan RKA-K/L TA 2027 berdasarkan Kerangka Ekonomi Makro dan Pokok-Pokok Kebijakan Fiskal (KEM-PPKF) 2027 jo. PMK No. 62 Tahun 2023, dari usulan kebutuhan RKA-K/L Mahkamah Agung sebesar Rp14,10 triliun, proyeksi alokasi pagu indikatif eksekutif hanya berkisar Rp13,20 triliun (sekitar 0,33\%--0,35\% dari APBN). Porsi yang sangat kecil dan berkisar di bawah 0,35\% ini menegaskan betapa lemahnya posisi tawar finansial badan peradilan tertinggi Indonesia jika dibandingkan dengan beban tugas konstitusional mengelola empat lingkungan peradilan di seluruh nusantara.
+
+Krisis kemandirian anggaran ini pada akhirnya menciptakan anomali fatal di lapangan yang secara langsung mengorbankan para pencari keadilan (\textit{justitiabelen}). Akibat sulitnya Mahkamah Agung mengajukan ekspansi RKA-K/L karena hambatan birokrasi eksekutif dan legislatif, beban biaya penyelesaian perkara terpaksa disubsidi oleh masyarakat. Sebagai contoh riil dalam yurisdiksi perkara perdata, seluruh biaya untuk Pemeriksaan Setempat (\textit{descente}), sita jaminan, pencocokan (\textit{konstatering}), sita eksekusi, hingga eksekusi riil, murni dibebankan kepada pihak yang mengajukan. Komponen panjar biaya perkara ini membengkak karena harus menutupi sewa transportasi, biaya panggilan para pihak, biaya pengamanan aparat kepolisian, hingga honorarium pendampingan aparat desa/kelurahan setempat. Tidak jarang, akumulasi biaya perkara (\textit{court fees}) tersebut hampir setara atau bahkan lebih besar dari nilai objek yang disengketakan. Tragisnya, di balik biaya selangit yang ditanggung pencari keadilan tersebut, komponennya sama sekali tidak mencakup akomodasi, uang perjalanan dinas dalam kota, atau penyediaan sarana transportasi mobil dinas yang representatif dan aman bagi Majelis Hakim, Panitera Pengganti, maupun Jurusita. Kondisi sistemik ini sangat rentan memengaruhi muruah dan kualitas putusan pengadilan, serta secara diametral mengkhianati amanat asas peradilan cepat, sederhana, dan biaya ringan. Apabila Mahkamah Agung diberikan kewenangan tata kelola otonomi anggaran yang proporsional melalui APBN, pembiayaan krusial penegakan hukum semacam ini niscaya tidak perlu lagi memeras kantong masyarakat dan cukup diatur pelaksanaannya melalui Peraturan Mahkamah Agung (PERMA).
+
+Untuk mengatasi persoalan tersebut, Kosta Rika menawarkan formulasi tata kelola anggaran yudikatif yang paling progresif dan terukur. Konstitusi Politik Republik Kosta Rika secara tegas mengunci jaminan finansial peradilan melalui model persentase tetap (\textit{fixed percentage allocation}). Berdasarkan Pasal 177 Konstitusi Kosta Rika (Constitución Política de la República de Costa Rica, 1949, art. 177), kekuasaan kehakiman dijamin mendapatkan alokasi anggaran minimal sebesar 6\% (enam persen) dari total Anggaran Pendapatan reguler negara setiap tahunnya. Formulasi konstitusional ini mematikan celah tawar-menawar politik antara yudikatif dan eksekutif/legislatif dalam penyusunan anggaran. Jaminan persentase ini memberikan Mahkamah Agung Kosta Rika kepastian dana abadi yang kebal terhadap dinamika pergantian rezim politik, sehingga mereka dapat merancang program pembaruan peradilan jangka panjang secara mandiri dan berkesinambungan (Wilson, 2011).
+
+Di sisi lain, Amerika Serikat menghadirkan model otonomi fiskal melalui perisai regulasi prosedural yang tak kalah efektif. Di Amerika Serikat, penyusunan anggaran untuk peradilan federal dikelola secara profesional oleh \textit{Ad\-mi\-nis\-tra\-tive Office of the United States Courts} (AO) (Wheeler, 2014). Keistimewaan dari model ini adalah lembaga eksekutif---dalam hal ini \textit{Office of Management and Budget} (OMB) yang berada di bawah Presiden---diwajibkan oleh hukum untuk meneruskan usulan anggaran dari AO kepada Kongres secara utuh, tanpa memiliki kewenangan veto, modifikasi, atau pemotongan sepihak (28 U.S.C. § 605). Yudikatif mempresentasikan dan menjustifikasi anggarannya langsung di hadapan legislatif.
+
+Melalui komparasi di atas, urgensi bagi Mahkamah Agung Republik Indonesia untuk mereformasi tata kelola anggarannya menjadi sangat krusial. Perlu ditegaskan bahwa reformasi pelindung anggaran ini tidak mutlak mensyaratkan amandemen Undang-Undang Dasar yang sarat beban politik. Sebagai jalan keluar pragmatis, Indonesia dapat memformulasikan model kemandirian anggaran hibrida yang mengadaptasi ketegasan Kosta Rika dan perlindungan prosedural Amerika Serikat melalui jalur legislasi biasa. 
+
+Secara normatif, formulasi ini dapat diwujudkan cukup melalui revisi Undang-Undang Kekuasaan Kehakiman (UU No. 48 Tahun 2009) dan Undang-Undang Keuangan Negara (UU No. 17 Tahun 2003). Revisi tersebut wajib merumuskan dua jaminan mutlak: pertama, menetapkan \textit{fixed percentage} atau ambang batas minimal persentase APBN untuk Mahkamah Agung (misalnya 1\% hingga 2\% dari APBN sebagai satu kesatuan pagu komprehensif yang merangkum seluruh kebutuhan belanja pegawai, belanja operasional, dan belanja modal peradilan) layaknya porsi khusus dana pendidikan atau kesehatan; dan kedua, menyisipkan perisai prosedural yang menghapus kewenangan eksekutif dalam memotong atau memodifikasi usulan rancangan anggaran Mahkamah Agung sebelum diajukan ke DPR. 
+
+Sebagai wujud nyata dari perumusan norma tersebut, revisi UU Keuangan Negara atau UU Kekuasaan Kehakiman cukup menyisipkan rumusan pasal baru yang mengintegrasikan kedua jaminan tersebut secara eksplisit, yang berbunyi: "Usulan Rencana Kerja dan Anggaran (RKA) Mahkamah Agung yang diajukan kepada Presiden, wajib diteruskan secara utuh kepada Dewan Perwakilan Rakyat tanpa ada pemotongan atau modifikasi pagu oleh Menteri Keuangan atau Bappenas, dengan ambang batas minimal 1\% dan maksimal 2\% dari APBN". Perpaduan dua jaminan dalam satu norma regulasi ini beroperasi layaknya sistem penguncian ganda (\textit{double-lock system}): perisai prosedural mengeliminasi pemotongan sepihak oleh eksekutif, sementara ambang batas persentase mengunci batas bawah pagu definitif guna melucuti potensi penyanderaan atau pembalasan politik (\textit{political retaliation}) oleh legislatif saat pengesahan APBN. 
+
+Dengan perlindungan hukum mutlak setingkat undang-undang ini, Mahkamah Agung tidak lagi tersandera secara finansial oleh cabang kekuasaan mana pun, sehingga kemurnian asas \textit{Trias Politica} dapat ditegakkan tanpa harus menunggu perubahan konstitusi (Asshiddiqie, 2019).
+
+\subsection{Dekonstruksi Tata Kelola SDM: Menuju Sistem Kepegawaian Yudikatif yang Mandiri}
+
+Menurut Lawrence M. Friedman dalam Teori Sistem Hukum, elemen struktur (\textit{structure}) merupakan kerangka kelembagaan persisten yang menentukan bagaimana institusi bekerja secara fungsional (Friedman, 1975). Dalam konteks peradilan Indonesia, penataan Sumber Daya Manusia (SDM) kepaniteraan dan kesekretariatan masih terjebak pada anomali struktural ganda: subordinasi administrasi kepegawaian di bawah eksekutif, serta sentralisasi birokrasi yang membelenggu meritokrasi.
+
+Mengenai anomali pertama, yakni subordinasi eksekutif. Meskipun Pasal 24 UUD NRI 1945 mengamanatkan kemerdekaan peradilan dan memposisikan Hakim sebagai Pejabat Negara, penyelenggaraan kepegawaian Mahkamah Agung secara praktis masih terkooptasi oleh rezim Aparatur Sipil Negara (ASN) di bawah Badan Kepegawaian Negara (BKN) dan Kementerian PAN-RB. Seluruh aparatur peradilan—baik Hakim, Panitera, maupun pejabat/pelaksana Kesekretariatan—masih didikte oleh instrumen birokrasi kementerian, seperti kewajiban presensi/absensi elektronik dan penyusunan Sasaran Kinerja Pegawai (SKP). 
+
+Penundukan pada rezim eksekutif ini melahirkan benturan operasional yang tajam. Instrumen SKP eksekutif dirancang berdasarkan metrik kehadiran fisik (jam 08.00--16.00) dan kuantitas produksi administratif; standar yang tidak kompatibel dengan muruah peradilan. Di peradilan pidana khusus (Tipikor), majelis hakim beserta panitera kerap menggelar sidang hingga larut malam demi mengejar batas masa penahanan terdakwa atau karena harus memeriksa puluhan saksi. Ironisnya, karena luput menekan mesin presensi (\textit{clock-out}) akibat dinamika persidangan \textit{pro justitia}, sistem BKN justru menghukum dedikasi mereka dengan status mangkir dan pemotongan remunerasi. Demikian pula pada unit Kesekretariatan, dukungan operasional persidangan hingga pengadaan sarana IT e-Court yang membutuhkan respons cepat kerap terganjal oleh prosedur kaku dan jam kerja administratif kementerian. Anomali serupa terjadi di Peradilan Agama; formulasi kaku SKP memaksa aparatur mematok "target penyelesaian perkara cerai" secara kuantitatif demi mengejar Predikat Kinerja. Pendekatan ini melahirkan insentif sesat (\textit{perverse incentive}), seolah-olah pengadilan dituntut memproduksi akta cerai sebanyak mungkin layaknya pabrik, mengabaikan esensi peradilan dalam memulihkan ketahanan keluarga. Mengukur keadilan dengan kacamata kuota produksi kementerian adalah reduksi fatal terhadap hakikat penegakan hukum.
+
+Lebih dari sekadar benturan instrumen kinerja, subordinasi kepegawaian di bawah rezim ASN eksekutif ini juga menciptakan diskriminasi kesejahteraan yang memprihatinkan bagi Pejabat Non-Hakim (Aparatur Kepaniteraan dan Kesekretariatan). Tidak seperti instansi vertikal di bawah kementerian eksekutif (misalnya Kementerian Keuangan atau Kejaksaan) yang ditopang anggaran memadai, ketika aparatur peradilan harus menjalani mutasi nasional (\textit{tour of duty}) lintas yurisdiksi, Biro Perencanaan dan Organisasi Badan Urusan Administrasi Mahkamah Agung (Biro Renog BUA MARI) sering kali terbentur kekakuan birokrasi eksekutif saat mengajukan postur anggaran tunjangan transportasi maupun tunjangan kemahalan. Saat ditempatkan jauh dari \textit{homebase}, mayoritas aparatur sipil negara (ASN) peradilan ini tidak difasilitasi rumah dinas, sehingga mereka terpaksa merogoh kantong pribadi yang terbatas untuk menyewa indekos atau kontrakan rumah apabila membawa serta keluarganya. 
+
+Padahal, secara regulasi, pengadaan perumahan bagi aparatur sejatinya telah diatur dalam Peraturan Pemerintah No. 40 Tahun 1994 jo. PP No. 31 Tahun 2005 tentang Rumah Negara. Faktanya, instansi eksekutif seperti Kemenkeu dan Kejaksaan hampir selalu mendapat persetujuan alokasi Belanja Modal dalam DIPA untuk pembangunan mess atau rumah dinas secara masif di daerah. Kesejahteraan mereka juga dibentengi oleh regulasi insentif kinerja (remunerasi) vertikal yang jauh lebih masif, seperti Perpres No. 37 Tahun 2015 untuk DJP Kemenkeu yang menetapkan besaran tunjangan sangat tinggi. Besaran remunerasi ini secara faktual mampu mengakomodasi \textit{cost of living} di wilayah mutasi, sebuah privilese fiskal yang permohonan peningkatannya sering kali ditolak atau dipangkas jika diusulkan oleh Mahkamah Agung.
+
+Ketimpangan ini terasa sangat miris apabila dikomparasikan dengan standar kepegawaian korporasi swasta atau Badan Usaha Milik Negara (BUMN) tertentu, di mana pegawai yang dimutasi lintas pulau secara otomatis mendapatkan fasilitas representatif, termasuk penyediaan perumahan dinas dan hak tunjangan tiket kunjungan keluarga (\textit{family visit allowance}) secara periodik bagi pegawai yang terpisah dari domisili keluarganya (\textit{unaccompanied assignment}), sebagaimana lumrah diatur dalam standar korporasi modern. Sebagai contoh komparatif, Perjanjian Kerja Bersama (PKB) pada korporasi BUMN \textit{top-tier} (seperti sektor perbankan Himbara atau energi) mewajibkan perusahaan untuk mengalokasikan Fasilitas Tunjangan Perjalanan Cuti atau \textit{Home Leave Ticket} bagi pegawai yang berstatus \textit{bujang lokal} (mutasi ke luar daerah tanpa membawa keluarga inti), dengan frekuensi pemberian hak tiket penerbangan rata-rata 2 hingga 4 kali dalam setahun (PT Bank Mandiri (Persero) Tbk, 2024). Realitas pahit ini membuktikan bahwa penundukan aparatur yudikatif di bawah skema kepegawaian umum (\textit{civil service}) sangat gagal dalam mengakomodasi tingkat kerentanan, mobilitas, dan beban pengabdian khusus sebagai pilar penegak hukum.
+
+\subsubsection{Rekonseptualisasi Status Kepegawaian: Komparasi Tiga Kamar Kekuasaan}
+
+Untuk mengurai benang kusut tersebut, Mahkamah Agung secara institusional tidak memiliki kewenangan penuh untuk merekonseptualisasi status hukum aparaturnya sendiri, mengingat postur kepegawaian ini telah terkunci secara rigid oleh Undang-Undang Kekuasaan Kehakiman dan UU ASN. Oleh karena itu, kewenangan dan tanggung jawab reformasi mutlak berada di tangan lembaga Eksekutif dan Legislatif untuk menyesuaikan regulasi yang ada dengan berkaca pada standar tata negara Kosta Rika, Amerika Serikat, dan Korea Selatan. Sesuai napas murni \textit{Trias Politica}, terminologi "Pejabat Negara" maupun "Aparatur Negara" seyogianya didekonstruksi dan dipilah secara kategoris menjadi tiga pilar: Eksekutif, Legislatif, dan Yudikatif. Seluruh entitas manusia yang bekerja di bawah payung Mahkamah Agung—baik hakim maupun tenaga administratif—harus disatukan dalam satu payung hukum otonom sebagai \textbf{Aparatur Yudikatif}, dan mutlak dibebaskan dari nomenklatur kepegawaian (ASN) milik eksekutif.
+
+
+Secara epistemologis dan etimologis, keengganan Eksekutif dan Legislatif di Indonesia untuk melakukan pemurnian status ini berakar pada sesat pikir (\textit{fallacy}) dalam memaknai nomenklatur "Kekuasaan Kehakiman". Pembentuk undang-undang secara keliru menyamakan konsep "Kehakiman" (sebagai sistem/institusi) dengan "Hakim" (sebagai individu pengadil), sehingga mereduksi makna institusi peradilan menjadi sangat sempit. Padahal, dalam tradisi linguistik dan filsafat hukum global, keduanya memiliki demarkasi ontologis yang sangat tegas. 
+
+Dalam terminologi Latin klasik, \textit{Judiciarius} (sistem peradilan) adalah entitas kelembagaan makro yang komprehensif, berbeda dengan \textit{Judex} yang merujuk semata pada individu sang pengadil. Pemisahan identitas ini juga absolut dalam nomenklatur Anglo-Saxon yang memisahkan \textit{Judiciary} (sistem kelembagaan) dari \textit{Judge} (person), serta tata hukum Belanda yang membedakan \textit{Rechterlijke Macht} (kekuasaan peradilan) dari \textit{Rechter} (hakim). Lebih mendasar lagi, filsuf Montesquieu dalam karya monumentalnya \textit{L'Esprit des Lois} mengonsepsikan \textit{puissance de juger} (kekuasaan mengadili) sebagai sebuah fungsi ekosistem kelembagaan, bukan sekadar privilese personal seorang magistrat (Montesquieu, 1748). 
+
+Akibat dari cara pandang yang reduksionis di Indonesia ini, kemandirian dan hak protokoler yudikatif dipandang eksklusif hanya menjadi monopoli profesi hakim semata. Padahal, secara yuridis, landasan konstitusional Pasal 24 UUD NRI 1945 jo. Undang-Undang Kekuasaan Kehakiman secara tegas mengonstruksikan "Kehakiman" sebagai sebuah ekosistem peradilan terpadu (\textit{Integrated Justice System}), yang secara fungsional ditopang oleh rincian pilar berikut:
+\begin{enumerate}
+    \item \textbf{Pelaku Inti (Pemegang Wewenang Mengadili):} Profesi utama yang memegang palu keadilan, meliputi Hakim Agung (di tingkat kasasi/PK), Hakim Konstitusi (penguji undang-undang dan sengketa lembaga), Hakim karier Tingkat Pertama dan Banding (pada pengadilan negeri, agama, militer, dan TUN), hingga Hakim Ad Hoc yang menangani pengadilan khusus (Tipikor, PHI, HAM).
+    \item \textbf{Aparatur Pengadilan (Pendukung Teknis):} Entitas organik yang diwajibkan undang-undang untuk mendampingi persidangan, seperti Panitera yang mengurus administrasi perkara dan mencatat Berita Acara Sidang, serta Jurusita yang mengeksekusi panggilan (\textit{relaas}) dan putusan di lapangan, didukung mutlak oleh kesekretariatan sebagai mesin penggerak organisasi.
+    \item \textbf{Profesi Penegak Hukum Terkait:} Elemen eksternal penunjang siklus kekuasaan kehakiman, mulai dari Polisi (penyelidik/penyidik pada tahap awal), Jaksa (penuntut umum dan eksekutor putusan pidana), Advokat (penasihat hukum independen penjaga peradilan berimbang), hingga Petugas Pemasyarakatan (sipir lapas) yang menjalankan ujung akhir proses kehakiman pidana.
+\end{enumerate}
+
+Pengingkaran terhadap realitas ekosistem ini merupakan wujud nyata cacat epistemologis. Menafikan peran krusial kepaniteraan dan kesekretariatan sama dengan melumpuhkan operasionalisasi Kekuasaan Kehakiman itu sendiri. Pada akhirnya, interpretasi sempit ini melegitimasi kebijakan diskriminatif yang membelah entitas tunggal Mahkamah Agung ke dalam sistem "kasta". Praktik ini melahirkan jurang kesenjangan sosial dan finansial yang amat ekstrem: di satu sisi para hakim menikmati postur remunerasi dan protokoler pejabat tinggi, sementara di sisi lain, aparatur non-hakim dipaksa bertahan dengan standar gaji subsisten ala kementerian.
+
+\subsubsection{Bifurkasi Internal dan Jurang Kesenjangan Hak Keuangan}
+
+Anomali struktural kedua yang menggerogoti SDM peradilan Indonesia adalah dominasi jabatan manajerial puncak oleh hakim karier. Berdasarkan skema Pasal 20 jo. Pasal 21 Undang-Undang Mahkamah Agung, jabatan strategis manajerial puncak—baik Panitera maupun Sekretaris Mahkamah Agung—diwajibkan atau didominasi untuk diduduki oleh hakim karier. Secara filosofis dan historis, kebijakan perangkapan fungsi ini merupakan residu dari tradisi tata peradilan kolonial Belanda (\textit{Gouvernementsrechtspraak}). Pada masa itu, kedudukan \textit{Griffier} (Panitera) dan fungsionaris administrasi kerap diposisikan sekadar sebagai pos klerikal transisi bagi para calon hakim (\textit{Rechterlijk Ambtenaar}) sebelum mereka diangkat secara definitif, sehingga kepaniteraan dan kesekretariatan tidak pernah diakui sebagai profesi manajerial yang otonom (Pompe, 2005). 
+
+Dogma feodal ini kemudian dilanggengkan secara sistematis pada era Orde Baru—ketika administrasi peradilan disubordinasi di bawah Departemen Kehakiman—demi memastikan sentralisasi kendali birokrasi pengadilan tetap berada di tangan hakim-hakim senior. Rentetan sejarah ini akhirnya memfosil menjadi asumsi usang di benak pembentuk undang-undang, yang memendam bias institusional bahwa aparatur organik non-hakim secara inheren dinilai lebih lemah kapasitas intelektual dan manajerialnya (Susanti \& Setiawan, 2020). Padahal, secara faktual, aparatur kepaniteraan (teknis peradilan) dan kesekretariatan (manajemen umum dan keuangan) yang meniti karier dari bawah memiliki kepakaran manajerial yang jauh lebih spesifik dibandingkan hakim yang wilayah keilmuannya adalah adjudikasi murni. Dominasi warisan masa lalu ini menciptakan \textit{bottleneck} struktural yang sangat tajam bagi karier aparatur murni.
+
+Fakta yang terjadi saat ini, desain organisasi pengadilan justru disubordinasi dan diamputasi oleh Surat Persetujuan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Men\-PAN-RB) Nomor B\slash 2128\slash M.PANRB\slash 6\slash 2015 tertanggal 25 Juni 2015. Intervensi administratif dari kementerian tersebut secara sepihak telah menghapus eksistensi jabatan jenjang karier strategis, seperti Wakil Panitera dan Wakil Sekretaris, sekaligus mereduksi secara drastis kewenangan Panitera yang semula juga mengemban otoritas sebagai Sekretaris Pengadilan. 
+
+Lebih jauh lagi, setelah lebih dari satu dekade gaung reformasi birokrasi dikumandangkan, MenPAN-RB terbukti tidak serius---atau bahkan tidak mampu---untuk mendefinisikan dan menerjemahkan karakteristik profesi kepaniteraan (seperti Panitera, Panitera Muda, Panitera Pengganti, Jurusita, dan Jurusita Pengganti) ke dalam payung nomenklatur jabatan fungsional yang proper. Kegagapan ini berbanding terbalik dengan perlakuan terhadap rumpun jabatan fungsional ASN eksekutif yang dengan sangat mudah dan cepat difasilitasi regulasinya, semisal pengesahan Peraturan MenPAN-RB Nomor 32 Tahun 2020 tentang Jabatan Fungsional Pranata Komputer. Pembiaran institusional dan perlakuan diskriminatif ini menjadi bukti tak terbantahkan betapa destruktifnya ketika arsitektur internal Kekuasaan Kehakiman dibiarkan untuk di\-bong\-kar-pa\-sang oleh otoritas kementerian eksekutif. Oleh karena itu, perombakan struktur kelembagaan secara otonom mutlak diperlukan untuk mengembalikan muruah organisasi yudikatif yang utuh, berjenjang, dan sepenuhnya kebal dari intervensi birokrat kementerian.
+
+
+Untuk memecahkan kebuntuan tersebut, tata kelola negara komparator yang menerapkan payung otonom Aparatur Yudikatif selalu diiringi oleh bifurkasi secara internal: mendemarkasi secara tajam kedudukan profesi Hakim dan profesi Administratif. Di Amerika Serikat, Hakim berstatus eksklusif sebagai \textit{Constitutional Officers} (Article III), sedangkan staf administratif direkrut dan dikelola mandiri oleh \textit{Administrative Office of the United States Courts} (AO) sebagai \textit{Statutory Employees} berlandaskan 28 U.S. Code § 602 dan § 711. Di Korea Selatan, \textit{Court Organization Act} mengatur Hakim secara independen dalam Bab IV, sementara aparatur administratif diatur terpisah dalam Bab VI di bawah otoritas eksklusif \textit{National Court Administration} (NCA). Kosta Rika, melalui \textit{Ley Orgánica del Poder Judicial}, juga memisahkan Hakim sebagai \textit{Funcionarios que Administran Justicia} (Pasal 43) dan administrator pengadilan sebagai \textit{Personal Auxiliar} (Pasal 147). 
+
+Sistem bifurkasi ini sukses memosisikan administrasi peradilan sebagai profesi manajerial yang mandiri (\textit{stand-alone profession}). Melalui meritokrasi ini, seorang staf tata usaha di Amerika Serikat atau Korea Selatan dapat merintis karier secara \textit{bottom-up} hingga menjadi Direktur AO atau memimpin NCA tanpa harus berstatus hakim. Demarkasi yang sehat ini berhasil menghancurkan \textit{bottleneck} hierarki feodal tersebut, sekaligus menyelamatkan para hakim dari beban birokrasi agar dapat fokus secara absolut pada kewajiban konstitusional utamanya dalam memutus perkara.
+
+Kemandirian absolut ini memungkinkan cabang yudikatif untuk membuang instrumen evaluasi kaku ala SKP eksekutif, dan merumuskan sistem kinerjanya sendiri. Evaluasi aparatur Kosta Rika murni berpedoman pada \textit{Reglamento del Sistema Integrado de Evaluación del Desempeño del Poder Judicial} yang menyeimbangkan target administratif dengan standar etika pelayanan. Evaluasi staf pengadilan AS diatur spesifik dalam \textit{Guide to Judiciary Policy} (GJP) Volume 12 Bab 4, yang menitikberatkan pada kelancaran \textit{judicial support}, bukan kehadiran mekanis. Demikian halnya Korea Selatan yang mengukur dedikasi manajemen kepaniteraan dan kesekretariatan secara mandiri melalui Peraturan Mahkamah Agung Nomor 1088. Berkaca dari komparasi tersebut, rezim Eksekutif dan Legislatif di Indonesia seyogianya cukup menerbitkan regulasi payung mengenai standar etika pelayanan publik secara umum—sebagaimana kerangka dasar etika di Kosta Rika—dan membiarkan Mahkamah Agung merumuskan formulasi kinerjanya sendiri. Keberadaan instrumen presensi pada dasarnya bukanlah sebuah masalah, dengan catatan krusial: apabila dinamika persidangan memaksa hakim dan aparatur bekerja melampaui batas jam absensi normal, sistem harus mampu memfasilitasi kompensasi yang riil (\textit{overtime compensation}), bukan justru menghukum dedikasi mereka dengan pemotongan remunerasi akibat kekakuan algoritma kementerian.
+
+Lebih jauh, dekonstruksi status ini melahirkan sistem hak keuangan (\textit{Take-Home Pay}/THP) yang sangat meritokratis, meruntuhkan hierarki feodal di Indonesia yang selama ini mendiskriminasi aparatur non-hakim. Karena jalur profesinya terpisah secara paralel, skala remunerasi administrator pengadilan didasarkan murni pada kompleksitas valuasi beban manajerial. Di Amerika Serikat, seorang \textit{Clerk of Court} tingkat banding atau \textit{Circuit Executive} dibayar menggunakan \textit{Judiciary Salary Plan} jenjang tertinggi (JSP-16 hingga JSP-17), yang plafon THP-nya setara atau bahkan melampaui gaji pokok seorang Hakim Federal tingkat pertama (\textit{Magistrate Judge}). Di Korea Selatan, pejabat teras NCA (\textit{Grade 1}) menerima kompensasi yang ekuivalen dengan hakim tinggi atau pejabat setingkat menteri, jauh melampaui THP hakim pratama yang baru diangkat. Realitas komparatif ini menegaskan bahwa dalam tata kelola peradilan modern, kepaniteraan dan kesekretariatan adalah profesi manajerial puncak yang prestisius, di mana kompensasinya dihargai sejajar dengan fungsionaris pemutus perkara, bebas dari doktrin usang kelas pekerja sekunder.
+
+Secara konstitusional, dekonstruksi status kepegawaian dan otonomi kelembagaan ini menjadi instrumen pemulihan hak-hak aparatur yudikatif untuk merintis karier dan menduduki jabatan manajerial kepaniteraan tertinggi—bahkan hingga level Panitera Mahkamah Agung—tanpa dipangkas oleh diskriminasi struktural perangkapan jabatan hakim. Kesetaraan peluang ini merupakan manifestasi langsung dari amanat Pasal 28D ayat (2) Undang-Undang Dasar NRI 1945, yang secara tegas menjamin hak setiap insan untuk bekerja serta mendapat imbalan dan perlakuan yang adil, layak, dan nondiskriminatif dalam pengembangan karier. 
+
+Sebagai bukti konkret bahwa amanat kesetaraan karier ini dapat diwujudkan, negara-negara komparator telah membuktikannya secara empiris melalui arsitektur kelembagaan yang otonom. Di pengadilan tingkat pertama dan banding Amerika Serikat, fungsi teknis yudisial dan administratif manajerial tidak dipisah dan dibenturkan, melainkan disatukan secara efisien di bawah komando seorang \textit{Clerk of Court} (Panitera). Berbeda dengan Indonesia yang membelah Panitera dan Sekretaris menjadi dua entitas yang sering kali tumpang tindih, \textit{Clerk of Court} di Amerika Serikat bertindak eksekutif sebagai \textit{Chief Executive Officer} (CEO) pengadilan yang membawahi seluruh urusan persidangan sekaligus operasional kesekretariatan (keuangan, SDM, IT). Secara hierarkis, \textit{Clerk of Court} bertanggung jawab langsung kepada \textit{Chief Judge} (Ketua Pengadilan), namun Ketua Pengadilan tidak akan pernah mengintervensi teknis manajerial tersebut agar dapat berfokus memutus perkara. 
+
+Lebih dari itu, \textit{Clerk of Court} memiliki struktur penjenjangan yang kukuh, ditopang oleh keberadaan \textit{Chief Deputy Clerk} (Wakil Panitera) dan \textit{Deputy Clerks} (Panitera Pengganti atau staf teknis) yang seluruh formasinya eksklusif diisi oleh tenaga profesional karier non-hakim. Paradigma penyatuan fungsi kepaniteraan dan kesekretariatan ke dalam satu figur administrator tunggal ini juga direplikasi secara identik oleh Korea Selatan dan Kosta Rika. 
+
+Di tingkat pengadilan lokal Korea Selatan, legitimasi ini dipaku kuat melalui \textit{Court Organization Act} atau \textit{Beobwon Jojikbeop} Republik Korea (secara historis disahkan sebagai Undang-Undang Nomor 51 Tahun 1949 dan terus dimutakhirkan, dengan salah satu amandemen terkininya tercatat sebagai \textit{Act No.} 20465). Berdasarkan regulasi tersebut, secara presisi diatur dalam Pasal 10 mengenai Kesekretariatan Pengadilan (\textit{Secretariats of Various Courts, etc.}), diamanatkan bahwa setiap pengadilan wajib memiliki entitas kesekretariatan (\textit{Samuguk}) yang dipimpin oleh seorang \textit{Chief Court Secretary} (\textit{Samugukjang}). Pejabat ini bertindak sebagai manajer eksekutif tunggal yang mengendalikan manajemen perkara (kepaniteraan) maupun administrasi umum (kesekretariatan) di bawah mandat \textit{Chief Judge}. Sama halnya dengan arsitektur penjenjangan di Amerika Serikat, \textit{Chief Court Secretary} di Korea Selatan disokong oleh lapisan struktur manajerial yang sangat solid di bawahnya, meliputi tingkat Biro (\textit{Bureau}) dan Divisi (\textit{Section}), di mana para direktur dan kepala divisinya secara fungsional bertindak sebagai wakil manajer operasional. Aturan ini secara spesifik mengharuskan seluruh formasi hierarkis tersebut diisi secara eksklusif oleh pejabat karier administratif peradilan (\textit{court official} atau \textit{Beobwon Gongmuwon}), bukan oleh hakim, sehingga hak dan rantai jenjang karier aparatur pengadilan murni terjamin tanpa diskriminasi.
+
+Serupa dengan itu, arsitektur peradilan Kosta Rika yang tertuang dalam \textit{Ley Orgánica del Poder Judicial} (Undang-Undang Nomor 7333) mendesain tata kelola pengadilan tingkat lokalnya ke dalam satu unit manajerial terpadu yang disebut \textit{Secretaría} (Kantor Kepaniteraan atau Kesekretariatan). Unit institusional ini dipimpin oleh figur administrator tunggal yang disebut \textit{Secretario} (pejabat laki-laki) atau \textit{Secretaria} (pejabat perempuan). Sistem ini secara tegas menyatukan kewenangan tata usaha umum dan teknis persidangan ke dalam kepemimpinan tunggal \textit{Secretario}\slash\textit{Secretaria}. Figur sentral ini disokong secara hierarkis oleh struktur manajerial murni non-hakim seperti \textit{Prosecretario} (Wakil Sekretaris) dan \textit{Personal Auxiliar} (Staf Pembantu). Formasi berlapis di dalam \textit{Secretaría} ini bertugas memastikan seluruh mesin birokrasi pengadilan berjalan sempurna, membebaskan hakim secara paripurna dari rutinitas dan intervensi manajerial. Hebatnya, ekosistem meritokratis ini memfasilitasi jenjang karier aparatur pendukung hingga mencapai posisi administrasi puncak sebagai \textit{Secretario General de la Corte} (Sekretaris Jenderal Mahkamah Agung), sebuah jabatan prestisius yang pelantikannya disumpah langsung di hadapan Ketua Mahkamah Agung.
+
+Anomali birokrasi ini menjadi semakin ironis apabila membedah struktur kompensasi atau \textit{Take Home Pay} (THP) aparatur peradilan. Di Indonesia, ketimpangan remunerasi terjadi secara amat mencolok pada level Pengadilan Kelas II. Seorang Panitera atau Sekretaris Pengadilan yang telah berusia matang (37--40 tahun) dengan rekam jejak pengabdian ASN lebih dari 10 tahun dan memikul tanggung jawab manajerial eksekutif atas operasional seluruh unit pengadilan, justru hanya menerima kompensasi yang sangat timpang jika disandingkan dengan THP seorang Hakim Junior (\textit{Hakim Pratama}). Ketimpangan ini termanifestasi secara ekstrem pasca-pemberlakuan regulasi hak keuangan terbaru di era Presiden Prabowo Subianto, yakni Peraturan Pemerintah Nomor 42 Tahun 2025 yang memberi lonjakan tunjangan fantastis bagi hakim. Sebagai bukti empiris yang presisi: merujuk pada lampiran tabel resmi regulasi tersebut, seorang Hakim Pratama (Hakim Tingkat Pertama Kelas II) berusia 25--29 tahun dengan 0 tahun pengalaman memutus perkara ditetapkan menerima Tunjangan Jabatan sebesar Rp 46.700.000,00 per bulan, sehingga penerimaan bulanannya (ditambah Gaji Pokok) menembus angka nyaris Rp 50 juta per bulan---sebuah angka dasar yang bahkan belum menghitung komponen hak keuangan bernilai fantastis lainnya seperti Tunjangan Transportasi, Tunjangan Sewa Rumah Dinas, Tunjangan Kemahalan, hingga Asuransi dan \textit{Benefit} kesehatan khusus hakim. 
+
+Sebaliknya, akumulasi hak keuangan seorang Panitera Pengadilan Kelas II yang sarat pengalaman hanya berada di kisaran Rp 14 juta per bulan---yang secara presisi terdiri dari Gaji Pokok Golongan III/b hingga III/d (dengan Masa Kerja Golongan 11--18 tahun) di kisaran Rp 4 juta, Tunjangan Kinerja Rp 9.500.000 (merujuk Keputusan KMA Nomor 210/2020), dan Tunjangan Jabatan yang sangat memprihatinkan yakni hanya Rp 540.000 (berdasarkan Perpres Nomor 124 Tahun 2022). Tragisnya, jabatan kepaniteraan sama sekali tidak difasilitasi oleh tunjangan komplementer apa pun: tidak ada tunjangan transportasi, tidak ada sewa rumah dinas, tidak ada tunjangan kemahalan, dan perlindungan kesehatannya murni hanya bertumpu pada fasilitas standar BPJS layaknya masyarakat umum, tanpa adanya asuransi medis khusus apalagi jaminan kesehatan VIP. Akibatnya, hakim \textit{entry-level} ini secara riil menikmati kompensasi nyaris 4 kali lipat (mendekati 400\%) lebih besar dibandingkan pejabat manajerial senior yang menjadi tulang punggung pengadilan. Marginalisasi finansial yang menyayat nalar ini adalah produk langsung dari kegagalan eksekutif (KemenPAN-RB dan Kementerian Keuangan) dalam menilai bobot manajerial (\textit{job value}) kepaniteraan secara objektif.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Komparasi Ketimpangan \textit{Take Home Pay} (THP) Hakim Pratama (3--6 Tahun Masa Kerja) vs Panitera/Sekretaris Pengadilan Kelas II (9--25 Tahun Masa Kerja)}
+\label{tab:komparasi-thp}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{4.2cm} p{5.0cm} p{5.2cm}}
+\hline
+\raggedright\textbf{Komponen Hak Keuangan} & \raggedright\textbf{Hakim Pratama (Kelas II)} \newline \textit{(Usia 25--29 th, Pengalaman 3--6 th)} & \raggedright\textbf{Panitera / Sekretaris (Kelas II)} \newline \textit{(Usia 35--50 th, Pengalaman 9--25 th)} \tabularnewline
+\hline
+\raggedright\textbf{Gaji Pokok} & \raggedright $\pm$ Rp 3.200.000 \newline \textit{(Golongan III/a--III/b)} & \raggedright $\pm$ Rp 4.000.000 \newline \textit{(Golongan III/b -- III/d)} \tabularnewline
+\raggedright\textbf{Tunjangan Jabatan} & \raggedright Rp 46.700.000 \newline \textit{(PP No. 42 Tahun 2025)} & \raggedright Rp 540.000 \newline \textit{(Perpres No. 124 Tahun 2022)} \tabularnewline
+\raggedright\textbf{Tunjangan Kinerja} & \raggedright Nihil \textit{(Telah dilebur ke dalam Tunjangan Jabatan)} & \raggedright Rp 9.500.000 \newline \textit{(Keputusan KMA No. 210/2020)} \tabularnewline
+\raggedright\textbf{Fasilitas Tambahan} & \raggedright \textbf{Lengkap} \newline (Sewa Rumah, Transportasi, Kemahalan, Asuransi VIP) & \raggedright \textbf{Tidak Ada} \newline (Hanya BPJS Standar tanpa tunjangan komplementer) \tabularnewline
+\raggedright\textbf{Estimasi THP Bulanan} & \raggedright \textbf{$\pm$ Rp 49.900.000} \newline \textit{(Belum termasuk nilai uang dari fasilitas)} & \raggedright \textbf{$\pm$ Rp 14.040.000} \newline \textit{(Nilai akhir/mentok)} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Fakta yang jauh lebih menohok dari tabel di atas adalah bahwa THP seorang Hakim Pratama Kelas II (nyaris Rp 50 juta) ternyata masih jauh lebih besar melampaui THP seorang \textbf{Panitera Tingkat Banding} (Pengadilan Tinggi) sekalipun. Berdasarkan regulasi yang sama, akumulasi hak keuangan Panitera Tingkat Banding yang memegang komando manajerial yudisial di tingkat provinsi dan telah berada di pengujung masa pensiunnya, hanya dibatasi pada kisaran Rp 26 juta per bulan (secara presisi terdiri dari Gaji Pokok Golongan IV puncak sekitar Rp 5,5 juta, Tunjangan Kinerja Rp 19.280.000, dan Tunjangan Jabatan Rp 2.025.000). Ketimpangan hierarkis di mana seorang yuris muda berusia 25 tahun tanpa pengalaman dibayar hampir dua kali lipat lebih besar daripada seorang veteran administrator tingkat banding yang membawahi puluhan pengadilan di wilayah provinsinya, adalah wujud nyata dari runtuhnya meritokrasi dalam ekosistem kepegawaian yudikatif Indonesia.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Tabel Persentase Ketimpangan THP Panitera Berbagai Tingkatan Dibandingkan Hakim Pratama Kelas II (3-6 Tahun Masa Kerja)}
+\label{tab:anomali-hierarki}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{6cm} p{3.0cm} p{4.0cm} p{1cm}}
+\hline
+\textbf{Tingkatan Pengadilan} & \textbf{THP Panitera} & \textbf{THP Hakim} & \textbf{\%} \\
+\hline
+\raggedright\textbf{Tingkat Pertama Kelas II} \newline \textit{(Masa Kerja 11--18 Th)} & $\pm$ Rp 14.040.000 & $\pm$ Rp 49.485.700 & \textbf{352\%} \\
+\raggedright\textbf{Tingkat Pertama Kelas IB} \newline \textit{(Masa Kerja 15--20 Th)} & $\pm$ Rp 16.500.000 & $\pm$ Rp 49.485.700 & \textbf{300\%} \\
+\raggedright\textbf{Tingkat Pertama Kelas IA} \newline \textit{(Masa Kerja $>$ 20 Th)} & $\pm$ Rp 19.500.000 & $\pm$ Rp 49.485.700 & \textbf{254\%} \\
+\raggedright\textbf{Tingkat Pertama Kelas IA Khusus} \newline \textit{(Masa Kerja $>$ 22 Th)} & $\pm$ Rp 22.824.000 & $\pm$ Rp 49.485.700 & \textbf{217\%} \\
+\raggedright\textbf{Tingkat Banding (Provinsi)} \newline \textit{(Masa Kerja Jelang Pensiun)} & $\pm$ Rp 26.805.000 & $\pm$ Rp 49.485.700 & \textbf{185\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Sebaliknya, negara komparator merumuskan kompensasi ini murni berdasarkan besarnya beban kerja eksekutif. 
+
+Di Kosta Rika, perlindungan terhadap muruah profesi kepaniteraan dan kesekretariatan juga diwujudkan melalui rasio remunerasi yang sangat proporsional di tingkat pengadilan yang sama. Melalui implementasi \textit{Salario Global} (Gaji Global) yang diamanatkan oleh \textit{Ley Marco de Empleo Público}, kekuasaan yudikatif (\textit{Poder Judicial}) mendesain skala gaji yang mengikat ketat remunerasi jabatan administrator tingkat pertama agar berimbang dengan hakim pemula (non-manajerial). Berdasarkan data resmi \textit{Dirección de Gestión Humana} (Direktorat SDM) Kosta Rika, seorang \textit{Administrador Regional 1} (setara Panitera/Sekretaris Pengadilan Tingkat Pertama) menerima gaji pokok sebesar CRC 1.979.545 (sekitar Rp 63,3 juta, mengacu estimasi kurs Rp 32/CRC). Angka ini dijaga pada rasio solid 74,5\% apabila dikomparasikan dengan gaji \textit{Juez 1} (Hakim Tingkat Pertama \textit{entry-level}) yang berada di angka CRC 2.656.416 (sekitar Rp 85 juta). Bahkan jika disandingkan dengan \textit{Juez 3} yang umumnya menjabat sebagai Ketua Pengadilan di tingkat yang sama (gaji CRC 3.015.582 atau sekitar Rp 96,5 juta), kompensasi Panitera/Administrator tetap bertahan kuat di rasio 65,6\% (Dirección de Gestión Humana del Poder Judicial, 2024). Fakta ini menegaskan bahwa Kosta Rika, sama seperti negara maju lainnya, tidak mendegradasi nilai pekerjaan administratif pengadilan di level yurisdiksi bawah, melainkan menghargainya dengan jarak proporsional yang rasional terhadap hakim pemutus perkara.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Proporsionalitas Remunerasi: Panitera/Sekretaris vs Hakim di Tingkat Pertama Kosta Rika (\textit{Salario Global})}
+\label{tab:komparasi-kostarika}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.5cm} p{2.0cm}}
+\hline
+\textbf{Jabatan (Ekuivalen Pan/Sek)} & \textbf{Gaji Pan/Sek} & \textbf{Gaji Hakim} & \textbf{Rasio} \tabularnewline
+\hline
+\raggedright\textbf{Administrator Regional 1} \newline \textit{(vs Hakim Tkt. Pertama / Juez 1)} & \raggedright CRC 1.979.545 \newline \textit{($\pm$ Rp 63,3 Juta)} & \raggedright CRC 2.656.416 \newline \textit{($\pm$ Rp 85 Juta)} & \textbf{74,5\%} \tabularnewline
+\raggedright\textbf{Administrator Regional 1} \newline \textit{(vs Ketua Pengadilan / Juez 3)} & \raggedright CRC 1.979.545 \newline \textit{($\pm$ Rp 63,3 Juta)} & \raggedright CRC 3.015.582 \newline \textit{($\pm$ Rp 96,5 Juta)} & \textbf{65,6\%} \tabularnewline
+\raggedright\textbf{Administrator Pengadilan Lalu Lintas} \newline \textit{(vs Hakim Tkt. Pertama / Juez 1)} & \raggedright CRC 1.840.226 \newline \textit{($\pm$ Rp 58,8 Juta)} & \raggedright CRC 2.656.416 \newline \textit{($\pm$ Rp 85 Juta)} & \textbf{69,2\%} \tabularnewline
+\hline
+\multicolumn{4}{p{14cm}}{\textit{*Catatan: Jabatan Administrator (\textit{Administrador Regional}) di Kosta Rika secara struktural memegang kekuasaan manajerial pengadilan yang setara dengan fungsi Panitera/Sekretaris Pengadilan Tingkat Pertama di Indonesia.}} \tabularnewline
+\end{tabular}
+\end{table}
+
+Di Amerika Serikat, figur sentral \textit{Clerk of Court} mendapatkan skema remunerasi \textit{Judiciary Salary Plan} (JSP) pada tingkatan eksekutif senior (Administrative Office of the U.S. Courts, 2024). Nominal gaji ini dibuat sangat kompetitif dan menempel ketat dengan standar kompensasi hakim di tiap tingkatannya. Secara formal, kerangka penyesuaian kompensasi ini dipayungi oleh regulasi \textit{Ethics Reform Act} of 1989 (Pub. L. 101-194), dengan nilai nominal ekuivalensi pada rentang 2024--2025 berada di kisaran USD 191.300 hingga menembus USD 220.700 (sekitar Rp 3,1 miliar hingga Rp 3,6 miliar, mengacu kurs Rp 16.350/USD). 
+
+Jika dikalkulasi secara persentase, skema remunerasi AS dirancang sangat proporsional di mana THP seorang Panitera secara konsisten dijaga pada rasio 74\% hingga 80\% dari THP Hakim di unit yang sama. Sebagai komparasi presisi: di pengadilan tingkat pertama, \textit{District Court Clerk} (USD 191.300) menerima sekitar 74\% dari gaji Hakim Distrik (USD 257.900). Perlu digarisbawahi bahwa Hakim Distrik federal di AS bukanlah hakim junior atau pemula (\textit{entry-level}) bak Hakim Pratama di Indonesia yang dapat dilantik pada usia 25 tahun sesaat setelah lulus pendidikan. Meski Konstitusi AS tidak mematok batas usia minimal secara tertulis, standar ketat dari \textit{American Bar Association} (ABA) mewajibkan rekam jejak praktik hukum mapan minimum 12 tahun---umumnya sebagai litigator papan atas di firma hukum, jaksa federal (\textit{U.S. Attorney}), atau hakim pengadilan negara bagian---sehingga rata-rata usia hakim federal saat pertama kali diangkat berada di kisaran 49 hingga 50 tahun sebagai yuris elite yang mengemban jabatan seumur hidup (\textit{lifetime appointment}) langsung dari Presiden AS.
+
+Faktanya, sistem federal AS sama sekali tidak mengenal konsep ``Hakim Junior'' bergaji rendah; bahkan hakim di hierarki paling dasar seperti \textit{Magistrate Judge} (setara hakim tingkat pertama) ditetapkan gajinya secara absolut oleh undang-undang sebesar 92\% dari Hakim Distrik (yakni sekitar USD 237.268) sebagaimana dibatasi secara eksplisit dalam ketentuan federal (28 U.S.C. § 634, 2024). Ini berarti THP seorang Panitera tetap kokoh berada di ekuivalensi 80\% meskipun disandingkan dengan hakim pada level hierarki terendah sekalipun. Di tingkat banding, remunerasi kepaniteraan juga dipertahankan pada proporsi 75\% terhadap Hakim Banding (USD 273.400); hingga pada puncaknya, \textit{Clerk of the Supreme Court} (Panitera Mahkamah Agung AS) yang bergaji lebih dari USD 220.700 mengamankan rasio sekitar 74\% terhadap gaji Hakim Agung AS (USD 298.500). Besaran rasio yang dipertahankan stabil di semua level ini sangat prestisius karena memosisikan profesi Panitera sejajar dengan eselon atas \textit{Senior Executive Service} (SES) pemerintah federal AS dan melampaui remunerasi mayoritas pejabat birokrasi kementerian.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Proporsionalitas Remunerasi: \textit{Clerk of Court} vs Hakim Federal Amerika Serikat}
+\label{tab:komparasi-usa}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.5cm} p{2.0cm}}
+\hline
+\textbf{Tingkatan Pengadilan Federal} & \textbf{Gaji \textit{Clerk}} & \textbf{Gaji Hakim} & \textbf{Rasio} \\
+\hline
+\raggedright\textbf{Hakim Hierarki Paling Dasar} \newline \textit{(U.S. Magistrate Judge)} & USD 191.300 & USD 237.268 & \textbf{81\%} \\
+\raggedright\textbf{Pengadilan Tingkat Pertama} \newline \textit{(U.S. District Court)} & USD 191.300 & USD 257.900 & \textbf{74\%} \\
+\raggedright\textbf{Pengadilan Tingkat Banding} \newline \textit{(U.S. Court of Appeals)} & $\pm$ USD 205.050 & USD 273.400 & \textbf{75\%} \\
+\raggedright\textbf{Mahkamah Agung} \newline \textit{(U.S. Supreme Court)} & USD 220.700 & USD 298.500 & \textbf{74\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Lebih mengejutkan lagi, pada yurisdiksi peradilan tingkat negara bagian (\textit{state courts}) di wilayah metropolitan padat penduduk seperti California, penghargaan terhadap beban kerja administratif dan manajerial justru memposisikan remunerasi kepaniteraan melampaui figur yudisial itu sendiri. Dalam sistem pengadilan tinggi wilayah (\textit{Superior Court}), fungsi Panitera dan Sekretaris dilebur ke dalam satu jabatan sentral berdaya penuh yang disebut \textit{Court Executive Officer} (CEO). Mengingat seorang CEO pada distrik raksasa seperti Los Angeles County harus mengelola ribuan pegawai dan mengeksekusi anggaran ratusan juta dolar, mereka diberi kompensasi setara eksekutif korporat swasta yang nilainya sering kali menembus USD 300.000 (sekitar Rp 4,9 miliar) berdasarkan laporan resmi \textit{Government Compensation in California} (California State Controller's Office, 2023). Realitas ini menempatkan THP seorang Panitera/CEO lebih tinggi daripada gaji Hakim Tingkat Pertama (\textit{Superior Court Judge}) di pengadilan yang sama, yang gajinya dibatasi pada kisaran USD 238.000 sesuai regulasi penyesuaian kompensasi yudisial (California Government Code § 68203, 2024). Filosofi dasar di baliknya sangat rasional dan berkeadilan: kekuasaan memutus perkara (yudisial) dan kekuasaan mengelola institusi (manajerial) adalah dua cabang profesional yang benar-benar berbeda, dan kompensasi wajib linier dengan besaran risiko serta tanggung jawab struktural yang dipikul.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Superioritas Remunerasi Manajerial: \textit{Court Executive Officer} vs Hakim Tingkat Pertama (Studi Kasus \textit{California State Courts})}
+\label{tab:komparasi-california}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{6.5cm} p{3.5cm} p{4.0cm}}
+\hline
+\textbf{Jabatan Yudisial/Manajerial} & \textbf{Gaji Tahunan} & \textbf{Rasio Komparatif} \\
+\hline
+\raggedright\textbf{\textit{Court Executive Officer} (CEO)} \newline \textit{(Ekuivalen Panitera/Sekretaris Pengadilan)} & > USD 300.000 & \textbf{126\%} (Tertinggi) \\
+\raggedright\textbf{Hakim Tingkat Pertama} \newline \textit{(Superior Court Judge)} & $\pm$ USD 238.000 & \textbf{100\%} (\textit{Baseline}) \\
+\hline
+\end{tabular}
+\end{table}
+
+Serupa dengan itu, aparat non-hakim yang mengepalai administrasi peradilan di Korea Selatan secara hukum dijamin haknya untuk menerima kompensasi finansial yang sangat proporsional di setiap tingkatan yurisdiksi. Berbeda dengan Indonesia, sistem birokrasi di Korea Selatan (\textit{National Court Administration}) mendesain jenjang karier dan struktur remunerasi yang memastikan nilai pekerjaan administratif tetap dihargai sejajar dengan jabatan pemutus perkara.
+
+Berdasarkan Peraturan Gaji Pegawai Peradilan (\textit{Beob-won Gongmuwon}) tahun 2024, perbandingan \textit{apple-to-apple} di tingkat pengadilan dasar (\textit{District Court}) menunjukkan bahwa seorang Administrator Pengadilan (Pejabat Grade 3) menerima gaji pokok sebesar KRW 3.547.400 (sekitar Rp 41,8 juta), melampaui gaji pokok Hakim Tingkat Pertama yang berada di kisaran KRW 3.400.000 (sekitar Rp 40 juta) dengan rasio 104\%. Di tingkat banding (\textit{High Court}), seorang Administrator Senior (Grade 2) mengamankan rasio gaji di kisaran 65,5\% terhadap Hakim Tinggi. Puncaknya, pada tingkat Mahkamah Agung, jabatan \textit{Minister of Court Administration} (pimpinan tertinggi eksekutif peradilan) dijamin oleh undang-undang untuk menerima hak keuangan yang 100\% identik dengan \textit{Supreme Court Justice} (Hakim Agung) yakni sebesar KRW 9.139.800 (sekitar Rp 107 juta). Struktur linier dari pengadilan tingkat pertama hingga puncak ini secara telak melucuti logika diskriminatif yang selama ini dipelihara di Indonesia.
+
+\begin{table}[H]
+\centering
+\fontsize{10}{12}\selectfont
+\caption{Proporsionalitas Remunerasi: Panitera/Sekretaris vs Hakim di Korea Selatan (\textit{Seluruh Tingkatan})}
+\label{tab:komparasi-korsel}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.5cm} p{2.0cm}}
+\hline
+\textbf{Tingkatan Pengadilan} & \textbf{Gaji Pan/Sek} & \textbf{Gaji Hakim} & \textbf{Rasio} \tabularnewline
+\hline
+\raggedright\textbf{Pengadilan Tingkat Pertama} \newline \textit{Court Admin (Grade 3) vs District Judge} & \raggedright KRW 3.547.400 \newline \textit{($\pm$ Rp 41,8 Juta)} & \raggedright KRW 3.400.000 \newline \textit{($\pm$ Rp 40 Juta)} & \textbf{104\%} \tabularnewline
+\raggedright\textbf{Pengadilan Tingkat Banding} \newline \textit{High Court Admin (Grade 2) vs High Judge} & \raggedright KRW 3.931.900 \newline \textit{($\pm$ Rp 46,3 Juta)} & \raggedright KRW 6.000.000 \newline \textit{($\pm$ Rp 70 Juta)} & \textbf{65,5\%} \tabularnewline
+\raggedright\textbf{Tingkat Mahkamah Agung} \newline \textit{Minister of NCA vs Supreme Court Justice} & \raggedright KRW 9.139.800 \newline \textit{($\pm$ Rp 107 Juta)} & \raggedright KRW 9.139.800 \newline \textit{($\pm$ Rp 107 Juta)} & \textbf{100\%} \tabularnewline
+\hline
+\multicolumn{4}{p{14cm}}{\textit{*Catatan: Data merepresentasikan gaji pokok (base salary) per 2024. Otoritas manajerial tertinggi pengadilan di Korea Selatan dihargai 100\% setara dengan otoritas yudisial puncaknya.}} \tabularnewline
+\end{tabular}
+\end{table}
+
+Ironisnya, di tengah fakta komparatif yang menjunjung tinggi kesetaraan ini, wacana kesejahteraan peradilan di Indonesia justru sering kali dibajak menjadi ajang prestise politik oleh Kepala Negara. Dalam berbagai kesempatan pidatonya, termasuk pada Sidang Tahunan MPR, Presiden Prabowo Subianto secara terbuka membanggakan kenaikan gaji Hakim junior Indonesia hingga 280\% yang diklaimnya telah melampaui standar rata-rata ASEAN (seperti Malaysia dan Singapura) demi menjustifikasi kebijakan tersebut (CNBC Indonesia, 2024; CNN Indonesia, 2024). Namun, retorika politik ini terjebak pada sebuah titik buta (\textit{blind spot}) yang amat fatal: kebijakan kenaikan kompensasi yang melulu difokuskan secara eksklusif pada profesi Hakim telah menciptakan jurang kesenjangan yang sangat radikal dengan aparatur non-hakim. Alih-alih memperkuat soliditas institusi peradilan, kebijakan yang abai terhadap nasib aparatur kepaniteraan ini justru memicu "api dalam sekam" yang memanaskan suhu internal Mahkamah Agung, merobek harmoni kerja antara pemutus perkara dan pengelola perkara, serta melegitimasi kastanisasi birokrasi yang diskriminatif. Situasi ini kemudian diperparah oleh arogansi segelintir oknum Hakim di internal MA yang justru mewajarkan kesenjangan absolut tersebut dengan dalih legalistik sempit: bahwa Hakim adalah 'Pejabat Negara', sedangkan aparatur kepaniteraan hanyalah 'PNS biasa'. Klaim elitis ini secara psikologis menyiramkan bahan bakar ke dalam bara konflik, menghancurkan respek antar-profesi, dan mendegradasi peran krusial kepaniteraan sebagai tulang punggung manajerial pengadilan.
+
+Praktik komparatif global di atas secara gamblang menegaskan satu prinsip fundamental: di negara-negara dengan sistem peradilan maju, karier manajerial (\textit{Court Administrator}) dan karier yudisial (Hakim) adalah dua jalur terpisah (\textit{two distinct career tracks}) yang sama-sama bergengsi. Aparatur administratif tidak memiliki urgensi untuk bermigrasi menjadi Hakim hanya demi mencari penghidupan yang layak, karena sistem telah merawat dan membesarkan jalur karier manajerial dengan jaminan remunerasi yang sangat prestisius.
+
+Kondisi ini berbanding terbalik dengan realitas ironis di Indonesia. Akibat diskriminasi finansial yang dilembagakan secara struktural, ketika keran rekrutmen Calon Hakim (Cakim) dibuka bagi internal aparatur peradilan (dengan batas usia maksimal 35 tahun), secara alamiah SDM dengan kapasitas intelektual dan kompetensi tertinggi akan berlomba-lomba melarikan diri dari kepaniteraan untuk masuk ke jalur yudisial. Fenomena \textit{brain drain} (eksodus talenta) ini melahirkan efek domino yang sangat destruktif: kepaniteraan tidak hanya kehilangan aset SDM terbaiknya, tetapi pada akhirnya terpaksa membiarkan kursi-kursi kepemimpinan manajerial eksekutif diisi oleh sisa SDM dengan kualifikasi intelektual yang berada di bawah standar ideal. 
+
+Krisis kualitas ini kemudian diperparah oleh krisis kuantitas di lapangan, yakni maraknya kekosongan jabatan struktural (seperti Panitera Muda dan Panitera Kelas II) di satuan kerja daerah terpencil, perbatasan, atau kepulauan. Dengan \textit{Take Home Pay} (THP) yang sangat kerdil, para aparatur cenderung menolak tawaran promosi ke daerah sulit karena seluruh gajinya dipastikan habis terkuras hanya untuk menyambung biaya hidup dasar dan tiket transportasi antarpulau. Secara rasional, mereka lebih memilih membunuh ambisi karier strukturalnya dan 'berlindung' pada jabatan fungsional (seperti Panitera Pengganti atau sekadar Staf pelaksana) asalkan tidak dipindah dari \textit{homebase} asalnya.
+
+Situasi ini sangat jomplang jika dibandingkan dengan profesi Hakim di Indonesia, yang selalu siap dan ikhlas ditempatkan di pelosok nusantara mana pun semata-mata karena instrumen negara telah menjamin kesejahteraan finansial mereka secara paripurna. Jika anomali birokrasi dan ketimpangan remunerasi ini tidak segera diakhiri melalui reformasi penggajian yang radikal, Mahkamah Agung Republik Indonesia sedang meniti jalan pintas menuju kelumpuhan mesin operasional peradilan di garis terdepan.
 
 \subsection{Pemisahan Fungsi Manajerial dan Yudisial (Bifurkasi) sebagai Konsep Ideal Kelembagaan}
-% Bahas kritik terhadap perangkapan jabatan hakim di kepaniteraan dan pentingnya bifurkasi tugas murni.
-[Tulis hasil dan pembahasan rumusan masalah 3...]
+
+Untuk membongkar sistem kasta dan kesenjangan finansial tersebut, arah reformasi ketatanegaraan Indonesia harus dikembalikan pada trajektori tata kelola peradilan global. Praktik pembagian kamar kepegawaian sejatinya telah mapan diterapkan di negara komparator sebagai fondasi meritokrasi yang berkeadilan. Di Amerika Serikat, status aparatur dipilah mutlak menjadi \textit{Executive Branch Employees}, \textit{Legislative Branch Employees}, dan \textit{Judicial Branch Employees}. Kosta Rika membelah rezim kepegawaiannya menjadi \textit{Servicio Civil} (kementerian), \textit{Servicio Legislativo} (parlemen), dan \textit{Servicio Judicial} yang otonom penuh untuk pengadilan. Korea Selatan pun memisahkan aparaturnya secara rigid menjadi \textit{Haengjeong Gongmuwon} (Pegawai Eksekutif), \textit{Gukhoe Gongmuwon} (Pegawai Parlemen), dan \textit{Beobwon Gongmuwon} (Pegawai Yudikatif). 
+
+Ketiganya membuktikan secara empiris bahwa kemandirian institusional tidak akan pernah tercapai tanpa adanya pemurnian status hukum akar rumput aparatur dari campur tangan birokrasi eksekutif. Dengan mensinergikan seluruh elemen pendukung ke dalam satu identitas "Aparatur Yudikatif" yang utuh, negara-negara ini sukses mengubur diskriminasi struktural, memastikan bahwa setiap insan pengadilan—baik hakim pemutus perkara maupun tenaga operasional pendukung—dihargai dan difasilitasi secara setara sebagai satu kesatuan pilar penegak hukum yang bermartabat.
+
+Konstruksi kemandirian finansial dan penataan ulang jalur karier kepaniteraan serta kesekretariatan sebagaimana diuraikan sebelumnya bermuara pada satu gagasan sentral: urgensi penerapan bifurkasi dalam tata kelola peradilan. Berdasarkan Teori Tata Kelola Peradilan (\textit{Court Administration Theory}), bifurkasi merupakan pemisahan yang rigid antara fungsi yudisial murni (mengadili dan memutus perkara) dengan fungsi manajerial-administratif (pengelolaan keuangan, SDM, dan operasional pengadilan) (Tobin, 1999). Konsep ini merupakan postulat utama dalam mewujudkan kelembagaan peradilan yang modern, efisien, dan independen.
+
+Analisis komparatif terhadap Amerika Serikat, Korea Selatan, dan Kosta Rika membuktikan adanya korelasi simbiotik antara otonomi anggaran dan profesionalisme administrasi. Jaminan anggaran yang independen---seperti halnya alokasi 6\% di Kosta Rika atau perlindungan prosedural di Amerika Serikat---tidak akan terkelola secara optimal apabila struktur eksekutor internalnya masih dibebani oleh perangkapan jabatan dari para hakim (Wilson, 2011; Wheeler, 2014). Sebaliknya, pembentukan badan administratif profesional yang mandiri membutuhkan kepastian otonomi fiskal agar kebijakan operasionalnya tidak rentan terhadap intervensi atau penyanderaan politik dari cabang eksekutif maupun legislatif. Oleh karena itu, bifurkasi bukan sekadar pembagian porsi kerja birokrasi, melainkan instrumen purifikasi (\textit{purification}) terhadap kekuasaan kehakiman itu sendiri (Garoupa \& Ginsburg, 2015).
+
+Bagi Mahkamah Agung Republik Indonesia, bifurkasi adalah cetak biru (\textit{blue\-print}) konsep ideal yang wajib diimplementasikan untuk mengurai hambatan struktural yang ada saat ini. Implementasi bifurkasi menuntut Mahkamah Agung untuk secara tegas membebaskan Hakim Agung dan hakim karier dari segala bentuk beban jabatan struktural-\allowbreak{}manajerial di lingkungan Kepaniteraan maupun Kesekretariatan. Fungsi kepaniteraan (teknis yudisial) dan kesekretariatan (pendukung operasional \& finansial) harus direvitalisasi menjadi \textit{sup\-port\-ing unit} otonom yang dipimpin oleh aparatur profesional non-hakim yang meniti karier dari bawah dan memiliki keahlian spesifik di bidang manajemen peradilan (\textit{court man\-age\-ment}) (As\-shid\-di\-qie, 2019).
+
+Melalui pelembagaan bifurkasi yang ditopang oleh kemandirian anggaran, Mahkamah Agung dapat mengejawantahkan nilai ideal dari \textit{Trias Politica}. Hakim dapat memusatkan seluruh kapasitas intelektual dan integritasnya secara eksklusif pada esensi kekuasaan kehakiman, yakni menegakkan hukum dan keadilan, tanpa terdistraksi oleh kerumitan tata kelola birokrasi dan administrasi finansial.
+
+Sebagai langkah konkret dari purifikasi tata kelola ini, Mahkamah Agung harus mengambil sikap tegas untuk merombak ulang struktur organisasi pengadilan tingkat pertama dan banding agar murni tunduk pada landasan yurisdiksi utamanya---\allowbreak{}yakni UU Peradilan Umum, UU Peradilan Agama, dan UU Peradilan Tata Usaha Negara---\allowbreak{}bukan mengekor pada dikte regulasi eksekutif seperti peraturan KemenpanRB. Perombakan struktural secara otonom ini pada hakikatnya bertujuan mutlak untuk mengembalikan muruah kepaniteraan pengadilan.
 
 % ------------------- BAGIAN 4: KESIMPULAN -------------------
 \section{CONCLUSION}
-% Berisi sintesis jawaban rumusan masalah dalam bentuk paragraf (bukan numbering) dan disertai Rekomendasi/saran konkret kebijakan. Maksimal 5% dari total halaman.
-[Tulis narasi Kesimpulan dan Rekomendasi di sini...]
+
+Berdasarkan penelusuran dogmatik hukum dan analisis komparatif-empiris, dapat disimpulkan bahwa arsitektur tata kelola Mahkamah Agung Republik Indonesia saat ini masih tersandera oleh anomali birokrasi struktural yang melumpuhkan muruah aparatur non-hakim. Ketiadaan otonomi anggaran secara paripurna dan monopoli jabatan manajerial eksekutif oleh hakim tidak hanya bertentangan dengan prinsip \textit{Trias Politica}, melainkan juga telah menelurkan diskriminasi hak keuangan yang amat radikal. Fakta empiris yang mendemonstrasikan bagaimana seorang Hakim Pratama menikmati \textit{Take Home Pay} hingga 352\% lebih tinggi dibandingkan Panitera Kelas II yang memikul operasional pengadilan, atau melampaui THP Panitera Tingkat Banding sekalipun, adalah wujud nyata runtuhnya meritokrasi. Hal ini sangat kontras dengan preseden global di Amerika Serikat, yang secara absolut mempertahankan proporsionalitas gaji \textit{Clerk of Court} di level 74--81\% dari gaji Hakim Federal, bahkan menembus angka 126\% melampaui gaji Hakim tingkat pertama di pengadilan negara bagian (\textit{state courts}) sebagai bentuk penghargaan finansial atas beban manajerial raksasa yang dipikul.
+
+Sebagai rekomendasi kebijakan dan resolusi atas kemelut birokrasi ini, kekuasaan legislatif bersama Mahkamah Agung wajib segera mengimplementasikan sistem bifurkasi murni. \textit{Pertama}, pada dimensi tata kelola SDM, Mahkamah Agung harus mengadopsi model kepemimpinan administrator non-hakim (\textit{Secretario} ala Kosta Rika, atau \textit{Court Executive Officer} di AS). Hak jabatan manajerial puncak seperti Sekretaris Mahkamah Agung, Direktur Jenderal, hingga Panitera Pengadilan harus dikembalikan secara eksklusif kepada aparatur organik peradilan, dibarengi dengan reformasi kompensasi finansial yang proporsional dengan besaran risiko manajerialnya. \textit{Kedua}, pada dimensi fiskal, negara harus mengadopsi perlindungan anggaran konstitusional (seperti alokasi tetap 6\% APBN di Kosta Rika) guna melepaskan peradilan dari sandera tawar-menawar politik Kemenkeu dan Bappenas. Hanya melalui revolusi bifurkasi inilah, hakim dapat dikembalikan ke marwah sucinya murni sebagai pemutus perkara (\textit{judging only}), dan aparatur kepaniteraan serta kesekretariatan dapat merdeka untuk meraih jenjang karier tertinggi secara profesional dan bermartabat.
 
 % ------------------- REFERENSI -------------------
+\newpage
+\pagestyle{empty}
 \renewcommand{\refname}{\textbf{REFERENCES}}
 \begin{thebibliography}{99}
 % Referensi harus menggunakan format APA Style 7th edition
 % Disarankan menggunakan manajer referensi seperti Mendeley/Zotero, atau BibTeX jika di LaTeX.
-\bibitem{ref1}
-Penulis, A. A. (Tahun). \textit{Judul Buku}. Penerbit.
+\bibitem{uscourts2024}
+Administrative Office of the U.S. Courts. (2024). \textit{Judiciary Salary Plan (JSP) Base Pay Rates}. https://www.uscourts.gov/
 
-\bibitem{ref2}
-Penulis, B. B. (Tahun). Judul Artikel. \textit{Nama Jurnal}, Volume(Issue), Halaman.
+\bibitem{asshiddiqie2019}
+Asshiddiqie, J. (2019). \textit{Pengembangan Kelembagaan Negara dan Demokrasi}. Rajawali Pers.
+
+\bibitem{bedner2008}
+Bedner, A. (2008). An elementary approach to the rule of law. \textit{Hague Journal on the Rule of Law, 2}(1), 48--74.
+
+\bibitem{butt2018}
+Butt, S. (2018). \textit{The Constitutional Court and Democracy in Indonesia}. Routledge.
+
+\bibitem{cacontroller2023}
+California State Controller's Office. (2023). \textit{Government Compensation in California}. https://publicpay.ca.gov/
+
+\bibitem{calgovcode2024}
+\textit{California Government Code} § 68203 (2024).
+
+\bibitem{choi2017}
+Choi, D. H. (2017). Judicial administration reform and court governance in South Korea. \textit{Journal of Korean Law, 16}(2), 241--268.
+
+\bibitem{cnbc2024}
+CNBC Indonesia. (2024, Oktober 8). \textit{Prabowo Janji Perbaiki Gaji Hakim: Supaya Tidak Bisa Disogok}. CNBC Indonesia News. https://www.cnbcindonesia.com/news/
+
+\bibitem{cnn2024}
+CNN Indonesia. (2024, Oktober 8). \textit{Prabowo Kaget Dengar Gaji Hakim, Janji Sejahterakan Usai Jadi Presiden}. CNN Indonesia Nasional. https://www.cnnindonesia.com/nasional/
+
+\bibitem{costarica1949}
+Constitución Política de la República de Costa Rica. (1949). \textit{Asamblea Legislativa de la República de Costa Rica}.
+
+\bibitem{costaricasalario2024}
+Dirección de Gestión Humana del Poder Judicial. (2024). \textit{Escala de Salario Global Definitiva}. Poder Judicial de la República de Costa Rica. https://gestionhumana.poder-judicial.go.cr/
+
+\bibitem{friedman1975}
+Friedman, L. M. (1975). \textit{The Legal System: A Social Science Perspective}. Russell Sage Foundation.
+
+\bibitem{garoupa2015}
+Garoupa, N., \& Ginsburg, T. (2015). \textit{Judicial Reputation: A Comparative Theory}. University of Chicago Press.
+
+\bibitem{mandiri2024}
+PT Bank Mandiri (Persero) Tbk. (2024). \textit{Perjanjian Kerja Bersama (PKB) Periode 2024--2026}.
+
+\bibitem{pomery2021}
+Pomery, C. (2021). Judicial independence and one-roof reform in Indonesia. \textit{Asian Journal of Comparative Law, 16}(2), 215--239.
+
+\bibitem{pompe2005}
+Pompe, S. (2005). \textit{The Indonesian Supreme Court: A Study of Institutional Collapse}. Cornell Southeast Asia Program Publications.
+
+\bibitem{russell2001}
+Russell, P. H., \& O'Brien, D. M. (Eds.). (2001). \textit{Judicial Independence in the Age of Democracy: Critical Perspectives from Around the World}. University Press of Virginia.
+
+\bibitem{shetreet1985}
+Shetreet, S., \& Deschênes, J. (Eds.). (1985). \textit{Judicial Independence: The Contemporary Debate}. Martinus Nijhoff Publishers.
+
+\bibitem{skorea2024}
+Supreme Court of Korea. (2024). \textit{Regulations on the Remuneration of Court Officials}. National Court Administration, Republic of Korea.
+
+\bibitem{susanti2020}
+Susanti, R., \& Setiawan, I. (2020). Pembagian peran dan jenjang karier kepaniteraan Mahkamah Agung. \textit{Jurnal Hukum dan Peradilan, 9}(2), 185--204.
+
+\bibitem{tobin1999}
+Tobin, R. W. (1999). \textit{Creating the Judicial Branch: The Management of American Courts}. National Center for State Courts.
+
+\bibitem{usc605}
+28 U.S. Code § 605 - Budget Estimates. (1948). \textit{Legal Information Institute, Cornell Law School}.
+
+\bibitem{usc634}
+28 U.S.C. § 634 - Compensation of United States magistrate judges. (2024). \textit{United States Code}.
+
+\bibitem{wheeler2014}
+Wheeler, R. (2014). \textit{Governance of the United States Federal Judiciary}. Federal Judicial Center.
+
+\bibitem{wilson2011}
+Wilson, B. M. (2011). Institutional reform and the Judiciary in Costa Rica. \textit{Comparative Politics, 43}(3), 341--359.
 \end{thebibliography}
 
+\newpage
 % ------------------- DEKLARASI & PERNYATAAN WAJIB -------------------
 \section*{DECLARATION OF CONFLICTING INTERESTS}
 The authors state that there is no conflict of interest in the publication of this article.
@@ -122,12 +465,9 @@ The authors state that there is no conflict of interest in the publication of th
 None. % Ubah jika ada sumber pendanaan.
 
 \section*{ACKNOWLEDGMENT}
-[Tuliskan ucapan terima kasih kepada pihak yang membantu penelitian di sini...]
+Alhamdulillah, segala puji dan syukur penulis panjatkan kepada Allah SWT atas anugerah akal, intelektualitas, serta petunjuk-Nya sehingga penulisan naskah kajian ini dapat diselesaikan dengan baik.
 
 \section*{GENERATIVE AI STATEMENT}
-During the preparation of this manuscript, the author(s) used Gemini Agent via Antigravity to structure the outline, refine language, and improve readability. Following this process, the author(s) critically reviewed, edited, and validated the output to ensure accuracy and scientific integrity. The author(s) maintain full accountability for the final content. AI was used solely as a supportive tool and is not credited with authorship. No original data analysis or interpretations were performed by the AI without human oversight.
+During the preparation of this manuscript, the author(s) used Gemini Pro 3.1 to structure the outline, refine language, and improve readability. Following this process, the author(s) critically reviewed, edited, and validated the output to ensure accuracy and scientific integrity. The author(s) maintain full accountability for the final content. AI was used solely as a supportive tool and is not credited with authorship. No original data analysis or interpretations were performed by the AI without human oversight.
 
 \end{document}
-```eof
-
-I've generated the LaTeX code containing the complete outline for your article. It includes the English abstract, structured sections reflecting our discussion, and the required statements at the end, such as the Generative AI Statement. Let me know if you need any adjustments or if you're ready to start drafting specific sections!
