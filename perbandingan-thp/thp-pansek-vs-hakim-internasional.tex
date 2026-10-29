@@ -1,0 +1,858 @@
+\documentclass[12pt, a4paper]{article}
+
+% Pengaturan bahasa dan font
+\usepackage{iftex}
+
+\ifLuaTeX
+  \usepackage{fontspec}
+  \setmainfont{Book Antiqua}
+\else\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Book Antiqua}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{mathpazo} % Font Serif Palatino/Book Antiqua untuk pdflatex
+\fi\fi
+
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[nopatch=footnote]{microtype}
+\setlength{\emergencystretch}{3em}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{array}
+
+% Format Heading & Spasi Paragraf
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
+\titlespacing*{\section}{0pt}{14pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 3pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing*{\subsubsection}{0pt}{10pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+
+% Pengaturan Jarak Spasi Sebelum & Sesudah Paragraf
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parindent}{1.25cm}
+
+% Judul Penelitian
+\title{\textbf{DISPARITAS KOMPENSASI YUDISIAL DAN ADMINISTRATIF: STUDI KOMPARATIF TAKE-HOME PAY (THP) PANITERA/SEKRETARIS VERSUS HAKIM DI INDONESIA, AMERIKA SERIKAT, KOSTA RIKA, KOREA SELATAN, DAN FILIPINA}}
+\author{Moch. Ardany Chabib, S.H.}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+    Panitera Pengganti pada Pengadilan Agama Bojonegoro
+\end{center}
+
+\vspace{1em}
+
+% Abstrak Bahasa Inggris
+\noindent
+\begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \fontsize{9}{11}\selectfont
+    \textbf{ARTICLE INFO}\\
+    \textit{Article history:}\\
+    Received\\
+    January 14, 2026\\
+    Revised\\
+    March 16, 2026\\
+    Accepted\\
+    April 30, 2026\\
+    \vspace{1em}
+    \textbf{Copyright: \copyright~The Author (s). 2026}\\
+    \textbf{This is an open access article under the (CC BY-SA 4.0) license.}\\
+\end{minipage}%
+\hfill\vrule\hfill%
+\begin{minipage}[t]{0.73\textwidth}
+    \vspace{0pt}
+    \centering\textbf{Abstract}\par
+    \vspace{0.5em}
+    \fontsize{11}{13}\selectfont
+    \textit{This study examines the structural disparity in compensation between judicial officers (judges) and court administrative/case management personnel (clerks of court, court secretaries, and administrators) across five jurisdictions: Indonesia, the United States, Costa Rica, South Korea, and the Philippines. Using normative legal research combined with empirical-statutory compensation analysis, this article calculates the net Take-Home Pay (THP), non-cash facility valuations, and comparative ratio metrics ($R = \text{THP}_{\text{Clerk}} / \text{THP}_{\text{Judge}} \times 100\%$) across three equivalent career career milestones: entry-level, mid-career, and senior/peak leadership. The findings demonstrate an extreme anomaly in Indonesia following the enactment of Government Regulation No. 42 of 2025. In Indonesia, an entry-level junior judge with zero years of adjudicative experience receives a cash THP roughly 352.5\% higher (a 3.52-fold multiplier) than a senior Class II Court Clerk with over a decade of administrative tenure (a clerk-to-judge ratio of only 28.4\%), widening to 5.34-fold (434\% gap) when non-cash housing, transportation, and healthcare benefits are monetized. Furthermore, an entry-level judge's remuneration significantly eclipses that of an appellate court chief clerk. In sharp contrast, global comparator jurisdictions systematically anchor clerk and court executive remuneration between 65\% and 85\% of equivalent judicial pay, occasionally exceeding 100\% (e.g., 104\% in South Korea District Courts and 126\% in Los Angeles County, California) to reflect substantial executive liability. This paper concludes by proposing a statutory compensation reform package for Indonesia, establishing a mandatory statutory floor ratio of 60\%--75\% to safeguard institutional integrity, mitigate acute brain drain, and restore collaborative synergy within the judiciary.}\par
+    \vspace{1em}
+    \textit{Keywords: Compensation disparity; court administrator; judicial salary; take-home pay; comparative law; court clerk.}
+\end{minipage}
+
+\vspace{1.5em}
+\noindent
+\colorbox{gray!15}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+    \centering
+    \vspace{0.5em}
+    \textbf{How to cite this article:}\\
+    Chabib, M. A. (2026). Disparitas Kompensasi Yudisial dan Administratif: Studi Komparatif Take-Home Pay (THP) Panitera/Sekretaris versus Hakim di Indonesia, Amerika Serikat, Kosta Rika, Korea Selatan, dan Filipina. \textit{Judicia Suprema}, 1(1), 1--26. DOI: https://doi.org/10.xxxx/js.v1i1.2026
+    \vspace{0.5em}
+\end{minipage}}
+
+\vspace{2em}
+
+% ------------------- BAGIAN 1: PENDAHULUAN -------------------
+\section{PENDAHULUAN}
+
+Penyelenggaraan kekuasaan kehakiman yang merdeka dan berwibawa merupakan keniscayaan mutlak bagi negara hukum yang berlandaskan konstitusi. Dalam diskursus tata kelola peradilan modern (\textit{court governance}), independensi pengadilan tidak hanya bertumpu pada kebebasan hakim dalam memeriksa dan memutus perkara (\textit{decisional independence}), melainkan juga disokong secara krusial oleh kemandirian dan integritas institusional (\textit{institutional integrity}). Keberhasilan peradilan dalam menyelenggarakan keadilan secara cepat, sederhana, dan berbiaya ringan pada hakikatnya merupakan produk sinergi dari dua pilar fungsional yang tak terpisahkan: pilar adjudikasi yang diwakili oleh korps hakim, dan pilar manajemen operasional perkara serta administrasi umum yang dikemudikan oleh aparatur kepaniteraan dan kesekretariatan (\textit{court administrators and clerks of court}).
+
+Namun, dinamika penataan aparatur peradilan di Indonesia pasca-reformasi menyisakan anomali struktural yang kian menganga pada aspek hak keuangan dan sistem remunerasi. Kebijakan reformasi kesejahteraan aparat penegak hukum pada beberapa tahun terakhir tampak mengalami reduksi pandangan (\textit{fallacy}) yang menyamakan ``kehakiman'' semata-mata dengan ``hakim''. Puncaknya termanifestasi secara nyata pasca-ditetapkannya Peraturan Pemerintah (PP) Nomor 42 Tahun 2025 di bawah kepemimpinan Presiden Prabowo Subianto, yang melipatgandakan tunjangan jabatan bagi profesi hakim hingga mencapai angka fantastis Rp 46.700.000,00 per bulan bagi seorang Hakim Tingkat Pertama (Hakim Pratama) yang baru diangkat dengan nol tahun pengalaman memutus perkara. Lonjakan ini mendongkrak penerimaan tunai bulanan (\textit{Take-Home Pay}/THP) hakim pemula menjadi nyaris Rp 50 juta per bulan, belum termasuk paket fasilitas natura seperti sewa rumah dinas, transportasi, jaminan kesehatan khusus/VIP, serta tunjangan kemahalan zona khusus.
+
+Sebaliknya, nasib aparatur pendukung yudisial---yakni para Panitera, Panitera Muda, Panitera Pengganti, Jurusita, serta pejabat fungsional/struktural Kesekretariatan---mengalami marjinalisasi finansial yang sangat memprihatinkan. Sebagai aparatur sipil negara yang berstatus Pegawai Negeri Sipil (PNS) di bawah rezim kementerian eksekutif (KemenPAN-RB dan BKN), aparatur kepaniteraan hanya menerima Tunjangan Jabatan fungsional yang terkunci sangat rendah berdasarkan Peraturan Presiden (Perpres) Nomor 124 Tahun 2022, yakni berkisar antara Rp 540.000,00 hingga Rp 2.025.000,00 per bulan. Meskipun ditopang oleh Tunjangan Kinerja (remunerasi) melalui Keputusan Ketua Mahkamah Agung (KMA) Nomor 210/KMA/SK/VIII/2020, akumulasi THP seorang Panitera atau Sekretaris Pengadilan Kelas II dengan masa kerja belasan hingga puluhan tahun hanya berkutat di angka $\pm$ Rp 14 juta per bulan. 
+
+Kondisi tersebut melahirkan jurang kesenjangan kompensasi yang sangat ekstrem: seorang yuris muda berusia 25--29 tahun yang baru dilantik menerima THP tunai sekitar 352,5\% (3,52 kali lipat) lebih tinggi daripada pejabat administrator senior berusia 40 tahun yang memimpin seluruh urusan operasional kepaniteraan pengadilan tempat hakim tersebut bertugas. Bahkan, THP hakim pemula tersebut jauh melampaui penghasilan seorang Panitera Tingkat Banding (Pengadilan Tinggi) di tingkat provinsi yang membawahi puluhan pengadilan dan telah mengabdi selama hampir tiga dekade.
+
+Kesenjangan kompensasi yang tidak rasional ini menimbulkan implikasi multidimensional yang destruktif terhadap ekosistem peradilan Indonesia. Pertama, dari dimensi sosiologis dan iklim kerja, ketimpangan yang luar biasa melahirkan stratifikasi sosial-kelembagaan (feodalisme internal) dan merusak relasi kerja kolaboratif yang setara antara majelis hakim dan panitera pengganti di ruang sidang. Kedua, dari aspek integritas institusional, pembiaran aparatur kepaniteraan---yang memegang kontrol fisik atas berkas perkara, eksekusi putusan, dan layanan meja pertama (\textit{front office})---dalam kondisi kesejahteraan yang timpang membuka celah kerentanan moral terhadap godaan korupsi dan mafia peradilan. Ketiga, kesenjangan ini memicu fenomena eksodus talenta (\textit{brain drain}), di mana aparatur kepaniteraan senior berkinerja tinggi terdorong secara masif untuk berpindah jalur mengikuti seleksi Calon Hakim murni demi perbaikan taraf hidup, sehingga mengosongkan pos-pos manajerial kepaniteraan yang matang di berbagai satuan kerja peradilan pelosok tanah air.
+
+Menghadapi kompleksitas persoalan di atas, kajian ini melakukan reorientasi fokus penelitian dengan membedah secara komparatif rasio dan disparitas THP antara Panitera/Sekretaris Pengadilan dan Hakim di lima yurisdiksi: Indonesia, Amerika Serikat, Kosta Rika, Korea Selatan, dan Filipina. Pemilihan negara-negara komparator ini didasarkan pada variasi tipologi sistem peradilan yang dianut: Amerika Serikat mewakili tradisi \textit{common law} dengan administrasi peradilan profesional otonom (\textit{Administrative Office of the U.S. Courts}); Kosta Rika mewakili tradisi \textit{civil law} Amerika Latin yang memiliki otonomi anggaran konstitusional 6\% dan sistem penggajian terpadu (\textit{Salario Global}); Korea Selatan merepresentasikan sistem peradilan Asia Timur yang menerapkan otonomi birokrasi mutlak melalui \textit{National Court Administration} (NCA); serta Filipina yang mengombinasikan pengaruh hukum peradilan campuran dengan perisai otonomi fiskal non-pengurangan anggaran (\textit{non-decreasable budget}).
+
+Melalui pendekatan komparatif ini, penelitian ini berupaya menjawab tiga rumusan masalah pokok:
+\begin{enumerate}
+    \item Bagaimana perbandingan struktur, nominal, dan rasio komparatif \textit{Take-Home Pay} (THP) antara Panitera/Sekretaris Pengadilan dan Hakim di Indonesia, Amerika Serikat, Kosta Rika, Korea Selatan, dan Filipina?
+    \item Mengapa yurisdiksi komparator global berhasil menjaga proporsionalitas kompensasi non-hakim pada rentang yang bermartabat (65\%--85\%, bahkan melampaui 100\% pada level manajerial tertentu), sementara di Indonesia terjadi jurang kesenjangan ekstrem di mana Panitera hanya menerima 19\%--28\% dari penghasilan Hakim?
+    \item Bagaimana formulasi dan rekonstruksi kebijakan penggajian yudikatif yang ideal bagi Indonesia untuk menetapkan batas bawah rasio remunerasi Panitera dan Sekretaris Pengadilan demi menjaga wibawa penegakan hukum dan keadilan substantif?
+\end{enumerate}
+
+% ------------------- BAGIAN 2: METODE PENELITIAN -------------------
+\section{METODE PENELITIAN}
+
+Penelitian ini menggunakan jenis penelitian hukum normatif (\textit{normative legal research}) yang dipadukan dengan analisis kompensasi empiris-regulatoris (\textit{statutory compensation analysis}) berbasis data resmi lintas negara. Pendekatan penelitian yang diterapkan mencakup tiga instrumen metodologis utama:
+\begin{enumerate}
+    \item \textbf{Pendekatan Perundang-undangan (\textit{Statute Approach}):} Menganalisis peraturan perundang-undangan positif yang mengatur hak keuangan, gaji pokok, tunjangan jabatan, tunjangan kinerja, dan fasilitas bagi hakim maupun aparatur pengadilan di masing-masing yurisdiksi. Untuk Indonesia, regulasi inti meliputi PP No. 5 Tahun 2024, PP No. 42 Tahun 2025, Perpres No. 124 Tahun 2022, Keputusan KMA No. 210/KMA/SK/VIII/2020, dan SE Dirjen Perbendaharaan Kemenkeu SE-1/PB/2026. Untuk negara komparator, regulasi mencakup 28 U.S.C. §§ 604, 634, 711 dan \textit{Judiciary Salary Plan} (Amerika Serikat); \textit{Ley Marco de Empleo Público} dan skala \textit{Salario Global Poder Judicial} (Kosta Rika); \textit{Court Organization Act} dan \textit{Regulations on the Remuneration of Court Officials} (Korea Selatan); serta \textit{Judicial Compensation Act} (Filipina).
+    \item \textbf{Pendekatan Komparatif (\textit{Comparative Approach}):} Membandingkan secara berimbang (\textit{apple-to-apple}) struktur jabatan, mekanisme penggajian, dan rasio kompensasi aparatur kepaniteraan/kesekretariatan terhadap hakim pada tingkatan yurisdiksi yang ekuivalen.
+    \item \textbf{Pendekatan Konseptual (\textit{Conceptual Approach}):} Mengkaji fenomena ketimpangan kompensasi menggunakan Teori Tata Kelola Peradilan (\textit{Court Governance Theory}), Teori Keadilan Distributif John Rawls, serta Teori Nilai Pekerjaan (\textit{Job Value Theory}) dalam administrasi publik.
+\end{enumerate}
+
+Untuk memperoleh perbandingan yang presisi dan bebas dari distorsi fluktuasi moneter antarnegara, analisis komparasi ini menetapkan tiga parameter operasional:
+\begin{itemize}
+    \item \textbf{\textit{Job Equivalence Mapping} (Penyetaraan Jabatan):} Memetakan posisi aparatur non-hakim dan hakim ke dalam tiga tonggak karier setara:
+    \begin{enumerate}
+        \item \textit{Entry-Level} (Awal Karier, masa kerja 0--3 tahun): Hakim Pratama Kelas II vs Panitera Pengganti/Deputy Clerk/Admin Tingkat Pertama.
+        \item \textit{Mid-Career} (Pertengahan Karier, masa kerja 10--15 tahun): Hakim Madya/District Judge vs Panitera Pengadilan Kelas I/District Court Clerk/Samugukjang.
+        \item \textit{Senior/Peak Leadership} (Puncak Karier Manajerial, masa kerja $>$ 20 tahun): Hakim Tinggi/Hakim Agung vs Panitera Tingkat Banding/Circuit Executive/Minister of NCA.
+    \end{enumerate}
+    \item \textbf{Metrik Rasio Kompensasi ($R$) dan Multiplier Disparitas ($M$):}
+    \begin{equation}
+        R = \frac{\text{THP}_{\text{Clerk/Admin}}}{\text{THP}_{\text{Judge}}} \times 100\%
+    \end{equation}
+    \begin{equation}
+        M = \frac{\text{THP}_{\text{Judge}}}{\text{THP}_{\text{Clerk/Admin}}}
+    \end{equation}
+    Metrik $R$ mengukur persentase nilai pendapatan pejabat non-hakim terhadap hakim (semakin mendekati 100\%, semakin proporsional), sedangkan $M$ mengukur berapa kali lipat penghasilan hakim melampaui pejabat administrator pendukungnya.
+    \item \textbf{Analisis Sensitivitas Fasilitas Non-Tunai (\textit{Monetized Total Compensation}):} Membandingkan skenario penghasilan tunai murni (\textit{baseline cash THP}) terhadap skenario penghasilan tunai yang ditambah monetisasi nilai wajar fasilitas non-tunai (sewa rumah dinas, tunjangan transportasi dinas, asuransi kesehatan VIP/komersial, dan tunjangan kemahalan zona khusus).
+\end{itemize}
+
+% ------------------- BAGIAN 3: HASIL DAN PEMBAHASAN -------------------
+\section{HASIL DAN PEMBAHASAN}
+
+\subsection{Bedah Anatomi THP Indonesia: Anomali Hierarki dan Marginalisasi Finansial Panitera/Sekretaris}
+
+Sistem penggajian peradilan di Indonesia saat ini berada dalam situasi anomali akut akibat segregasi status kepegawaian yang kaku. Pasca-amandemen Undang-Undang Kekuasaan Kehakiman (UU No. 48 Tahun 2009) dan UU Aparatur Sipil Negara (UU No. 20 Tahun 2023), Hakim dikukuhkan kedudukan hukumnya sebagai Pejabat Negara. Sebaliknya, aparatur kepaniteraan dan kesekretariatan tetap disubordinasi sebagai Pegawai Negeri Sipil (PNS) biasa di bawah rezim kementerian eksekutif. Implikasi dari dualisme status ini tercermin langsung dalam formulasi hak keuangan bulanan.
+
+Penerimaan bulanan (\textit{Take-Home Pay}) seorang Hakim di Indonesia pasca-PP No. 42 Tahun 2025 disederhanakan dengan menyatukan tunjangan kinerja ke dalam Tunjangan Jabatan Hakim dengan nilai yang melonjak berlipat ganda. Berdasarkan Lampiran II B Nomor 11 regulasi tersebut, seorang Hakim Pratama (Hakim Pengadilan Tingkat Pertama Kelas II) berhak atas Tunjangan Jabatan sebesar Rp 46.700.000,00 per bulan. Ditambah Gaji Pokok PNS Golongan III/a Masa Kerja Golongan (MKG) 0 tahun sebesar Rp 2.785.700,00 (SE Dirjen Perbendaharaan Kemenkeu SE-1/PB/2026), maka seorang sarjana hukum muda berusia 25--29 tahun yang baru saja lulus pendidikan calon hakim langsung mengantongi THP tunai dasar sebesar Rp 49.485.700,00 per bulan. Angka ini murni penghasilan tunai dasar dan belum memperhitungkan fasilitas akomodasi perumahan dinas, uang transportasi, dan perlindungan asuransi kesehatan khusus.
+
+Di sisi lain, seorang Panitera atau Sekretaris Pengadilan Kelas II yang memikul tanggung jawab yuridis dan manajerial atas operasional seluruh satuan kerja berada pada posisi yang sangat timpang. Kompensasi bulanan pejabat non-hakim diatur secara terfragmentasi dalam tiga komponen:
+\begin{enumerate}
+    \item \textbf{Gaji Pokok PNS:} Mengacu pada PP No. 5 Tahun 2024, untuk Golongan III/d dengan masa kerja rata-rata 11 hingga 18 tahun, gaji pokok berkisar antara Rp 3.790.400,00 hingga Rp 4.169.900,00 (rata-rata Rp 4.000.000,00).
+    \item \textbf{Tunjangan Jabatan Fungsional Kepaniteraan:} Berdasarkan Perpres No. 124 Tahun 2022 (Lampiran II), Tunjangan Jabatan Panitera Pengadilan Kelas II ditetapkan hanya sebesar Rp 540.000,00 per bulan. Besaran ini tidak mengalami penyesuaian signifikan selama bertahun-tahun dan dinilai sangat mengabaikan risiko hukum penandatanganan akta serta pelaksanaan sita/eksekusi perdata.
+    \item \textbf{Tunjangan Kinerja (Remunerasi):} Mengacu pada Keputusan Ketua Mahkamah Agung Nomor 210/KMA/SK/VIII/2020 untuk Kelas Jabatan 10e, Panitera/Sekretaris Pengadilan Kelas II dialokasikan tunjangan kinerja sebesar Rp 9.500.000,00 per bulan.
+\end{enumerate}
+
+Dengan demikian, akumulasi THP tunai seorang Panitera Pengadilan Kelas II berada pada kisaran Rp 13.830.400,00 hingga Rp 14.209.900,00 per bulan (nilai median Rp 14.040.000,00). Komparasi rinci komponen hak keuangan ini disajikan dalam Tabel~\ref{tab:komparasi-thp-indonesia}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Dekomposisi Komponen Hak Keuangan Bulanan: Hakim Pratama vs Panitera/Sekretaris Pengadilan Kelas II di Indonesia}
+\label{tab:komparasi-thp-indonesia}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{4.0cm} p{5.2cm} p{5.2cm}}
+\hline
+\textbf{Komponen Hak Keuangan} & \textbf{Hakim Pratama (Kelas II)} \newline \textit{(Masa Kerja 0 Tahun, Usia 25--29 Th)} & \textbf{Panitera / Sekretaris (Kelas II)} \newline \textit{(Masa Kerja 11--18 Tahun, Usia 35--50 Th)} \tabularnewline
+\hline
+\raggedright\textbf{Gaji Pokok} & \raggedright Rp 2.785.700 \newline \textit{(Gol. III/a MKG 0, SE-1/PB/2026)} & \raggedright Rp 3.790.400 -- Rp 4.169.900 \newline \textit{(Gol. III/d, PP No. 5/2024)} \tabularnewline
+\raggedright\textbf{Tunjangan Jabatan} & \raggedright Rp 46.700.000 \newline \textit{(PP No. 42/2025 Lampiran II B No 11)} & \raggedright Rp 540.000 \newline \textit{(Perpres No. 124/2022 Lampiran II)} \tabularnewline
+\raggedright\textbf{Tunjangan Kinerja} & \raggedright Nihil \textit{(Dilebur ke Tunjangan Jabatan)} & \raggedright Rp 9.500.000 \newline \textit{(Keputusan KMA No. 210/2020 Kelas 10e)} \tabularnewline
+\raggedright\textbf{Fasilitas Akomodasi} & \raggedright Rumah Dinas / Tunjangan Sewa Rumah & \raggedright Tidak Ada (Biaya Pribadi / Indekos) \tabularnewline
+\raggedright\textbf{Fasilitas Transportasi} & \raggedright Tunjangan Transportasi Dinas & \raggedright Tidak Ada \tabularnewline
+\raggedright\textbf{Jaminan Kesehatan} & \raggedright Asuransi Kesehatan Khusus / VIP & \raggedright BPJS Kesehatan Standar ASN \tabularnewline
+\hline
+\raggedright\textbf{Total THP Tunai Bulanan} & \raggedright \textbf{Rp 49.485.700} & \raggedright \textbf{Rp 13.830.400 -- Rp 14.209.900} \newline \textit{(Median $\pm$ Rp 14.040.000)} \tabularnewline
+\hline
+\raggedright\textbf{Multiplier Disparitas ($M$)} & \multicolumn{2}{c}{\textbf{Hakim menerima 3,52 kali lipat (+252,5\% lebih tinggi)}} \tabularnewline
+\raggedright\textbf{Rasio Panitera ($R$)} & \multicolumn{2}{c}{\textbf{28,37\% (Panitera hanya menerima 28,4\% dari gaji Hakim)}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Data empiris pada Tabel~\ref{tab:komparasi-thp-indonesia} membuktikan secara matematis betapa lebarnya jurang kesenjangan internal peradilan. Seorang Hakim pemula dengan pengalaman adjudikasi nol tahun menerima kompensasi tunai 3,52 kali lipat dari Panitera yang mengelola seluruh kepaniteraan pengadilan. Dari sudut pandang rasio, THP Panitera Pengadilan Kelas II hanya setara 28,37\% dari penghasilan Hakim Pratama.
+
+Anomali ini semakin menabrak logika organisasi publik ketika dikomparasikan antar-tingkatan yurisdiksi. Dalam struktur hierarki peradilan, pengadilan tingkat banding (Pengadilan Tinggi) membina dan mengawasi seluruh pengadilan tingkat pertama di wilayah yurisdiksi provinsi. Namun, sistem penggajian saat ini justru memosisikan THP seorang Hakim Pratama pemula di pelosok jauh lebih tinggi daripada THP seorang \textbf{Panitera Tingkat Banding}. 
+
+Berdasarkan regulasi yang berlaku, seorang Panitera Tingkat Banding berpangkat Pembina Utama (Golongan IV/e) dengan masa kerja puncak mendekati masa pensiun menerima akumulasi THP sebesar $\pm$ Rp 27.051.800,00 per bulan (terdiri dari Gaji Pokok puncak $\pm$ Rp 5,7 juta, Tukin Rp 19.280.000,00, dan Tunjangan Jabatan Rp 2.025.000,00). Artinya, Hakim Pratama Kelas II yang baru lulus pendidikan dibayar nyaris dua kali lipat (1,83 kali lipat atau 182,9\%) lebih tinggi dibandingkan pejabat eselon tertinggi kepaniteraan di level provinsi. Perbandingan rasio THP Hakim Pratama terhadap seluruh tingkatan kepaniteraan di Indonesia dipaparkan dalam Tabel~\ref{tab:anomali-hierarki-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Anomali Hierarki: Perbandingan THP Hakim Pratama Kelas II (Baru Diangkat) terhadap THP Panitera Berbagai Tingkatan Pengadilan di Indonesia}
+\label{tab:anomali-hierarki-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{4.8cm} p{2.8cm} p{2.8cm} p{1.8cm} p{2.0cm}}
+\hline
+\textbf{Tingkatan Pengadilan} & \textbf{THP Panitera} & \textbf{THP Hakim Baru} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{Tingkat Pertama Kelas II} \newline \textit{(Masa Kerja 11--18 Th)} & Rp 14.040.000 & Rp 49.485.700 & \textbf{28,4\%} & \textbf{3,52x} (+252\%) \tabularnewline
+\raggedright\textbf{Tingkat Pertama Kelas IB} \newline \textit{(Masa Kerja 15--20 Th)} & Rp 14.876.000 & Rp 49.485.700 & \textbf{30,1\%} & \textbf{3,33x} (+233\%) \tabularnewline
+\raggedright\textbf{Tingkat Pertama Kelas IA} \newline \textit{(Masa Kerja $>$ 20 Th)} & Rp 19.102.000 & Rp 49.485.700 & \textbf{38,6\%} & \textbf{2,59x} (+159\%) \tabularnewline
+\raggedright\textbf{Tingkat Pertama Kelas IA Khusus} \newline \textit{(Masa Kerja $>$ 22 Th)} & Rp 23.761.800 & Rp 49.485.700 & \textbf{48,0\%} & \textbf{2,08x} (+108\%) \tabularnewline
+\raggedright\textbf{Tingkat Banding (Provinsi)} \newline \textit{(Masa Kerja Puncak $>$ 25 Th)} & Rp 27.051.800 & Rp 49.485.700 & \textbf{54,7\%} & \textbf{1,83x} (+83\%) \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Kesenjangan riil di lapangan sesungguhnya jauh lebih dramatis apabila memperhitungkan paket fasilitas natura (\textit{fringe benefits}) yang bernilai ekonomis tinggi. Berdasarkan PP No. 42 Tahun 2025 jo. PP No. 40 Tahun 1994, profesi hakim dijamin pemenuhan sarana perumahan dinas (atau kompensasi sewa rumah layak huni), sarana transportasi kedinasan, jaminan kesehatan VIP melalui asuransi komersial, serta tunjangan kemahalan zona terpencil. Sebaliknya, aparatur non-hakim yang dimutasi lintas pulau ke daerah terpencil sama sekali tidak difasilitasi tunjangan sewa rumah maupun tunjangan kemahalan, sehingga mereka terpaksa merogoh kantong pribadi untuk menyewa tempat tinggal bagi keluarganya. 
+
+Untuk memotret disparitas kompensasi total secara komprehensif, Tabel~\ref{tab:sensitivitas-monetisasi-lengkap} menyajikan analisis sensitivitas monetisasi kompensasi total (\textit{monetized total compensation}) antara Hakim Pratama Kelas II dan Panitera Pengadilan Kelas II.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Analisis Sensitivitas Kompensasi Total: Perbandingan THP Tunai Murni vs Monetisasi Total Fasilitas (Hakim Pratama vs Panitera Kelas II)}
+\label{tab:sensitivitas-monetisasi-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.0cm} p{4.0cm} p{4.0cm} p{2.2cm}}
+\hline
+\textbf{Komponen Remunerasi} & \textbf{Hakim Pratama Kelas II (Usia 25 Th, MKG 0 Th)} & \textbf{Panitera Kelas II (Usia 40 Th, MKG 15 Th)} & \textbf{Multiplier Disparitas} \tabularnewline
+\hline
+\raggedright\textbf{THP Tunai Murni (\textit{Baseline})} & Rp 49.485.700 & Rp 14.040.000 & \textbf{3,52x} (+252,5\%) \tabularnewline
+\raggedright\textbf{(+) Valuasi Sewa Rumah Dinas} & Rp 10.000.000 (Standar Layak) & Rp 0 (Tidak Difasilitasi) & -- \tabularnewline
+\raggedright\textbf{(+) Valuasi Fasilitas Transportasi} & Rp 5.000.000 (Tunjangan Transport) & Rp 0 (Tidak Difasilitasi) & -- \tabularnewline
+\raggedright\textbf{(+) Premi Asuransi Kesehatan Khusus} & Rp 3.000.000 (Paket Medis VIP) & Rp 0 (Standar BPJS) & -- \tabularnewline
+\raggedright\textbf{(+) Tunjangan Kemahalan (Zona 3--4)} & Rp 7.500.000 (PP 42/2025) & Rp 0 (Tidak Diberikan) & -- \tabularnewline
+\hline
+\raggedright\textbf{Total Kompensasi Termonetisasi} & \textbf{Rp 74.985.700} & \textbf{Rp 14.040.000} & \textbf{5,34x} (+434,0\%) \tabularnewline
+\hline
+\raggedright\textbf{Rasio Efektif Panitera ($R_{\text{eff}}$)} & \multicolumn{3}{c}{\textbf{18,72\% (Panitera hanya menerima 18,7\% dari kompensasi total Hakim)}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Hasil uji sensitivitas pada Tabel~\ref{tab:sensitivitas-monetisasi-lengkap} memperlihatkan lonjakan jurang disparitas yang sangat mencolok: jika pada penghasilan tunai murni rasionya berada di angka 3,52 kali lipat (+252,5\%), maka ketika seluruh fasilitas bernilai ekonomi dimonetisasi, kompensasi total hakim membengkak menjadi \textbf{5,34 kali lipat (+434\%)} di atas penghasilan panitera. Dengan kata lain, nilai pekerjaan manajerial kepaniteraan secara riil hanya dihargai sebesar 18,72\% dari total penghargaan negara kepada seorang hakim pemula.
+
+\subsection{Skema Remunerasi Amerika Serikat: Unifikasi Kepemimpinan Eksekutif dan Valuasi Manajerial Senior}
+
+Berbeda secara fundamental dengan Indonesia yang memecah kepaniteraan dan kesekretariatan ke dalam dualisme jabatan struktural, sistem peradilan federal Amerika Serikat menerapkan prinsip unifikasi kepemimpinan administratif. Pada setiap pengadilan federal tingkat pertama (\textit{U.S. District Court}) dan tingkat banding (\textit{U.S. Court of Appeals}), seluruh urusan kepaniteraan persidangan dan operasional administrasi umum (keuangan, kepegawaian, sarana prasarana, dan teknologi informasi) disatukan di bawah satu figur sentral non-hakim yang disebut \textit{Clerk of Court}. \textit{Clerk of Court} bertindak sebagai \textit{Chief Executive Officer} (CEO) pengadilan yang bertanggung jawab langsung kepada \textit{Chief Judge} (Ketua Pengadilan), membebaskan para hakim sepenuhnya untuk memutus perkara.
+
+Sistem penggajian peradilan federal AS dirancang dengan filosofi bahwa pengelolaan pengadilan modern adalah profesi manajerial puncak yang membutuhkan kepakaran eksekutif tinggi. Melalui payung hukum \textit{Ethics Reform Act of 1989} (Pub. L. 101-194) jo. 28 U.S. Code § 604 dan § 711, skala remunerasi bagi \textit{Clerk of Court} dan pimpinan administrasi senior diatur tersendiri dalam \textit{Judiciary Salary Plan} (JSP). Posisi \textit{Clerk of Court} diklasifikasikan pada jenjang eksekutif JSP-16 hingga JSP-17, yang plafon gajinya dipatok menempel ketat di bawah standar gaji hakim federal.
+
+Berdasarkan data resmi \textit{Administrative Office of the U.S. Courts} (AO) per 2024--2025:
+\begin{itemize}
+    \item Pada tingkat pengadilan dasar federal, seorang \textit{U.S. Magistrate Judge} menerima gaji statutori yang dikunci oleh undang-undang (28 U.S.C. § 634) sebesar 92\% dari gaji Hakim Distrik, yakni USD 237.268 per tahun. Pada tingkatan ini, seorang \textit{District Court Clerk} menerima gaji JSP hingga USD 191.300 per tahun, merepresentasikan rasio sebesar \textbf{80,6\%} terhadap \textit{Magistrate Judge}.
+    \item Dibandingkan dengan \textit{U.S. District Court Judge} (Hakim Distrik) yang bergaji statutori USD 257.900 per tahun, gaji \textit{District Court Clerk} (USD 191.300) mengamankan rasio solid sebesar \textbf{74,2\%}.
+    \item Pada tingkat pengadilan banding federal (\textit{U.S. Court of Appeals}), seorang \textit{Appellate Clerk of Court} atau \textit{Circuit Executive} menerima gaji berkisar USD 205.050 per tahun, menjaga rasio \textbf{75,0\%} terhadap \textit{Circuit Judge} (Hakim Banding) yang menerima USD 273.400 per tahun.
+    \item Pada tingkat Mahkamah Agung (\textit{Supreme Court of the United States}), posisi prestisius \textit{Clerk of the Supreme Court} menerima kompensasi eksekutif senior JSP-17 sebesar USD 220.700 per tahun, menghasilkan rasio \textbf{73,9\%} terhadap gaji seorang \textit{Associate Justice} (Hakim Agung AS) yang ditetapkan sebesar USD 298.500 per tahun.
+\end{itemize}
+
+Proporsionalitas sistem remunerasi peradilan federal Amerika Serikat dirangkum dalam Tabel~\ref{tab:komparasi-usa-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Proporsionalitas Remunerasi Peradilan Federal Amerika Serikat: \textit{Clerk of Court} vs Hakim Federal (2024--2025)}
+\label{tab:komparasi-usa-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.0cm} p{1.8cm} p{1.8cm}}
+\hline
+\textbf{Tingkatan Pengadilan Federal} & \textbf{Gaji \textit{Clerk} (JSP)} & \textbf{Gaji Hakim} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{Hakim Hierarki Dasar} \newline \textit{(U.S. Magistrate Judge)} & USD 191.300 & USD 237.268 & \textbf{80,6\%} & \textbf{1,24x} \tabularnewline
+\raggedright\textbf{Pengadilan Tingkat Pertama} \newline \textit{(U.S. District Court)} & USD 191.300 & USD 257.900 & \textbf{74,2\%} & \textbf{1,35x} \tabularnewline
+\raggedright\textbf{Pengadilan Tingkat Banding} \newline \textit{(U.S. Court of Appeals)} & USD 205.050 & USD 273.400 & \textbf{75,0\%} & \textbf{1,33x} \tabularnewline
+\raggedright\textbf{Mahkamah Agung} \newline \textit{(U.S. Supreme Court)} & USD 220.700 & USD 298.500 & \textbf{73,9\%} & \textbf{1,35x} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Data empiris Amerika Serikat menunjukkan stabilitas rasio yang luar biasa: di semua tingkatan hierarki dari pengadilan dasar hingga Mahkamah Agung, penghasilan Panitera secara konsisten dijaga pada rentang \textbf{74\% hingga 81\%} dari gaji Hakim. Nilai pengganda disparitas ($M$) hanya berkisar antara 1,24 hingga 1,35 kali lipat. Perlu dicatat pula bahwa rata-rata usia pengangkatan seorang Hakim Federal di AS adalah 49--50 tahun dengan rekam jejak praktik hukum minimal 12 tahun yang diakui oleh \textit{American Bar Association} (ABA). Artinya, bahkan ketika disandingkan dengan hakim-hakim elite yang memegang mandat seumur hidup (\textit{lifetime appointment}), kompensasi pejabat kepaniteraan tetap dihargai sangat tinggi dan setara dengan pejabat eselon atas kementerian (\textit{Senior Executive Service}/SES).
+
+Fenomena yang lebih progresif ditemukan pada yurisdiksi pengadilan tingkat negara bagian (\textit{state courts}), khususnya di distrik metropolitan besar seperti California. Di Los Angeles County Superior Court---pengadilan tingkat pertama terbesar di dunia yang mempekerjakan lebih dari 5.000 aparatur dan mengelola anggaran operasional ratusan juta dolar---posisi administrator tunggal dipegang oleh seorang \textit{Court Executive Officer} (CEO). Berdasarkan data resmi \textit{Government Compensation in California} (California State Controller's Office, 2023) jo. \textit{California Government Code} § 68203, gaji seorang Hakim Tingkat Pertama (\textit{Superior Court Judge}) dipatok oleh undang-undang pada kisaran USD 238.000 per tahun. Namun, dewan hakim menunjuk dan menggaji seorang CEO profesional non-hakim dengan paket kompensasi eksekutif korporat yang melampaui USD 300.000 per tahun, sebagaimana disajikan dalam Tabel~\ref{tab:komparasi-california-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Kasus Khusus Remunerasi Eksekutif: \textit{Court Executive Officer} (CEO) vs Hakim Tingkat Pertama pada Los Angeles County Superior Court, California}
+\label{tab:komparasi-california-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{6.0cm} p{3.5cm} p{2.2cm} p{2.2cm}}
+\hline
+\textbf{Jabatan Organisasi Pengadilan} & \textbf{Kompensasi Tahunan} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{\textit{Court Executive Officer} (CEO)} \newline \textit{(Ekuivalen Panitera/Sekretaris Pengadilan)} & > USD 300.000 & \textbf{126,1\%} & \textbf{0,79x} (CEO Lebih Tinggi) \tabularnewline
+\raggedright\textbf{Hakim Tingkat Pertama} \newline \textit{(Superior Court Judge)} & $\pm$ USD 238.000 & \textbf{100,0\%} & \textbf{1,00x} (\textit{Baseline}) \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Kasus Los Angeles County membuktikan paradigma modern administrasi peradilan: kompensasi pejabat publik tidak semata-mata diukur dari status konstitusional simbolik pemutus perkara, melainkan linier dengan besarnya risiko manajemen keuangan publik, skala organisasi, dan beban akuntabilitas institusional yang dipikul.
+
+\subsection{Sistem \textit{Salario Global} Kosta Rika: Keadilan Remunerasi dalam Bingkai \textit{Poder Judicial}}
+
+Republik Kosta Rika menawarkan model tata kelola remunerasi peradilan yang sangat khas dalam rumpun hukum \textit{civil law}. Kekuasaan Kehakiman Kosta Rika (\textit{Poder Judicial}) memiliki derajat kemandirian finansial yang sangat kuat berkat mandat Pasal 177 Konstitusi Politik 1949 yang mengunci alokasi anggaran belanja peradilan minimal 6\% dari pendapatan reguler negara secara otomatis setiap tahunnya. Dengan fondasi fiskal yang kebal dari intimidasi eksekutif, \textit{Poder Judicial} mengelola administrasi sumber daya manusianya secara mandiri melalui Direktorat Manajemen SDM (\textit{Dirección de Gestión Humana del Poder Judicial}).
+
+Dalam perkembangan terkini, peradilan Kosta Rika menerapkan sistem \textit{Salario Global} (Gaji Global Terpadu) yang diamanatkan oleh Undang-Undang Kerangka Kerja Ketenagakerjaan Publik (\textit{Ley Marco de Empleo Público}, UU No. 10159). Sistem ini menghapus fragmentasi tunjangan-tunjangan ad-hoc yang rumit dan menggantinya dengan paket gaji tunggal yang transparan, kompetitif, dan berkeadilan. Dalam struktur organisasi pengadilan tingkat pertama Kosta Rika, tata usaha administrasi perkara dan kesekretariatan dipimpin oleh seorang pejabat administrator manajerial, yang diklasifikasikan sebagai \textit{Administrador Regional} atau \textit{Administrador de Despacho}.
+
+Berdasarkan data resmi tabel skala gaji \textit{Salario Global Poder Judicial} per 2024:
+\begin{enumerate}
+    \item Jabatan \textit{Administrador Regional 1} (padanan terdekat Panitera/Sekretaris Pengadilan Tingkat Pertama) ditetapkan menerima gaji pokok sebesar CRC 1.979.545 per bulan (sekitar Rp 63,3 juta dengan kurs referensi Rp 32/CRC).
+    \item Jika dikomparasikan dengan \textit{Juez 1} (Hakim Tingkat Pertama \textit{entry-level}) yang menerima CRC 2.656.416 per bulan (sekitar Rp 85 juta), maka gaji Administrator Pengadilan Kosta Rika mencapai rasio \textbf{74,5\%} terhadap Hakim. Multiplier perbedaannya hanya 1,34 kali lipat.
+    \item Bahkan apabila disandingkan dengan \textit{Juez 3} (Hakim Senior yang mengepalai pengadilan/Ketua Pengadilan) yang menerima CRC 3.015.582 per bulan (sekitar Rp 96,5 juta), gaji Administrator tetap bertahan kuat pada rasio \textbf{65,6\%}.
+    \item Pada satuan kerja pengadilan khusus, seperti \textit{Administrador de Juzgado de Tránsito} (Pengadilan Lalu Lintas) yang menerima CRC 1.840.226 per bulan (sekitar Rp 58,9 juta), rasio terhadap \textit{Juez 1} tercatat sebesar \textbf{69,3\%}.
+\end{enumerate}
+
+Rincian perbandingan remunerasi Kosta Rika disajikan pada Tabel~\ref{tab:komparasi-kostarika-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Proporsionalitas Remunerasi Peradilan Kosta Rika: Pejabat Administrator Manajerial vs Hakim Tingkat Pertama (\textit{Salario Global} 2024)}
+\label{tab:komparasi-kostarika-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.0cm} p{1.8cm} p{1.8cm}}
+\hline
+\textbf{Jabatan Administrator vs Hakim} & \textbf{Gaji Administrator} & \textbf{Gaji Hakim} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{Administrador Regional 1} \newline \textit{(vs Juez 1 / Hakim Pertama)} & CRC 1.979.545 \newline \textit{($\pm$ Rp 63,3 Juta)} & CRC 2.656.416 \newline \textit{($\pm$ Rp 85,0 Juta)} & \textbf{74,5\%} & \textbf{1,34x} \tabularnewline
+\raggedright\textbf{Administrador Regional 1} \newline \textit{(vs Juez 3 / Ketua Pengadilan)} & CRC 1.979.545 \newline \textit{($\pm$ Rp 63,3 Juta)} & CRC 3.015.582 \newline \textit{($\pm$ Rp 96,5 Juta)} & \textbf{65,6\%} & \textbf{1,52x} \tabularnewline
+\raggedright\textbf{Admin Pengadilan Khusus} \newline \textit{(vs Juez 1 / Hakim Pertama)} & CRC 1.840.226 \newline \textit{($\pm$ Rp 58,9 Juta)} & CRC 2.656.416 \newline \textit{($\pm$ Rp 85,0 Juta)} & \textbf{69,3\%} & \textbf{1,44x} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Pengalaman Kosta Rika memberikan pelajaran berharga bagi peradilan rumpun \textit{civil law}: kepastian anggaran institusional (kuota 6\% Konstitusi) berkolerasi positif dengan kemampuan institusi dalam memelihara kesejahteraan yang adil bagi seluruh aparatur pendukungnya. Di Kosta Rika, tidak ada aparatur kepaniteraan yang ditinggalkan dalam kemiskinan komparatif demi mendanai kenaikan gaji hakim semata.
+
+\subsection{Meritokrasi Birokrasi Yudikatif Korea Selatan: Independensi \textit{National Court Administration}}
+
+Republik Korea (Korea Selatan) menghadirkan model tata kelola peradilan mandiri yang sangat maju melalui pelembagaan \textit{National Court Administration} (NCA, \textit{Beobwonhaengjeongcheo}). Berdasarkan \textit{Court Organization Act} (\textit{Beobwon Jojikbeop}, UU No. 51 Tahun 1949 yang dimutakhirkan dalam Act No. 20465), manajemen administrasi, keuangan, dan sumber daya manusia peradilan berada di bawah otoritas eksklusif Mahkamah Agung Korea Selatan, sepenuhnya terbebas dari intervensi kementerian kepegawaian maupun kementerian keuangan eksekutif.
+
+Dalam tata kelola pengadilan Korea Selatan, staf administrasi peradilan (\textit{Beobwon Gongmuwon}) memiliki jalur karier profesional mandiri yang terstruktur dari Grade 9 (staf klerikal pemula) hingga Grade 2 (Administrator Senior). Pada tingkat pengadilan distrik (\textit{District Court}), pimpinan manajemen operasional persidangan dan administrasi umum dipegang oleh seorang \textit{Chief Court Secretary} atau Administrator Pengadilan (\textit{Samugukjang}) yang berpangkat Pejabat Grade 3. Perlu dicatat bahwa posisi puncak birokrasi NCA---yakni \textit{Minister of the National Court Administration} yang secara struktural berada di luar jenjang karier Aparatur Pengadilan (\textit{Beobwon Gongmuwon})---secara hukum dan tradisi selalu dijabat oleh seorang Hakim Agung aktif yang ditunjuk langsung oleh Ketua Mahkamah Agung.
+
+Mengacu pada Peraturan Remunerasi Aparatur Pengadilan (\textit{Regulations on the Remuneration of Court Officials}) tahun 2024:
+\begin{itemize}
+    \item Pada tingkat pengadilan pertama (\textit{District Court}), seorang Pejabat Grade 3 yang menjabat Administrator Pengadilan menerima gaji pokok bulanan sebesar KRW 3.547.400 (sekitar Rp 41,8 juta dengan kurs referensi Rp 11,8/KRW). Sementara itu, seorang Hakim Distrik pemula (\textit{District Judge} yang baru menyelesaikan pendidikan \textit{Judicial Research and Training Institute}) menerima gaji pokok bulanan sekitar KRW 3.400.000 (sekitar Rp 40,1 juta). Dengan demikian, pada tingkatan ini, gaji pokok Administrator Pengadilan mencatat rasio \textbf{104,3\%} terhadap Hakim Distrik pemula (pejabat non-hakim senior menerima gaji 4\% lebih tinggi dari hakim baru).
+    \item Pada tingkat pengadilan banding (\textit{High Court}), seorang Administrator Pengadilan Senior berkualifikasi Grade 2 menerima gaji pokok bulanan sebesar KRW 3.931.900 (sekitar Rp 46,3 juta). Jika disandingkan dengan Hakim Pengadilan Tinggi (\textit{High Court Judge}) yang menerima gaji sekitar KRW 6.000.000 (sekitar Rp 70,8 juta), rasio remunerasi tetap terjaga stabil di kisaran \textbf{65,5\%}.
+    \item Pada tingkat puncak Mahkamah Agung (\textit{Supreme Court of Korea}), pimpinan eksekutif tertinggi administrasi peradilan adalah \textit{Minister of the National Court Administration}. Jabatan ini---berbeda dari seluruh jenjang karier \textit{Beobwon Gongmuwon} di bawahnya---secara hukum dan tradisi hingga saat ini selalu dijabat oleh seorang \textbf{Hakim Agung aktif} (\textit{Supreme Court Justice}) yang ditunjuk langsung oleh Ketua Mahkamah Agung (sebagaimana penunjukan Hakim Agung Park Young-jae pada Januari 2026; KBS World, 2026). Oleh karena itu, kompensasi bulanan pimpinan NCA adalah 100\% identik dengan Hakim Agung, yakni sebesar KRW 9.139.800 per bulan (sekitar Rp 107,8 juta). \textbf{Praktik ini mendapat kritik dari akademisi dan pemerhati tata kelola peradilan}: sejumlah pakar berpendapat bahwa penunjukan hakim aktif sebagai kepala administrasi berpotensi mengaburkan batas antara fungsi adjudikatif dan administratif, serta mengurangi otonomi birokrasi karier NCA itu sendiri. Dengan demikian, data rasio 100\% pada level ini tidak dapat diperlakukan sebagai bukti bahwa pejabat administrator non-hakim dibayar setara hakim---melainkan mencerminkan fakta bahwa jabatan \textit{Minister NCA} \textit{de facto} tetap dipegang oleh hakim.
+\end{itemize}
+
+Struktur komparasi remunerasi Korea Selatan dirangkum dalam Tabel~\ref{tab:komparasi-korsel-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Proporsionalitas Remunerasi Peradilan Korea Selatan: Pejabat Administrasi Peradilan (\textit{Beobwon Gongmuwon}) vs Hakim (2024)}
+\label{tab:komparasi-korsel-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.0cm} p{1.8cm} p{1.8cm}}
+\hline
+\textbf{Tingkatan Pengadilan \& Jabatan} & \textbf{Gaji Administrator} & \textbf{Gaji Hakim} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{Pengadilan Tingkat Pertama} \newline \textit{Court Admin (Gr-3) vs District Judge} & KRW 3.547.400 \newline \textit{($\pm$ Rp 41,8 Juta)} & KRW 3.400.000 \newline \textit{($\pm$ Rp 40,1 Juta)} & \textbf{104,3\%} & \textbf{0,96x} (Admin Lebih Tinggi) \tabularnewline
+\raggedright\textbf{Pengadilan Tingkat Banding} \newline \textit{High Admin (Gr-2) vs High Judge} & KRW 3.931.900 \newline \textit{($\pm$ Rp 46,3 Juta)} & KRW 6.000.000 \newline \textit{($\pm$ Rp 70,8 Juta)} & \textbf{65,5\%} & \textbf{1,53x} \tabularnewline
+\raggedright\textbf{Tingkat Mahkamah Agung} \newline \textit{Minister NCA vs Supreme Justice} & KRW 9.139.800 \newline \textit{($\pm$ Rp 107,8 Juta)} & KRW 9.139.800 \newline \textit{($\pm$ Rp 107,8 Juta)} & \textbf{100,0\%*} & \textbf{1,00x}* (Dijabat Hakim) \tabularnewline
+\hline
+\multicolumn{5}{p{16.0cm}}{\textit{*Catatan Kritis: Rasio 100\% di level Mahkamah Agung bukan karena pejabat administrator karier dihargai setara hakim, melainkan karena jabatan Minister NCA hingga saat ini selalu dijabat oleh Hakim Agung aktif yang ditunjuk Ketua MA. Praktik ini dikritik akademisi karena mengaburkan pemisahan fungsi adjudikatif dan administratif.}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Pengaturan di Korea Selatan menegaskan bahwa senioritas pengalaman dan tanggung jawab operasional sangat dihargai dalam meritokrasi peradilan pada jenjang karier birokrasi (Grade 2--9): seorang \textit{Beobwon Gongmuwon} senior yang telah mengabdi puluhan tahun tidak disubordinasi secara finansial di bawah lulusan baru yang baru dilantik menjadi hakim. Namun, model Korea Selatan juga menyimpan paradoks yang patut dicermati: posisi puncak administrasi peradilan (\textit{Minister of the National Court Administration}) justru tidak diisi oleh birokrat karier NCA, melainkan tetap dimonopoli oleh Hakim Agung aktif. Paradoks ini---yang juga menjadi bahan kritik dalam literatur akademik tata kelola peradilan komparatif---menunjukkan bahwa bahkan di negara yang sistem birokrasi peradilannya paling maju sekalipun, batas antara kekuasaan adjudikatif dan manajerial masih belum sepenuhnya dipisahkan secara kelembagaan. Meskipun demikian, bukti terkuat dari model Korea yang relevan bagi penelitian ini tetap terletak pada jenjang karier Grade 2--3, di mana kompensasi birokrat peradilan karier terbukti setara atau melampaui kompensasi hakim pemula.
+
+\subsection{Model Campuran Filipina: Otonomi Finansial \textit{Office of the Court Administrator}}
+
+Republik Filipina menyajikan model komparasi yang sangat menarik di kawasan Asia Tenggara. Dengan tradisi hukum campuran (\textit{mixed jurisdiction}) yang memadukan warisan hukum Spanyol (\textit{civil law}) dan pengaruh kuat sistem presidensial serta peradilan Amerika Serikat (\textit{common law}), Filipina membentengi cabang yudikatifnya dengan otonomi fiskal konstitusional yang eksplisit. Berdasarkan Pasal VIII Seksi 3 Konstitusi Filipina 1987, anggaran peradilan dilarang dikurangi oleh kongres di bawah alokasi tahun sebelumnya dan wajib dicairkan secara berkala dan otomatis oleh Departemen Anggaran dan Manajemen (DBM).
+
+Di bawah supervisi Mahkamah Agung Filipina, manajemen pengadilan dikelola oleh \textit{Office of the Court Administrator} (OCA). Tata kelola kepaniteraan peradilan Filipina dipimpin oleh para \textit{Clerk of Court} yang terstruktur dari tingkat pengadilan kota tingkat pertama (\textit{Municipal Trial Court}/MTC), pengadilan distrik umum (\textit{Regional Trial Court}/RTC), hingga pengadilan banding (\textit{Court of Appeals}).
+
+Berdasarkan kerangka \textit{Judicial Compensation and Salary Standardization Act} per 2024:
+\begin{enumerate}
+    \item Pada tingkat MTC, seorang \textit{Clerk of Court} menerima gaji bulanan sekitar PHP 85.000 (sekitar Rp 23,8 juta dengan kurs referensi Rp 280/PHP), berbanding dengan MTC \textit{Judge} yang menerima sekitar PHP 120.000 (sekitar Rp 33,6 juta), menghasilkan rasio sebesar \textbf{70,8\%} (multiplier 1,41x).
+    \item Pada tingkat RTC, seorang \textit{Branch Clerk of Court} menerima gaji bulanan sekitar PHP 110.000 (sekitar Rp 30,8 juta), berbanding dengan RTC \textit{Judge} yang menerima sekitar PHP 160.000 (sekitar Rp 44,8 juta), menghasilkan rasio sebesar \textbf{68,8\%} (multiplier 1,45x).
+    \item Pada tingkat pengadilan banding (\textit{Court of Appeals}), pimpinan deputi kepaniteraan (\textit{OCA Deputy/Appellate Clerk}) menerima gaji sekitar PHP 165.000 (sekitar Rp 46,2 juta) dibandingkan \textit{Associate Justice} yang menerima PHP 210.000 (sekitar Rp 58,8 juta), menghasilkan rasio sebesar \textbf{78,6\%} (multiplier 1,27x).
+\end{enumerate}
+
+Rangkuman proporsionalitas remunerasi Filipina disajikan dalam Tabel~\ref{tab:komparasi-filipina-lengkap}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Proporsionalitas Remunerasi Peradilan Filipina: \textit{Clerk of Court} vs Hakim Peradilan Berbagai Tingkat (2024)}
+\label{tab:komparasi-filipina-lengkap}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.5cm} p{3.0cm} p{3.0cm} p{1.8cm} p{1.8cm}}
+\hline
+\textbf{Tingkatan Pengadilan} & \textbf{Gaji \textit{Clerk}} & \textbf{Gaji Hakim} & \textbf{Rasio ($R$)} & \textbf{Multiplier ($M$)} \tabularnewline
+\hline
+\raggedright\textbf{Municipal Trial Court (MTC)} \newline \textit{Clerk of Court vs MTC Judge} & PHP 85.000 \newline \textit{($\pm$ Rp 23,8 Juta)} & PHP 120.000 \newline \textit{($\pm$ Rp 33,6 Juta)} & \textbf{70,8\%} & \textbf{1,41x} \tabularnewline
+\raggedright\textbf{Regional Trial Court (RTC)} \newline \textit{Branch Clerk vs RTC Judge} & PHP 110.000 \newline \textit{($\pm$ Rp 30,8 Juta)} & PHP 160.000 \newline \textit{($\pm$ Rp 44,8 Juta)} & \textbf{68,8\%} & \textbf{1,45x} \tabularnewline
+\raggedright\textbf{Court of Appeals} \newline \textit{Appellate Clerk vs Assoc. Justice} & PHP 165.000 \newline \textit{($\pm$ Rp 46,2 Juta)} & PHP 210.000 \newline \textit{($\pm$ Rp 58,8 Juta)} & \textbf{78,6\%} & \textbf{1,27x} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Data Filipina membuktikan bahwa di kawasan sesama negara berkembang Asia Tenggara, rasio kepaniteraan terhadap hakim tetap dipatok stabil di rentang \textbf{68\% hingga 79\%}. Filipina menolak doktrin subordinasi ekstrem yang memiskinkan aparatur kepaniteraannya.
+
+\subsection{Sintesis Komparatif Global: Matriks Lintas Yurisdiksi dan Analisis Kesenjangan}
+
+Untuk meletakkan posisi Indonesia dalam peta perbandingan internasional yang komprehensif, Tabel~\ref{tab:matriks-global-ekuivalensi} memetakan kompensasi bulanan kotor/tetap pada tiga tonggak karier setara (\textit{Entry-Level, Mid-Career, Senior/Peak Leadership}) di lima yurisdiksi.
+
+\begin{table}[H]
+\centering
+\fontsize{8.5}{10.5}\selectfont
+\caption{Matriks Komparatif Global: Ekuivalensi Karier dan Rasio Remunerasi Non-Hakim vs Hakim pada 3 Titik Masa Kerja Setara di 5 Negara}
+\label{tab:matriks-global-ekuivalensi}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{2.2cm} p{3.8cm} p{3.8cm} p{3.8cm} p{1.8cm}}
+\hline
+\textbf{Yurisdiksi} & \textbf{Entry-Level (0--3 Th)} & \textbf{Mid-Career (10--15 Th)} & \textbf{Senior/Peak ($>$ 20 Th)} & \textbf{Rentang Rasio ($R$)} \tabularnewline
+\hline
+\raggedright\textbf{Indonesia} & Hakim II: Rp 49,5 Jt \newline Panitera Pengganti: Rp 9,6 Jt \newline \textit{($R = 19,4\%$)} & Hakim IA: Rp 74,4 Jt \newline Panitera IA: Rp 23,8 Jt \newline \textit{($R = 32,0\%$)} & Hakim Tinggi: Rp 106,9 Jt \newline Panitera Tinggi: Rp 27,1 Jt \newline \textit{($R = 25,3\%$)} & \textbf{19,4\% -- 32,0\%} \newline \textit{(Ekstrem Rendah)} \tabularnewline
+\raggedright\textbf{Amerika Serikat} & Magistrate: USD 19,7k \newline Deputy Clerk: USD 12,5k \newline \textit{($R = 63,5\%$)} & District Judge: USD 21,5k \newline District Clerk: USD 15,9k \newline \textit{($R = 74,0\%$)} & Appeals Judge: USD 22,8k \newline Circuit Exec: USD 17,1k \newline \textit{($R = 75,0\%$)} & \textbf{63,5\% -- 80,6\%} \newline \textit{(Stabil Tinggi)} \tabularnewline
+\raggedright\textbf{Korea Selatan} & District Judge: KRW 3,4M \newline Admin Gr-3: KRW 3,5M \newline \textit{($R = 104,3\%$)} & High Judge: KRW 6,0M \newline Admin Gr-2: KRW 3,9M \newline \textit{($R = 65,5\%$)} & Supreme Justice: KRW 9,1M \newline Minister NCA: KRW 9,1M \newline \textit{($R = 100,0\%$)} & \textbf{65,5\% -- 104,3\%} \newline \textit{(Sangat Proporsional)} \tabularnewline
+\raggedright\textbf{Kosta Rika} & Juez 1: CRC 2,66M \newline Admin 1: CRC 1,98M \newline \textit{($R = 74,5\%$)} & Juez 2: CRC 2,85M \newline Admin 2: CRC 2,10M \newline \textit{($R = 73,7\%$)} & Juez 3: CRC 3,02M \newline Admin Reg: CRC 2,25M \newline \textit{($R = 74,5\%$)} & \textbf{65,6\% -- 74,5\%} \newline \textit{(Stabil Proporsional)} \tabularnewline
+\raggedright\textbf{Filipina} & MTC Judge: PHP 120k \newline MTC Clerk: PHP 85k \newline \textit{($R = 70,8\%$)} & RTC Judge: PHP 160k \newline Branch Clerk: PHP 110k \newline \textit{($R = 68,8\%$)} & Court Appeals: PHP 210k \newline OCA Deputy: PHP 165k \newline \textit{($R = 78,6\%$)} & \textbf{68,8\% -- 78,6\%} \newline \textit{(Stabil Proporsional)} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Kompilasi empiris pada Tabel~\ref{tab:matriks-global-ekuivalensi} menegaskan temuan sentral penelitian ini:
+\begin{enumerate}
+    \item \textbf{Konsensus Proporsionalitas Global:} Di seluruh yurisdiksi demokrasi modern yang diteliti (Amerika Serikat, Kosta Rika, Korea Selatan, dan Filipina), rasio penghasilan pejabat administrasi dan kepaniteraan peradilan terhadap hakim secara konsisten berada pada rentang **65\% hingga 85\%**. Pada posisi-posisi tertentu di pengadilan tingkat dasar atau wilayah metropolitan (Korea Selatan Grade 3 dan Los Angeles County California), kompensasi pejabat administrator bahkan melampaui **100\% hingga 126\%** dari gaji hakim.
+    \item \textbf{Anomali Terisolasi Indonesia:} Indonesia merupakan satu-satunya yurisdiksi yang menampilkan jurang disparitas ekstrem yang tidak rasional. Rasio kompensasi aparatur kepaniteraan di Indonesia terpuruk pada rentang **19,4\% hingga 32,0\%** (rata-rata di bawah 28\%). Sementara di negara komparator seorang hakim dibayar hanya 1,2 hingga 1,5 kali lipat dari paniteranya, di Indonesia seorang hakim baru dibayar **3,52 kali lipat (tunai)** hingga **5,34 kali lipat (termonetisasi)** dari panitera seniornya.
+\end{enumerate}
+
+\subsection{Analisis Komparatif Sistem Hierarki Jabatan: Eselonisasi Indonesia vs. Sistem Klasifikasi Karier di Negara Komparator}
+
+Salah satu premis yang sering diabaikan dalam perdebatan mengenai disparitas kompensasi adalah pertanyaan mendasar: \textit{apakah negara-negara komparator juga menerapkan hierarki jabatan yang kaku seperti eselonisasi di Indonesia?} Jawaban atas pertanyaan ini krusial untuk memahami mengapa sistem di sana mampu menjaga proporsionalitas kompensasi, sementara sistem Indonesia mengalami kegagalan struktural.
+
+\subsubsection{Sistem Eselonisasi Indonesia: Hierarki Rigid yang Mengunci Kompensasi}
+
+Indonesia menerapkan sistem eselonisasi jabatan struktural yang berjenjang (Eselon I hingga IV) sebagaimana diatur dalam kerangka UU Aparatur Sipil Negara. Berdasarkan Pasal 13 UU ASN Nomor 20 Tahun 2023, nomenklatur jabatan diklasifikasikan ke dalam jabatan manajerial (Jabatan Pimpinan Tinggi Utama, Madya, dan Pratama; Jabatan Administrator; dan Jabatan Pengawas) serta jabatan nonmanajerial (Jabatan Fungsional dan Jabatan Pelaksana). Dalam konteks pengadilan, jabatan kepaniteraan dan kesekretariatan memiliki posisi eselon yang secara teori mencerminkan bobot tanggung jawab manajerial yang signifikan, sebagaimana dirangkum dalam Tabel~\ref{tab:eselon-indonesia}.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Pemetaan Eselonisasi Jabatan Kepaniteraan dan Kesekretariatan Pengadilan di Indonesia (PERMA No. 7 Tahun 2015)}
+\label{tab:eselon-indonesia}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{4.8cm} p{2.8cm} p{2.8cm} p{2.8cm}}
+\hline
+\textbf{Jabatan Kepaniteraan / Kesekretariatan} & \textbf{Tingkatan Pengadilan} & \textbf{Setara Eselon} & \textbf{Kelas Jabatan (Tukin KMA 210/2020)} \tabularnewline
+\hline
+\raggedright\textbf{Panitera / Sekretaris} \newline \textit{Pengadilan Tingkat Banding} & PT / PTTUN & Eselon \textbf{II.b} & Kelas 13 \tabularnewline
+\raggedright\textbf{Panitera / Sekretaris} \newline \textit{Pengadilan Kelas IA Khusus} & PN/PA/PTUN Kelas IAK & Eselon \textbf{II.b} & Kelas 12 \tabularnewline
+\raggedright\textbf{Panitera / Sekretaris} \newline \textit{Pengadilan Kelas IA} & PN/PA Kelas IA & Eselon \textbf{III.a} & Kelas 11 \tabularnewline
+\raggedright\textbf{Panitera / Sekretaris} \newline \textit{Pengadilan Kelas IB} & PN/PA Kelas IB & Eselon \textbf{III.b} & Kelas 10f \tabularnewline
+\raggedright\textbf{Panitera / Sekretaris} \newline \textit{Pengadilan Kelas II} & PN/PA Kelas II & Eselon \textbf{III.b} & Kelas 10e \tabularnewline
+\hline
+\multicolumn{4}{p{15.4cm}}{\textit{*Sumber: PERMA No. 7/2015 tentang Organisasi dan Tata Kerja Kepaniteraan dan Kesekretariatan Pengadilan; Keputusan KMA No. 210/KMA/SK/VIII/2020.}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Data pada Tabel~\ref{tab:eselon-indonesia} memperlihatkan ironi yang sangat mencolok: secara formal, jabatan Panitera/Sekretaris Pengadilan Tingkat Banding setara Eselon II.b---yang dalam birokrasi eksekutif setara dengan Kepala Biro atau Direktur---namun tunjangan jabatannya hanya Rp 2.025.000,00 per bulan (Perpres 124/2022). Ini jauh di bawah eselon II.b dalam birokrasi kementerian eksekutif yang dapat menerima Tunjangan Jabatan Struktural sebesar Rp 3.250.000,00 ditambah Tunjangan Kinerja sebesar puluhan juta. Dengan kata lain, \textbf{eselon pada jabatan kepaniteraan bersifat dekoratif---mencerminkan kedudukan hierarkis secara simbolis, namun tidak sebanding dengan kompensasi finansial yang diterima}.
+
+Anomali ini diperparah oleh fakta bahwa kebijakan penyederhanaan birokrasi nasional (simplifikasi eselon III dan IV menjadi jabatan fungsional) tidak diterapkan secara konsisten di lingkungan peradilan. Alih-alih memperkuat kompensasi jabatan manajerial kepaniteraan, reformasi birokrasi justru berpotensi mendorong aparatur kepaniteraan ke dalam kategori jabatan fungsional dengan tunjangan yang bahkan lebih rendah.
+
+\subsubsection{Amerika Serikat: Sistem Klasifikasi Berbasis Bobot Pekerjaan (\textit{Job-Worth Based Classification})}
+
+Amerika Serikat sama sekali tidak mengenal sistem eselonisasi berbasis hierarki struktural seperti Indonesia. Sebagai gantinya, sistem federal AS menerapkan \textit{Judiciary Salary Plan} (JSP) yang mengklasifikasikan jabatan administratif peradilan berdasarkan bobot pekerjaan (\textit{job-worth}), mengacu pada faktor-faktor seperti: kompleksitas tanggung jawab, skala organisasi, volume kasus yang dikelola, dan beban akuntabilitas anggaran publik. Berikut adalah pemetaan komparatif jalur karier kepaniteraan federal AS:
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Struktur Klasifikasi Jabatan Administratif Peradilan Federal AS dalam \textit{Judiciary Salary Plan} (JSP) 2024--2025}
+\label{tab:jsp-usa}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{5.0cm} p{3.5cm} p{2.5cm} p{3.5cm}}
+\hline
+\textbf{Jabatan Administratif Peradilan} & \textbf{Jenjang JSP} & \textbf{Gaji Tahunan (2024)} & \textbf{Setara Birokrasi Eksekutif} \tabularnewline
+\hline
+\raggedright\textbf{Deputy Clerk / Court Operations Spec.} \newline \textit{(Entry-Level)} & JSP 7--10 & USD 48.000--82.000 & GS-7 hingga GS-10 \tabularnewline
+\raggedright\textbf{Chief Deputy Clerk} \newline \textit{(Mid-Level)} & JSP 13--15 & USD 105.000--148.000 & GS-13 hingga GS-15 \tabularnewline
+\raggedright\textbf{District Court Clerk} \newline \textit{(Senior/Peak Leadership)} & JSP 16--17 & USD 191.300--209.600 & Setara SES (Senior Executive Service) \tabularnewline
+\raggedright\textbf{Circuit Executive / Appellate Clerk} \newline \textit{(Pimpinan Banding)} & JSP 16--17 & USD 205.050--209.600 & Setara SES Tingkat Atas \tabularnewline
+\hline
+\multicolumn{4}{p{14.5cm}}{\textit{*Sumber: Administrative Office of the U.S. Courts (2024--2025); 28 U.S.C. §§ 604, 634, 711.}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Kunci perbedaan fundamental: dalam sistem JSP, kompensasi kepaniteraan senior (JSP-17) \textbf{disetarakan dengan SES} (Senior Executive Service)---kelas birokrasi tertinggi pemerintah federal yang mengelola kementerian dan lembaga besar. Tidak ada dikotomi simbolik ``Pejabat Negara vs. PNS biasa'' yang mengunci plafon kompensasi secara artifisial.
+
+\subsubsection{Korea Selatan: Sistem \textit{Grade} Terpadu di Bawah Otonomi NCA}
+
+Korea Selatan menerapkan sistem pangkat (\textit{grade}/\textit{jikgeup}) 9 tingkatan untuk Aparatur Pengadilan (\textit{Beobwon Gongmuwon}), namun dengan karakteristik yang sangat berbeda dari eselonisasi Indonesia. Sistem ini dikelola secara eksklusif oleh \textit{National Court Administration} (NCA)---tidak ada intervensi Kementerian Kepegawaian (MOIS) maupun Kementerian Keuangan. Aparatur pengadilan Korea termasuk dalam kategori \textit{Byeolpyo 4} (Tabel Khusus 4) dalam Peraturan Remunerasi, yang memberikan skala gaji pokok \textbf{lebih tinggi} dari aparatur sipil umum (\textit{Ilban Haengjeong-jik}) setingkat.
+
+\begin{table}[H]
+\centering
+\fontsize{9.5}{11.5}\selectfont
+\caption{Pemetaan Jalur Karier dan Kompensasi Aparatur Pengadilan Korea Selatan (\textit{Beobwon Gongmuwon}) 2024}
+\label{tab:korea-grade}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{2.0cm} p{4.5cm} p{3.5cm} p{3.5cm}}
+\hline
+\textbf{Grade} & \textbf{Jabatan Tipikal} & \textbf{Gaji Pokok Bulanan (2024)} & \textbf{Keterangan Otonomi NCA} \tabularnewline
+\hline
+Grade 1 & \textit{(Jabatan karier tertinggi; dalam praktiknya posisi Minister NCA dijabat Hakim Agung, bukan jalur karier)} & KRW 7.000.000+ & \textbf{*Dikritik akademisi} (lihat Catatan) \tabularnewline
+Grade 2 & Administrator Senior Banding & KRW 3.931.900 \newline \textit{($\pm$ Rp 46,3 Juta)} & Di bawah otonomi penuh NCA \tabularnewline
+Grade 3 & Kepala Kepaniteraan Distrik \newline (\textit{Samugukjang}) & KRW 3.547.400 \newline \textit{($\pm$ Rp 41,8 Juta)} & \textbf{Melebihi gaji Hakim Distrik baru} \tabularnewline
+Grade 4--5 & Manajer Divisi / Asisten Yudisial & KRW 2.800.000--3.200.000 & Jalur karier mandiri \tabularnewline
+Grade 6--7 & Staf Senior Kepaniteraan & KRW 2.200.000--2.600.000 & -- \tabularnewline
+Grade 8--9 & Staf Klerikal Pemula & KRW 1.700.000--2.100.000 & \textit{Entry-level} \tabularnewline
+\hline
+\multicolumn{4}{p{13.5cm}}{\textit{*Sumber: Supreme Court of Korea, Regulations on the Remuneration of Court Officials (2024); NCA Act No. 20465.}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Yang paling kritis untuk dicatat: \textbf{di Korea Selatan, seorang pejabat Grade 3 (Kepala Kepaniteraan Distrik) menerima gaji pokok yang secara faktual melebihi Hakim Distrik pemula}. Ini bukan anomali---ini adalah desain yang disengaja untuk menghargai senioritas pengabdian dan beban tanggung jawab operasional.
+
+\subsubsection{Kosta Rika: Hierarki Fungsional Berbasis Poin Evaluasi Jabatan}
+
+Kosta Rika menghapus fragmentasi tunjangan ad-hoc dan menggantinya dengan sistem \textit{Salario Global} yang transparan. Hierarki administrator pengadilan distrukturkan berdasarkan \textbf{evaluasi bobot pekerjaan} (\textit{valoración de puestos}) oleh MIDEPLAN (\textit{Ministerio de Planificación Nacional}), bukan oleh kementerian kepegawaian eksekutif. Terdapat jenjang \textit{Administrador Regional 1, 2, dan 3} yang mencerminkan skala dan kompleksitas satuan kerja yang dikelola, dengan gaji yang meningkat secara linier dari CRC 1.840.226 hingga CRC 2.277.038 per bulan (sekitar Rp 58,9 juta hingga Rp 72,9 juta).
+
+\subsubsection{Filipina: Sistem \textit{Salary Grade} Terpadu dengan Kesepadanan Jenjang Tinggi}
+
+Filipina mengadopsi sistem \textit{Salary Grade} (SG) yang berjenjang 1 hingga 33. Yang sangat instruktif bagi perbandingan ini adalah bahwa:
+\begin{itemize}
+    \item Jabatan \textit{Clerk of Court VII} (Panitera pada RTC besar dengan 16--74 salas) ditetapkan pada \textbf{SG 26}---setara dengan Hakim Pengadilan Kota (\textit{Municipal Circuit Trial Court}) pada SG yang sama.
+    \item \textit{Executive Clerk of Court} pada Pengadilan Banding (\textit{Court of Appeals}) mencapai \textbf{SG 27--28}---mendekati atau menyamai Hakim Banding awal.
+    \item \textit{Clerk of Court} di Mahkamah Agung Filipina mencapai \textbf{SG 30}---setara dengan jabatan pejabat eksekutif senior tertinggi (DBM Circular No. 2024-1).
+\end{itemize}
+
+Dalam sistem Filipina, terdapat \textbf{kesejajaran SG antara panitera senior dan hakim tingkat bawah}---suatu kondisi yang mustahil terjadi dalam sistem kompensasi Indonesia saat ini di mana Panitera Kelas II terkunci di Kelas Jabatan 10e sementara hakim pemula sudah melampaui kelas jabatan tertinggi dalam skema fungsional umum.
+
+\subsubsection{Perbandingan Matriks Sistem Hierarki Jabatan: Indonesia vs. Empat Negara Komparator}
+
+\begin{table}[H]
+\centering
+\fontsize{8.5}{10.5}\selectfont
+\caption{Matriks Komparatif Sistem Hierarki Jabatan Kepaniteraan/Administrator Peradilan di Lima Yurisdiksi}
+\label{tab:matriks-hierarki-komparatif}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm}}
+\hline
+\textbf{Dimensi} & \textbf{Indonesia} & \textbf{Amerika Serikat} & \textbf{Korea Selatan} & \textbf{Kosta Rika} & \textbf{Filipina} \tabularnewline
+\hline
+\raggedright\textbf{Sistem Klasifikasi} & Eselon I--IV (struktural rigid) & JSP (berbasis bobot pekerjaan) & Grade 1--9 (otonomi NCA) & \textit{Salario Global} (berbasis poin evaluasi) & SG 1--33 (terpadu) \tabularnewline
+\raggedright\textbf{Otoritas Pengelola} & KemenPAN-RB \& BKN (eksekutif) & AO of U.S. Courts (mandiri) & NCA (otonomi penuh) & MIDEPLAN + \textit{Poder Judicial} (mandiri) & DBM + Mahkamah Agung \tabularnewline
+\raggedright\textbf{Puncak Karier Panitera/Admin} & Eselon II.b (Tukin Rp 19,3 Jt) & JSP-17 (USD 209.600/th) & Grade 2 (KRW 3,9 Jt/bln) & Admin Regional 3 (CRC 2,3 Jt/bln) & SG 30 (setara hakim senior) \tabularnewline
+\raggedright\textbf{Setara Birokrasi Eksekutif} & Di bawah Eselon II biasa & Setara SES (Kementerian Federal) & Lebih tinggi dari ASN umum & Setara Direktur Teknis & Setara pejabat DBM senior \tabularnewline
+\raggedright\textbf{Kesepadanan dengan Hakim} & \textbf{Tidak ada} (28,4\% -- 54,7\%) & \textbf{Tinggi} (74\% -- 81\%) & \textbf{Sangat Tinggi} (65,5\% -- 104,3\%) & \textbf{Tinggi} (65,6\% -- 74,5\%) & \textbf{Tinggi} (68,8\% -- 78,6\%) \tabularnewline
+\raggedright\textbf{Mekanisme Penyesuaian Otomatis} & \textbf{Tidak ada} & Index COLA tahunan & Revisi NCA reguler & MIDEPLAN evaluasi berkala & SSL periodik \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Matriks pada Tabel~\ref{tab:matriks-hierarki-komparatif} mengonfirmasi temuan kritis: \textbf{Indonesia adalah satu-satunya yurisdiksi yang menempatkan otoritas pengelolaan kepegawaian aparatur peradilannya pada kementerian eksekutif}, sehingga plafon kompensasi kepaniteraan secara struktural tunduk pada logika birokrasi umum, bukan pada logika bobot fungsional yudisial. Sementara empat negara komparator menjamin bahwa puncak karier panitera/administrator peradilan setara dengan kelas eksekutif senior tertinggi pemerintah, Indonesia mengunci karier serupa pada tunjangan kinerja setara pejabat eselon menengah.
+
+\subsection{Hipotesis: Apakah Pejabat Manajerial Senior Layak Dibayar Lebih Tinggi dari Hakim dalam Logika Tata Kelola Modern?}
+
+Kajian komparatif ini membuka ruang untuk menguji sebuah proposisi ilmiah yang semula tampak kontraintuitif namun terbukti secara empiris berlaku di berbagai yurisdiksi maju:
+
+\begin{quote}
+\textit{``Dalam sistem tata kelola peradilan modern yang berbasis akuntabilitas manajerial, kompensasi pejabat administratif senior pengadilan dapat dan seharusnya menyamai, bahkan melampaui, kompensasi hakim pada jenjang tertentu, karena keduanya menanggung beban tanggung jawab yang berbeda namun setara nilainya bagi institusi peradilan.''}
+\end{quote}
+
+\subsubsection{Landasan Teoritis: \textit{Job Value Theory} dan Prinsip \textit{Equal Pay for Work of Equal Value}}
+
+Teori Nilai Pekerjaan (\textit{Job Value Theory}) dalam administrasi publik, sebagaimana dikembangkan oleh Treiman \& Hartmann (1981) dan dioperasionalisasikan oleh \textit{International Labour Organization} (ILO) melalui Konvensi No. 100 tentang prinsip \textit{equal remuneration}, menetapkan bahwa kompensasi pekerjaan harus mencerminkan nilai kontribusi jabatan tersebut bagi organisasi, diukur melalui empat faktor utama: (1) \textbf{keterampilan dan kompetensi} (\textit{skill}); (2) \textbf{upaya dan intensitas kerja} (\textit{effort}); (3) \textbf{tanggung jawab} (\textit{responsibility}); dan (4) \textbf{kondisi kerja} (\textit{working conditions}).
+
+Ketika kerangka ini diterapkan untuk membandingkan jabatan Panitera/Sekretaris Pengadilan Kelas IA Khusus (sebagai puncak karier kepaniteraan tingkat pertama) dengan Hakim Pratama pemula, hasil analisisnya menjungkirbalikkan asumsi dominan:
+
+\begin{table}[H]
+\centering
+\fontsize{9.0}{11.0}\selectfont
+\caption{Analisis \textit{Job Evaluation} Berbasis Empat Faktor ILO: Hakim Pratama Pemula vs. Panitera/Sekretaris Senior Kelas IA Khusus}
+\label{tab:job-evaluation}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{3.5cm} p{4.8cm} p{4.8cm} p{1.0cm}}
+\hline
+\textbf{Faktor Evaluasi} & \textbf{Hakim Pratama (Baru Dilantik, 0 Tahun)} & \textbf{Panitera/Sekretaris Senior (>20 Tahun)} & \textbf{Skor Relatif} \tabularnewline
+\hline
+\raggedright\textbf{Keterampilan \& Kompetensi} & Sarjana Hukum + Pendidikan CPNS Cakim + sertifikasi hakim. Keilmuan hukum substantif. & Sarjana Hukum / S2 + pengalaman praktis >20 tahun dalam hukum acara formil, manajemen SDM, manajemen keuangan PNBP, IT pengadilan, dan eksekusi perdata. & Setara \tabularnewline
+\raggedright\textbf{Tanggung Jawab} & Memutus perkara dalam majelis; bertanggung jawab atas kebenaran hukum putusan. & Bertanggung jawab atas: (a) keaslian semua akta otentik kepaniteraan; (b) manajemen operasional seluruh satuan kerja; (c) pengelolaan dana titipan \& PNBP; (d) pembinaan 30--200 aparatur. & \textbf{Panitera Lebih Tinggi} \tabularnewline
+\raggedright\textbf{Upaya \& Intensitas Kerja} & Menelaah berkas, memimpin sidang, merancang putusan. Jadwal relatif terstruktur. & Bertanggung jawab 24/7 atas operasional pengadilan; merangkap tugas manajerial, administratif, dan teknis perkara di luar jam sidang. & \textbf{Panitera Lebih Tinggi} \tabularnewline
+\raggedright\textbf{Kondisi Kerja} & Difasilitasi rumah dinas, transportasi, dan asuransi VIP. Posisi prestisius secara sosial. & Tidak ada fasilitas perumahan, tidak ada tunjangan transportasi, tidak ada asuransi khusus; sering ditugaskan ke daerah terpencil tanpa kompensasi kemahalan. & \textbf{Panitera Jauh Lebih Berat} \tabularnewline
+\hline
+\raggedright\textbf{Kesimpulan \textit{Job Evaluation}} & \multicolumn{3}{p{10.6cm}}{Berdasarkan empat faktor evaluasi ILO, \textbf{nilai pekerjaan Panitera/Sekretaris Senior secara agregat setara atau melampaui nilai pekerjaan Hakim Pratama pemula}, namun dibayar hanya sebesar 19,4\%--28,4\% dari kompensasi hakim tersebut---suatu distorsi nilai yang tidak dapat dibenarkan oleh teori manapun.} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Bukti Empiris: Jurisdiksi di Mana Pejabat Manajerial Dibayar Lebih Tinggi dari Hakim}
+
+Data empiris dari negara-negara komparator secara gamblang membuktikan bahwa skenario di mana pejabat manajerial senior dibayar setara atau bahkan lebih tinggi dari hakim bukan merupakan pengecualian---melainkan \textbf{norma} dalam tata kelola peradilan modern:
+
+\begin{enumerate}
+    \item \textbf{Amerika Serikat---Los Angeles County, California (Kasus Paling Ekstrem):} Berdasarkan data \textit{Government Compensation in California} (California State Controller's Office, 2023) dan laporan \textit{Transparent California}, \textit{Court Executive Officer} (CEO) Los Angeles County Superior Court---pengadilan terbesar di dunia dengan lebih dari 5.000 aparatur---menerima kompensasi total yang mendekati atau melampaui \textbf{USD 430.000 hingga hampir USD 600.000 per tahun}. Angka ini secara substansial melampaui gaji \textit{Superior Court Judge} sebesar $\pm$ USD 238.000 per tahun (diatur oleh \textit{California Government Code} § 68203). Rasio CEO terhadap hakim mencapai \textbf{180\%--251\%}. Justifikasi yang diterima oleh \textit{California Judicial Council}: mengelola anggaran ratusan juta dolar, mengawasi ribuan pegawai, dan menavigasi infrastruktur teknologi peradilan menuntut kompensasi eksekutif korporat yang bersaing di pasar kerja terbuka.
+    \item \textbf{Korea Selatan---Grade 3 Distrik:} Sebagaimana telah dipaparkan, \textit{Chief Court Secretary} (Samugukjang) Grade 3 menerima gaji pokok KRW 3.547.400/bulan, melampaui Hakim Distrik pemula sebesar KRW 3.400.000/bulan. Rasio: \textbf{104,3\%}. Desain ini disengaja oleh NCA untuk menghargai birokrat peradilan senior yang telah mengabdi belasan hingga puluhan tahun agar tidak disubordinasi secara finansial oleh lulusan baru.
+    \item \textbf{Amerika Serikat---Santa Clara County:} Laporan kompensasi California State Controller (2023) menunjukkan bahwa \textit{Court Executive Officer} di beberapa county metropolitan California secara rutin menerima paket kompensasi total yang melampaui gaji pokok hakim setempat, mencerminkan filosofi bahwa \textbf{tanggung jawab manajerial eksekutif dalam organisasi publik berskala besar harus dihargai setara dengan standar pasar eksekutif senior}, bukan disubordinasi oleh status konstitusional formal jabatan hakim.
+\end{enumerate}
+
+\subsubsection{Pengujian Hipotesis: Mengapa Indonesia Menolak Paradigma Ini?}
+
+Hipotesis bahwa pejabat manajerial senior dapat dibayar lebih tinggi dari hakim \textbf{terbukti valid secara empiris} di berbagai yurisdiksi. Namun, di Indonesia, paradigma ini ditolak secara implisit oleh sistem yang berlaku karena dua mekanisme penolak (\textit{rejection mechanisms}) berikut:
+
+\begin{enumerate}
+    \item \textbf{Doktrin ``Sakralitas Pejabat Negara'' (\textit{State Officer Supremacy Doctrine}):} Sistem hukum Indonesia mentradisikan pandangan bahwa status Pejabat Negara---yang secara konstitusional menjalankan salah satu cabang kekuasaan---secara \textit{a priori} lebih tinggi nilainya dari jabatan administrasi manapun. Pandangan ini mengakar kuat dalam budaya birokrasi dan tidak memiliki instrumen koreksi berupa evaluasi jabatan berbasis beban kerja (\textit{workload-based job evaluation}). Akibatnya, lonjakan tunjangan hakim melalui PP No. 42/2025 dilakukan tanpa analisis komparatif terhadap jabatan pendukungnya---sebuah \textit{policy fallacy} yang sangat mahal bagi ekosistem peradilan.
+    \item \textbf{Segregasi Dual-Track Kepegawaian yang Tidak Tersinkronisasi:} Karena aparatur kepaniteraan berada di bawah rezim KemenPAN-RB dan BKN, sementara hakim diatur melalui PP tersendiri, tidak ada mekanisme sinkronisasi otomatis (\textit{automatic linkage mechanism}) yang memastikan setiap kenaikan kompensasi hakim diikuti oleh penyesuaian proporsional kompensasi kepaniteraan. Di semua negara komparator, otoritas tunggal (AO of U.S. Courts, NCA Korea, \textit{Poder Judicial} Kosta Rika, Mahkamah Agung Filipina) mengelola kompensasi seluruh aparatur peradilan---hakim maupun non-hakim---dalam satu kerangka terpadu. Indonesia mengoperasikan dua kerangka yang sepenuhnya terpisah dan tidak terhubung.
+\end{enumerate}
+
+Dengan demikian, anomali kompensasi yang dihadapi Panitera/Sekretaris Pengadilan di Indonesia bukan semata-mata produk dari keputusan kebijakan tunggal, melainkan \textbf{akumulasi kegagalan sistemik} yang terdiri dari: doktrin supremasi status konstitusional yang tidak diimbangi oleh evaluasi nilai pekerjaan, ketiadaan otoritas pengelolaan kepegawaian yudikatif yang terpadu, serta absennya mekanisme sinkronisasi kompensasi antara korps hakim dan aparatur pendukungnya. Semua ini berlangsung tanpa koreksi selama beberapa dekade dan mencapai puncak deformasinya dengan terbitnya PP No. 42 Tahun 2025.
+
+\subsection{Implikasi Yuridis, Sosiologis, dan Kerusakan Ekosistem Peradilan di Indonesia}
+
+Jurang disparitas kompensasi yang sedemikian menganga di Indonesia bukanlah persoalan angka nominal semata, melainkan bom waktu yang mengikis fondasi keadilan dari dalam tubuh peradilan itu sendiri. Setidaknya terdapat tiga implikasi destruktif yang timbul:
+
+\subsubsection{Keretakan Relasi Kolaboratif dan Feodalisme Internal Pengadilan}
+Di ruang sidang, majelis hakim dan panitera pengganti merupakan satu kesatuan fungsional persidangan. Tanpa kehadiran panitera pengganti yang mencatat jalannya sidang dan mengautentikasi berita acara persidangan, persidangan dinyatakan batal demi hukum (\textit{null and void}). Namun, ketika negara memberikan disparitas penghasilan lebih dari 250\% bagi hakim pemula terhadap panitera senior yang duduk bersamanya di ruang sidang, tercipta pembelahan psikologis dan segregasi kasta. Situasi ini menyuburkan budaya feodalisme internal di mana pejabat administrasi dan panitera kerap diperlakukan layaknya pembantu sekunder, merusak etos kemitraan kolegial yang setara dalam menegakkan keadilan.
+
+\subsubsection{Kerentanan Integritas Institusional dan Pintu Masuk Mafia Peradilan}
+Kepaniteraan merupakan pintu gerbang utama administrasi perkara: mulai dari pendaftaran gugatan, penetapan panjar biaya, pemanggilan para pihak, penyitaan jaminan, penyampaian salinan putusan, hingga eksekusi riil perdata. Menempatkan aparatur kepaniteraan pada taraf kesejahteraan yang minim---tanpa tunjangan perumahan dan tanpa tunjangan transportasi di daerah perantauan---secara sosiologis menempatkan mereka pada posisi yang sangat rentan terhadap godaan suap dan manipulasi perkara. Peningkatan integritas peradilan tidak akan pernah tuntas jika reformasi kesejahteraan hanya dinikmati oleh korps pemutus perkara, sementara aparatur yang menguasai berkas dan jalur lalu lintas perkara dibiarkan dalam kerentanan ekonomi.
+
+\subsubsection{Fenomena \textit{Brain Drain} dan Kelangkaan Kader Administrator Senior}
+Kesenjangan hak keuangan yang menganga mendorong fenomena disrupsi karier yang masif. Ketika Mahkamah Agung membuka seleksi pengadaan Calon Hakim dari formasi internal, ratusan Panitera Pengganti muda dan staf potensial berbondong-bondong mendaftarkan diri. Motivasi utama perpindahan jalur ini mayoritas bukan didorong oleh panggilan nurani keilmuan hukum murni, melainkan dorongan rasional untuk melarikan diri dari jeratan kasta penggajian PNS biasa demi mengamankan taraf hidup keluarga. Akibatnya, sistem kepaniteraan di pengadilan tingkat pertama mengalami kekeringan kader berpengalaman (\textit{brain drain}). Pengadilan-pengadilan di pelosok daerah terancam ketiadaan figur Panitera dan Jurusita yang menguasai hukum acara formil secara matang, sebuah kerugian institusional yang sangat mahal harganya bagi pencari keadilan.
+
+\subsection{Formulasi Kebijakan dan Rekomendasi Restrukturisasi THP Panitera/Sekretaris di Indonesia}
+
+Berdasarkan sintesis komparatif dari negara-negara maju, Mahkamah Agung bersama Pemerintah (Presiden dan DPR) perlu segera melakukan restrukturisasi menyeluruh atas skala kompensasi kepaniteraan dan kesekretariatan. Kebijakan ini harus diletakkan dalam kerangka keadilan distributif (\textit{distributive justice}) dan prinsip beban kerja setara (\textit{equal pay for work of equal value}).
+
+Penelitian ini merumuskan paket rekomendasi kebijakan konkrit berupa penetapan ambang batas rasio kompensasi statutori (\textit{statutory floor ratio}) bagi profesi kepaniteraan dan kesekretariatan di Indonesia:
+\begin{enumerate}
+    \item \textbf{Penetapan Batas Bawah Rasio 60\%--75\%:} Pemerintah dan Mahkamah Agung wajib mengadopsi standar komparatif internasional dengan mengunci norma bahwa THP Panitera/Sekretaris Pengadilan pada setiap tingkatan tidak boleh berada di bawah \textbf{60\% hingga 75\%} dari THP Hakim pada tingkatan pengadilan yang sama.
+    \item \textbf{Revisi Regulasi Tunjangan Jabatan Kepaniteraan:} Merevisi Peraturan Presiden Nomor 124 Tahun 2022 dengan menaikkan Tunjangan Jabatan Panitera secara proporsional. Tunjangan jabatan kepaniteraan harus merefleksikan bobot yuridis akta otentik dan beban eksekusi putusan pengadilan.
+    \item \textbf{Penyetaraan Fasilitas Perumahan dan Kemahalan:} Menghapus diskriminasi fasilitas natura. Pejabat Panitera dan Sekretaris yang menjalani mutasi nasional (\textit{tour of duty}) wajib difasilitasi tunjangan sewa rumah dinas dan tunjangan kemahalan zona khusus yang setara dengan persentase kebutuhan riil di wilayah penugasan.
+\end{enumerate}
+
+Sebagai panduan teknis bagi perumus kebijakan, Tabel~\ref{tab:simulasi-rekomendasi-thp} menyajikan simulasi proyeksi restrukturisasi THP Panitera/Sekretaris Pengadilan di Indonesia berbasis target rasio moderat 65\%--75\% terhadap THP Hakim.
+
+\begin{table}[H]
+\centering
+\fontsize{9.0}{11.0}\selectfont
+\caption{Simulasi Proyeksi Formula Baru THP Panitera/Sekretaris Pengadilan di Indonesia Berbasis Standar Komparatif Global (Target Rasio 65\%--75\%)}
+\label{tab:simulasi-rekomendasi-thp}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{p{4.2cm} p{2.6cm} p{2.6cm} p{2.6cm} p{2.0cm}}
+\hline
+\textbf{Tingkatan Pengadilan} & \textbf{THP Hakim Acuan} & \textbf{THP Panitera Saat Ini} & \textbf{Proyeksi THP Panitera Baru} & \textbf{Rasio Baru ($R_{\text{baru}}$)} \tabularnewline
+\hline
+\raggedright\textbf{Tingkat Pertama Kelas II} & Rp 49.485.700 & Rp 14.040.000 & \textbf{Rp 32.500.000} & \textbf{65,7\%} \tabularnewline
+\raggedright\textbf{Tingkat Pertama Kelas IB} & Rp 55.200.000 & Rp 14.876.000 & \textbf{Rp 37.000.000} & \textbf{67,0\%} \tabularnewline
+\raggedright\textbf{Tingkat Pertama Kelas IA} & Rp 65.800.000 & Rp 19.102.000 & \textbf{Rp 45.000.000} & \textbf{68,4\%} \tabularnewline
+\raggedright\textbf{Tingkat Pertama IA Khusus} & Rp 74.400.000 & Rp 23.761.800 & \textbf{Rp 52.000.000} & \textbf{69,9\%} \tabularnewline
+\raggedright\textbf{Tingkat Banding (Provinsi)} & Rp 106.900.000 & Rp 27.051.800 & \textbf{Rp 75.000.000} & \textbf{70,2\%} \tabularnewline
+\hline
+\multicolumn{5}{p{15.0cm}}{\textit{*Catatan: Proyeksi dihitung dengan mempertahankan gaji pokok reguler, menyesuaikan besaran Tukin KMA 210/2020, dan merevisi besaran Tunjangan Jabatan Perpres 124/2022 guna mencapai rasio proporsionalitas 65\%--70\% terhadap hakim setingkat.}} \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+Dengan penerapan formula simulasi pada Tabel~\ref{tab:simulasi-rekomendasi-thp}, martabat aparatur kepaniteraan dan kesekretariatan dapat dipulihkan secara terhormat. Seorang Panitera Pengadilan Kelas II akan menerima kompensasi yang layak di kisaran Rp 32,5 juta per bulan, sementara Panitera Tingkat Banding dihargai secara wajar di kisaran Rp 75 juta per bulan. Skema ini mengembalikan muruah hierarki organisasi, menutup pintu godaan transaksional perkara, serta membangun kembali kekuasaan kehakiman yang solid dan berwibawa di seluruh nusantara.
+
+% ------------------- BAGIAN 4: KESIMPULAN DAN REKOMENDASI -------------------
+\section{KESIMPULAN DAN REKOMENDASI}
+
+\subsection{Kesimpulan}
+Berdasarkan hasil analisis komparatif normatif dan kalkulasi empiris lintas yurisdiksi, penelitian ini menghasilkan tiga kesimpulan fundamental:
+\begin{enumerate}
+    \item Terjadi anomali disparitas kompensasi yang sangat ekstrem di internal pengadilan Indonesia pasca-berlakunya PP No. 42 Tahun 2025. Seorang Hakim Pratama (pengadilan tingkat pertama Kelas II) pemula dengan masa kerja adjudikasi nol tahun menerima THP tunai bulanan sebesar Rp 49.485.700,00, yang merepresentasikan angka 3,52 kali lipat (+252,5\% lebih besar) dibandingkan Panitera Pengadilan Kelas II senior yang mengelola seluruh kepaniteraan pengadilan (THP rata-rata Rp 14.040.000,00, dengan rasio hanya 28,4\%). Kesenjangan ini membengkak secara eksponensial menjadi 5,34 kali lipat (+434\%) ketika fasilitas sewa rumah dinas, transportasi, asuransi VIP, dan tunjangan kemahalan dimonetisasi. Bahkan, THP hakim baru tersebut jauh melampaui penghasilan seorang Panitera Pengadilan Tinggi di tingkat provinsi.
+    \item Negara-negara komparator demokrasi modern (Amerika Serikat, Kosta Rika, Korea Selatan, dan Filipina) secara tegas menolak pemiskinan struktural terhadap pejabat administrasi peradilan. Yurisdiksi komparator secara konsisten menjaga rasio kompensasi Panitera dan Administrator Pengadilan pada rentang bermartabat antara \textbf{65\% hingga 85\%} dari gaji hakim setingkat. Bahkan pada tingkat pengadilan dasar di Korea Selatan (Grade 3 Samugukjang) dan yurisdiksi metropolitan Los Angeles County California, kompensasi pejabat administrator pengadilan mencapai \textbf{104\% hingga 126\%} dari gaji hakim guna mengimbangi besarnya beban risiko dan liabilitas manajerial eksekutif yang diemban.
+    \item Kesenjangan ekstrem di Indonesia berakar pada segregasi kasta kepegawaian yang mengunci Panitera dan Sekretaris sebagai PNS biasa di bawah rezim kementerian eksekutif dengan tunjangan jabatan fungsional yang tertinggal (Perpres No. 124 Tahun 2022). Kondisi ini merusak iklim kerja kemitraan di ruang sidang, meningkatkan kerentanan integritas pada jalur administrasi perkara, dan memicu fenomena eksodus talenta senior (\textit{brain drain}) yang mengancam mutu layanan peradilan bagi para pencari keadilan.
+\end{enumerate}
+
+\subsection{Rekomendasi Kebijakan}
+Berdasarkan kesimpulan di atas, dirumuskan paket rekomendasi strategis:
+\begin{enumerate}
+    \item \textbf{Bagi Presiden Republik Indonesia:} Segera menerbitkan revisi Peraturan Presiden Nomor 124 Tahun 2022 tentang Tunjangan Jabatan Panitera dan Perpres terkait Jabatan Kesekretariatan untuk menaikkan plafon tunjangan jabatan secara masif, serta menetapkan norma perlindungan berupa penyediaan fasilitas perumahan dinas dan jaminan kemahalan yang setara bagi Pejabat Non-Hakim di wilayah mutasi.
+    \item \textbf{Bagi DPR RI dan Pemerintah:} Mengagendakan revisi Undang-Undang Kekuasaan Kehakiman (UU No. 48 Tahun 2009) dan harmonisasi regulasi aparatur guna melembagakan status otonom ``Aparatur Yudikatif'' serta menetapkan batas bawah statutori rasio kompensasi kepaniteraan dan kesekretariatan minimal 60\%--75\% dari hak keuangan profesi hakim.
+    \item \textbf{Bagi Mahkamah Agung Republik Indonesia:} Melakukan penyesuaian kelas jabatan dan evaluasi bobot nilai pekerjaan (\textit{job evaluation}) dalam skema Tunjangan Kinerja (KMA No. 210 Tahun 2020), memformulasikan sistem insentif kerja persidangan lembur (\textit{overtime judicial allowance}), serta menghentikan ketergantungan administrasi kinerja pada format absensi kaku eksekutif yang kerap memotong hak keuangan aparatur peradilan yang bersidang hingga larut malam.
+\end{enumerate}
+
+% ------------------- REFERENSI -------------------
+\newpage
+\pagestyle{empty}
+\renewcommand{\refname}{\textbf{REFERENCES}}
+\begin{thebibliography}{99}
+
+\bibitem{uscourts2024}
+Administrative Office of the U.S. Courts. (2024). \textit{Judiciary Salary Plan (JSP) Base Pay Rates and Court Executive Schedules}. Administrative Office of the United States Courts. \url{https://www.uscourts.gov/}
+
+\bibitem{asshiddiqie2019}
+Asshiddiqie, J. (2019). \textit{Pengembangan Kelembagaan Negara dan Demokrasi}. Rajawali Pers.
+
+\bibitem{cacontroller2023}
+California State Controller's Office. (2023). \textit{Government Compensation in California: Los Angeles County Superior Court Executive Compensation Report}. State Controller of California. \url{https://publicpay.ca.gov/}
+
+\bibitem{calgovcode2024}
+\textit{California Government Code} § 68203 - Judicial Compensation Adjustment. (2024). California State Legislature.
+
+\bibitem{costarica1949}
+Constitución Política de la República de Costa Rica. (1949). \textit{Asamblea Legislativa de la República de Costa Rica}.
+
+\bibitem{costaricasalario2024}
+Dirección de Gestión Humana del Poder Judicial. (2024). \textit{Escala de Salario Global Definitiva para el Personal Administrativo y Judicial}. Poder Judicial de la República de Costa Rica. \url{https://gestionhumana.poder-judicial.go.cr/}
+
+\bibitem{cruz2018}
+Cruz, I. A. (2018). \textit{Philippine Political Law and Judicial Governance}. Central Book Supply.
+
+\bibitem{friedman1975}
+Friedman, L. M. (1975). \textit{The Legal System: A Social Science Perspective}. Russell Sage Foundation.
+
+\bibitem{garoupa2015}
+Garoupa, N., \& Ginsburg, T. (2015). \textit{Judicial Reputation: A Comparative Theory}. University of Chicago Press.
+
+\bibitem{kbs2026}
+KBS World. (2026, January 13). \textit{Supreme Court Justice Park Young-jae named new Nat'l Court Administration minister}. KBS WORLD Radio. \url{https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code=198786}
+
+\bibitem{mak2012}
+Mak, E. (2012). Judicial administration in a globalized world: The Dutch case. \textit{International Journal for Court Administration, 4}(2), 12--25.
+
+\bibitem{philippines1987}
+The 1987 Constitution of the Republic of the Philippines. (1987). \textit{Official Gazette of the Republic of the Philippines}, Article VIII.
+
+\bibitem{pompe2005}
+Pompe, S. (2005). \textit{The Indonesian Supreme Court: A Study of Institutional Collapse}. Cornell Southeast Asia Program Publications.
+
+\bibitem{rawls1971}
+Rawls, J. (1971). \textit{A Theory of Justice}. Harvard University Press.
+
+\bibitem{russell2001}
+Russell, P. H., \& O'Brien, D. M. (Eds.). (2001). \textit{Judicial Independence in the Age of Democracy: Critical Perspectives from Around the World}. University Press of Virginia.
+
+\bibitem{shetreet1985}
+Shetreet, S., \& Deschênes, J. (Eds.). (1985). \textit{Judicial Independence: The Contemporary Debate}. Martinus Nijhoff Publishers.
+
+\bibitem{skorea2024}
+Supreme Court of Korea. (2024). \textit{Regulations on the Remuneration of Court Officials (Beobwon Gongmuwon)}. National Court Administration, Republic of Korea.
+
+\bibitem{susanti2020}
+Susanti, R., \& Setiawan, I. (2020). Pembagian peran dan jenjang karier kepaniteraan Mahkamah Agung. \textit{Jurnal Hukum dan Peradilan, 9}(2), 185--204.
+
+\bibitem{tobin1999}
+Tobin, R. W. (1999). \textit{Creating the Judicial Branch: The Management of American Courts}. National Center for State Courts.
+
+\bibitem{usc604}
+28 U.S. Code § 604 - Duties of Director Generally. (1948). \textit{Legal Information Institute, Cornell Law School}.
+
+\bibitem{usc634}
+28 U.S. Code § 634 - Compensation of United States Magistrate Judges. (2024). \textit{United States Code}.
+
+\bibitem{usc711}
+28 U.S. Code § 711 - Clerks and Employees. (1948). \textit{Legal Information Institute, Cornell Law School}.
+
+\bibitem{wheeler2014}
+Wheeler, R. (2014). \textit{Governance of the United States Federal Judiciary}. Federal Judicial Center.
+
+\bibitem{wilson2011}
+Wilson, B. M. (2011). Institutional reform and the Judiciary in Costa Rica. \textit{Comparative Politics, 43}(3), 341--359.
+
+\bibitem{treiman1981}
+Treiman, D. J., \& Hartmann, H. I. (Eds.). (1981). \textit{Women, Work, and Wages: Equal Pay for Jobs of Equal Value}. National Academy Press.
+
+\bibitem{ilo1951}
+International Labour Organization. (1951). \textit{Convention No. 100 Concerning Equal Remuneration for Men and Women Workers for Work of Equal Value}. ILO. \url{https://www.ilo.org/normlex/en/?p=NORMLEXPUB:12100:::NO:12100:P12100_ILO_CODE:C100}
+
+\bibitem{transparentca2023}
+Transparent California. (2023). \textit{Los Angeles County Superior Court -- Employee Compensation Data 2022--2023}. \url{https://transparentcalifornia.com/agencies/los-angeles-county-superior-court/}
+
+\bibitem{dbmphilippines2024}
+Department of Budget and Management Philippines. (2024). \textit{DBM Circular No. 2024-1: Updated Position Classification and Compensation Framework for the Judiciary}. DBM Philippines. \url{https://www.dbm.gov.ph/}
+
+\bibitem{perma72015}
+Mahkamah Agung Republik Indonesia. (2015). \textit{Peraturan Mahkamah Agung Nomor 7 Tahun 2015 tentang Organisasi dan Tata Kerja Kepaniteraan dan Kesekretariatan Peradilan}. Mahkamah Agung RI.
+
+\bibitem{uuasn2023}
+Pemerintah Republik Indonesia. (2023). \textit{Undang-Undang Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara}. Lembaran Negara Republik Indonesia Tahun 2023.
+
+\bibitem{ncakorea2024}
+National Court Administration of Korea. (2024). \textit{Court Organization Act (Beobwon Jojikbeop), Act No. 20465, and Regulations on the Remuneration of Court Officials (Byeolpyo 4)}. Supreme Court of Korea. \url{https://www.scourt.go.kr/}
+
+\bibitem{mideplan2024}
+Ministerio de Planificación Nacional y Política Económica (MIDEPLAN). (2024). \textit{Manual de Puestos y Valoración de Cargos del Poder Judicial bajo el Sistema de Salario Global}. MIDEPLAN, República de Costa Rica. \url{https://www.mideplan.go.cr/}
+
+\end{thebibliography}
+
+\newpage
+% ------------------- DEKLARASI & PERNYATAAN WAJIB -------------------
+\section*{DECLARATION OF CONFLICTING INTERESTS}
+The author serves as an Assistant Clerk (\textit{Panitera Pengganti}) at the Religious Court of Bojonegoro, Supreme Court of Indonesia. This study was conducted independently as an academic contribution to judicial administration and compensation reform and does not represent the official policy or institutional position of the Supreme Court of Indonesia.
+
+\section*{FUNDING INFORMATION}
+None.
+
+\section*{ACKNOWLEDGMENT}
+Alhamdulillah, segala puji dan syukur penulis panjatkan kepada Allah SWT atas segala rahmat, petunjuk, dan intelektualitas yang dianugerahkan sehingga penulisan artikel studi komparatif ini dapat diselesaikan dengan paripurna.
+
+\section*{GENERATIVE AI STATEMENT}
+During the preparation of this manuscript, the author used Generative AI (Gemini AI) to assist in preliminary data aggregation, cross-border statutory translation, and language polishing for readability. The author critically examined, calculated, verified, and synthesized all comparative metrics and textual content, maintaining sole responsibility and accountability for the accuracy and conclusions of this manuscript.
+
+\newpage
+% ------------------- LAMPIRAN NORMATIF -------------------
+\section*{LAMPIRAN NORMATIF: REGULASI DASAR PENGGAJIAN DAN HAK KEUANGAN}
+
+\subsection*{1. Indonesia: PP Nomor 42 Tahun 2025 jo. PP Nomor 5 Tahun 2024 \& Perpres 124 Tahun 2022}
+\noindent\textbf{Hakim Pratama (Gol. III/a MKG 0 th):}
+\begin{itemize}
+    \item Gaji Pokok: Rp 2.785.700,00 (SE Dirjen Perbendaharaan Kemenkeu SE-1/PB/2026).
+    \item Tunjangan Jabatan: Rp 46.700.000,00 (PP No. 42 Tahun 2025 Lampiran II B No. 11).
+    \item Total THP Tunai Dasar: \textbf{Rp 49.485.700,00} / bulan.
+\end{itemize}
+\noindent\textbf{Panitera Pengadilan Kelas II (Gol. III/d MKG 11--18 th):}
+\begin{itemize}
+    \item Gaji Pokok: Rp 3.790.400,00 -- Rp 4.169.900,00 (PP No. 5 Tahun 2024).
+    \item Tunjangan Jabatan: Rp 540.000,00 (Perpres No. 124 Tahun 2022 Lampiran II).
+    \item Tunjangan Kinerja: Rp 9.500.000,00 (Keputusan KMA No. 210/KMA/SK/VIII/2020).
+    \item Total THP Tunai: \textbf{Rp 13.830.400,00 -- Rp 14.209.900,00} / bulan (Median $\pm$ Rp 14.040.000,00).
+    \item \textbf{Rasio ($R$): 28,37\%} | \textbf{Multiplier ($M$): 3,52x (+252,5\%)}.
+\end{itemize}
+
+\subsection*{2. Amerika Serikat: 28 U.S. Code § 634 jo. Judiciary Salary Plan (JSP 2024--2025)}
+\noindent\textbf{Pengadilan Tingkat Pertama (U.S. District Court):}
+\begin{itemize}
+    \item U.S. District Judge: USD 257.900,00 / tahun.
+    \item U.S. Magistrate Judge (92\% statutori): USD 237.268,00 / tahun (28 U.S.C. § 634).
+    \item District Court Clerk (JSP-16/17): USD 191.300,00 / tahun.
+    \item \textbf{Rasio ($R$): 74,2\%} terhadap District Judge (80,6\% terhadap Magistrate Judge) | \textbf{Multiplier ($M$): 1,35x}.
+\end{itemize}
+
+\subsection*{3. Kosta Rika: Ley Marco de Empleo Público No. 10159 (Salario Global 2024)}
+\noindent\textbf{Pengadilan Tingkat Pertama (Tribunal de Primera Instancia):}
+\begin{itemize}
+    \item Juez 1 (Hakim Tingkat Pertama Entry-Level): CRC 2.656.416,00 / bulan ($\pm$ Rp 85,0 Juta).
+    \item Administrador Regional 1 (Administrator Pengadilan): CRC 1.979.545,00 / bulan ($\pm$ Rp 63,3 Juta).
+    \item \textbf{Rasio ($R$): 74,5\%} | \textbf{Multiplier ($M$): 1,34x}.
+\end{itemize}
+
+\subsection*{4. Republik Korea: Court Organization Act (Act No. 20465) \& Remuneration Rules 2024}
+\noindent\textbf{Pengadilan Distrik (District Court):}
+\begin{itemize}
+    \item District Court Judge (Hakim Pertama Pemula): KRW 3.400.000,00 / bulan ($\pm$ Rp 40,1 Juta).
+    \item Chief Court Secretary / Administrator (Grade 3 Samugukjang): KRW 3.547.400,00 / bulan ($\pm$ Rp 41,8 Juta).
+    \item \textbf{Rasio ($R$): 104,3\%} | \textbf{Multiplier ($M$): 0,96x} (Administrator senior lebih tinggi dari hakim baru).
+\end{itemize}
+
+\subsection*{5. Republik Filipina: Judicial Compensation Act (2024)}
+\noindent\textbf{Regional Trial Court (RTC):}
+\begin{itemize}
+    \item RTC Judge: PHP 160.000,00 / bulan ($\pm$ Rp 44,8 Juta).
+    \item Branch Clerk of Court: PHP 110.000,00 / bulan ($\pm$ Rp 30,8 Juta).
+    \item \textbf{Rasio ($R$): 68,8\%} | \textbf{Multiplier ($M$): 1,45x}.
+\end{itemize}
+
+\end{document}
