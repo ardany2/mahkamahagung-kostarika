@@ -1,3 +1,4 @@
+\RequirePackage{fix-cm}
 \documentclass[12pt, a4paper]{article}
 
 % Pengaturan bahasa dan font
@@ -79,7 +80,7 @@
     \vspace{0pt}
     \centering\textbf{Abstract}\par
     \vspace{0.5em}
-    \fontsize{11}{13}\selectfont
+    \small
     \textit{This study examines the structural disparity in compensation between judicial officers (judges) and court administrative/case management personnel (clerks of court, court secretaries, and administrators) across five jurisdictions: Indonesia, the United States, Costa Rica, South Korea, and the Philippines. Using normative legal research combined with empirical-statutory compensation analysis, this article calculates the net Take-Home Pay (THP), non-cash facility valuations, and comparative ratio metrics ($R = \text{THP}_{\text{Clerk}} / \text{THP}_{\text{Judge}} \times 100\%$) across three equivalent career career milestones: entry-level, mid-career, and senior/peak leadership. The findings demonstrate an extreme anomaly in Indonesia following the enactment of Government Regulation No. 42 of 2025. In Indonesia, an entry-level junior judge with a minimum of three years of total service (comprising one year as a civil servant candidate/CPNS and two years of mandatory \textit{Calon Hakim} judicial training) receives a cash THP roughly 352.5\% higher (a 3.52-fold multiplier) than a senior Class II Court Clerk with over a decade of administrative tenure (a clerk-to-judge ratio of only 28.4\%), widening to 5.34-fold (434\% gap) when non-cash housing, transportation, and healthcare benefits are monetized. Furthermore, an entry-level judge's remuneration significantly eclipses that of an appellate court chief clerk. In sharp contrast, global comparator jurisdictions systematically anchor clerk and court executive remuneration between 65\% and 85\% of equivalent judicial pay, occasionally exceeding 100\% (e.g., 104\% in South Korea District Courts and 126\% in Los Angeles County, California) to reflect substantial executive liability. This paper concludes by proposing a statutory compensation reform package for Indonesia, establishing a mandatory statutory floor ratio of 60\%--75\% to safeguard institutional integrity, mitigate acute brain drain, and restore collaborative synergy within the judiciary.}\par
     \vspace{1em}
     \textit{Keywords: Compensation disparity; court administrator; judicial salary; take-home pay; comparative law; court clerk.}
@@ -170,7 +171,7 @@ Dengan demikian, akumulasi THP tunai seorang Panitera Pengadilan Kelas II berada
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Dekomposisi Komponen Hak Keuangan Bulanan: Hakim Pratama vs Panitera/Sekretaris Pengadilan Kelas II di Indonesia}
 \label{tab:komparasi-thp-indonesia}
 \renewcommand{\arraystretch}{1.35}
@@ -201,7 +202,7 @@ Berdasarkan regulasi yang berlaku, seorang Panitera Tingkat Banding berpangkat P
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Anomali Hierarki: Perbandingan THP Hakim Pratama Kelas II (Baru Diangkat) terhadap THP Panitera Berbagai Tingkatan Pengadilan di Indonesia}
 \label{tab:anomali-hierarki-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -224,13 +225,13 @@ Untuk memotret disparitas kompensasi total secara komprehensif, Tabel~\ref{tab:s
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Analisis Sensitivitas Kompensasi Total: Perbandingan THP Tunai Murni vs Monetisasi Total Fasilitas (Hakim Pratama vs Panitera Kelas II)}
 \label{tab:sensitivitas-monetisasi-lengkap}
 \renewcommand{\arraystretch}{1.35}
-\begin{tabular}{p{4.6cm} p{3.7cm} p{3.7cm} p{2.2cm}}
+\begin{tabular}{p{4.3cm} p{3.6cm} p{3.6cm} p{2.5cm}}
 \hline
-\textbf{Komponen Remunerasi} & \textbf{Hakim Pratama Kelas II (Usia 25--29 Th, Min. 3 Th Masa Kerja)} & \textbf{Panitera Kelas II (Usia 40 Th, MKG 15 Th)} & \textbf{Multiplier Disparitas} \tabularnewline
+\textbf{Komponen Remunerasi} & \textbf{Hakim Pratama Kelas II (Usia 25--29 Th, Min. 3 Th Masa Kerja)} & \textbf{Panitera Kelas II (Usia 40 Th, MKG 15 Th)} & \textbf{Multiplier} \newline \textbf{Disparitas} \tabularnewline
 \hline
 \raggedright\textbf{THP Tunai Murni (\textit{Baseline})} & Rp 49.485.700 & Rp 14.040.000 & \textbf{3,52x} (+252,5\%) \tabularnewline
 \raggedright\textbf{(+) Valuasi Sewa Rumah Dinas} & Rp 10.000.000 (Standar Layak) & Rp 0 (Tidak Difasilitasi) & -- \tabularnewline
@@ -265,7 +266,7 @@ Proporsionalitas sistem remunerasi peradilan federal Amerika Serikat dirangkum d
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Proporsionalitas Remunerasi Peradilan Federal Amerika Serikat: \textit{Clerk of Court} vs Hakim Federal (2024--2025)}
 \label{tab:komparasi-usa-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -287,7 +288,7 @@ Fenomena yang lebih progresif ditemukan pada yurisdiksi pengadilan tingkat negar
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Kasus Khusus Remunerasi Eksekutif: \textit{Court Executive Officer} (CEO) vs Hakim Tingkat Pertama pada Los Angeles County Superior Court, California}
 \label{tab:komparasi-california-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -321,7 +322,7 @@ Rincian perbandingan remunerasi Kosta Rika disajikan pada Tabel~\ref{tab:kompara
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Proporsionalitas Remunerasi Peradilan Kosta Rika: Pejabat Administrator Manajerial vs Hakim Tingkat Pertama (\textit{Salario Global} 2024)}
 \label{tab:komparasi-kostarika-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -355,7 +356,7 @@ Struktur komparasi remunerasi Korea Selatan dirangkum dalam Tabel~\ref{tab:kompa
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Proporsionalitas Remunerasi Peradilan Korea Selatan: Pejabat Administrasi Peradilan (\textit{Beobwon Gongmuwon}) vs Hakim (2024)}
 \label{tab:komparasi-korsel-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -391,7 +392,7 @@ Rangkuman proporsionalitas remunerasi Filipina disajikan dalam Tabel~\ref{tab:ko
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Proporsionalitas Remunerasi Peradilan Filipina: \textit{Clerk of Court} vs Hakim Peradilan Berbagai Tingkat (2024)}
 \label{tab:komparasi-filipina-lengkap}
 \renewcommand{\arraystretch}{1.35}
@@ -414,7 +415,7 @@ Untuk meletakkan posisi Indonesia dalam peta perbandingan internasional yang kom
 
 \begin{table}[H]
 \centering
-\fontsize{8.5}{10.5}\selectfont
+\fontsize{8}{10}\selectfont
 \caption{Matriks Komparatif Global: Ekuivalensi Karier dan Rasio Remunerasi Non-Hakim vs Hakim pada 3 Titik Masa Kerja Setara di 5 Negara}
 \label{tab:matriks-global-ekuivalensi}
 \renewcommand{\arraystretch}{1.35}
@@ -447,7 +448,7 @@ Indonesia menerapkan sistem eselonisasi jabatan struktural yang berjenjang (Esel
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Pemetaan Eselonisasi Jabatan Kepaniteraan dan Kesekretariatan Pengadilan di Indonesia (PERMA No. 7 Tahun 2015)}
 \label{tab:eselon-indonesia}
 \renewcommand{\arraystretch}{1.35}
@@ -476,7 +477,7 @@ Amerika Serikat sama sekali tidak mengenal sistem eselonisasi berbasis hierarki 
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Struktur Klasifikasi Jabatan Administratif Peradilan Federal AS dalam \textit{Judiciary Salary Plan} (JSP) 2024--2025}
 \label{tab:jsp-usa}
 \renewcommand{\arraystretch}{1.35}
@@ -502,7 +503,7 @@ Korea Selatan menerapkan sistem pangkat (\textit{grade}/\textit{jikgeup}) 9 ting
 
 \begin{table}[H]
 \centering
-\fontsize{9.5}{11.5}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Pemetaan Jalur Karier dan Kompensasi Aparatur Pengadilan Korea Selatan (\textit{Beobwon Gongmuwon}) 2024}
 \label{tab:korea-grade}
 \renewcommand{\arraystretch}{1.35}
@@ -543,7 +544,7 @@ Dalam sistem Filipina, terdapat \textbf{kesejajaran SG antara panitera senior da
 
 \begin{table}[H]
 \centering
-\fontsize{8.5}{10.5}\selectfont
+\fontsize{8}{10}\selectfont
 \caption{Matriks Komparatif Sistem Hierarki Jabatan Kepaniteraan/Administrator Peradilan di Lima Yurisdiksi}
 \label{tab:matriks-hierarki-komparatif}
 \renewcommand{\arraystretch}{1.35}
@@ -579,7 +580,7 @@ Ketika kerangka ini diterapkan untuk membandingkan jabatan Panitera/Sekretaris P
 
 \begin{table}[H]
 \centering
-\fontsize{9.0}{11.0}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Analisis \textit{Job Evaluation} Berbasis Empat Faktor ILO: Hakim Pratama Pemula vs. Panitera/Sekretaris Senior Kelas IA Khusus}
 \label{tab:job-evaluation}
 \renewcommand{\arraystretch}{1.35}
@@ -651,7 +652,7 @@ Sebagai panduan teknis bagi perumus kebijakan, Tabel~\ref{tab:simulasi-rekomenda
 
 \begin{table}[H]
 \centering
-\fontsize{9.0}{11.0}\selectfont
+\fontsize{9}{11}\selectfont
 \caption{Simulasi Proyeksi Formula Baru THP Panitera/Sekretaris Pengadilan di Indonesia Berbasis Standar Komparatif Global (Target Rasio 65\%--75\%)}
 \label{tab:simulasi-rekomendasi-thp}
 \renewcommand{\arraystretch}{1.35}
